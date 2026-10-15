@@ -74,27 +74,27 @@
     },
     {
       "source": "/qr/10-6",
-      "destination": "/#verken",
+      "destination": "/dikt/10-6",
       "permanent": false
     },
     {
       "source": "/qr/10-7",
-      "destination": "/#verken",
+      "destination": "/dikt/10-7",
       "permanent": false
     },
     {
       "source": "/qr/10-8",
-      "destination": "/#verken",
+      "destination": "/dikt/10-8",
       "permanent": false
     },
     {
       "source": "/qr/10-9",
-      "destination": "/#verken",
+      "destination": "https://www.nobelprize.org/prizes/literature/2011/transtromer/166705-tomas-transtromer-poetry-swedish/",
       "permanent": false
     },
     {
       "source": "/qr/10-10",
-      "destination": "/#verken",
+      "destination": "/dikt/10-10",
       "permanent": false
     },
     {
