@@ -8,7 +8,7 @@ Statisk webbplats för boken *Svenska Kulturkanon – 100 verk som skapade Sveri
 index.html            Hela sajten (startsida, om boken, verken, veckans verk, quiz, beställ, företag, press, kontakt)
 data/kanon.js         All data: avsnitt och verk, quizfrågor, veckans verk per vecka
 images/               Omslag, marmorpapper och uppslag ur boken
-verk/<nr>.jpg         Bildsidan för varje verk (1080 × 1350), t.ex. 37.jpg, 10-5.jpg
+images/verk/<nr>.jpg  Bildsidan för varje verk (1080 × 1350), t.ex. 37.jpg, 10-5.jpg
 vercel.json           QR-omdirigeringar /qr/<nr> och cache för bilder
 qr-adresser.csv       Alla 109 QR-adresser till Agneta, med kolumn för mål
 instagram/            Mall och färdiga inlägg för Instagram
