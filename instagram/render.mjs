@@ -56,7 +56,7 @@ function titleCard(v, w) {
   <div class="foot"><span class="brand">Svenska Kulturkanon</span><span class="url">${esc(w.av)}</span></div>`);
 }
 function imageCard(v) {
-  const img = pathToFileURL(path.join(root, 'verk', v.nr.replace('.', '-') + '.jpg')).href;
+  const img = pathToFileURL(path.join(root, 'images/verk', v.nr.replace('.', '-') + '.jpg')).href;
   return page(`<img src="${img}" style="position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover">`);
 }
 function textCard(v, w) {
