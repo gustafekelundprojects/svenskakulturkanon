@@ -1,5 +1,14 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
+<meta property="og:title" content="Svenska Kulturkanon">
+<meta property="og:description" content="100 verk som skapade Sverige – en coffee table-bok om den svenska kulturkanonen.">
+<meta property="og:image" content="https://svenskakulturkanon.se/images/omslag.jpg">
+<meta name="theme-color" content="#F3F1ED">
 <title>Svenska Kulturkanon</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
@@ -51,6 +60,7 @@ nav.main a.buy:hover{color:var(--on-navy);background:var(--copper-ink)}
 
 .page{padding-block:48px 80px;display:grid;gap:56px}
 .page[hidden]{display:none}
+.page{scroll-margin-top:90px}
 .head{display:grid;gap:14px;max-width:44em}
 
 /* hero */
@@ -154,12 +164,60 @@ form.f{display:grid;gap:14px;max-width:560px}
 footer.site{border-top:1px solid var(--rule);padding-block:36px;font-size:.92rem;color:var(--ink-2)}
 footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .draft{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-ink)}
+
+/* ---------- mobil ---------- */
+.menu,.mbuy{display:none}
+@media (max-width:860px){
+  body{font-size:18px}
+  header.site .wrap{flex-wrap:nowrap;min-height:58px;gap:10px}
+  .brand{font-size:.78rem;letter-spacing:.1em;margin-right:auto;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:clip}
+  .mbuy{display:inline-flex;flex:0 0 auto;padding:9px 12px;font-size:.7rem;letter-spacing:.12em}
+  .menu{display:inline-flex;flex:0 0 44px;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:1px solid var(--rule);background:var(--sheet);cursor:pointer;padding:0 11px;position:relative}
+  .menu span{display:block;height:1.5px;background:var(--ink);transition:transform .2s,opacity .2s}
+  .menu b{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .menu[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--rule);flex-direction:column;gap:0;padding:6px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px));box-shadow:0 18px 30px -20px rgba(20,24,40,.35)}
+  nav.main.open{display:flex}
+  nav.main a{font-size:.9rem;padding:14px 0;border-bottom:1px solid var(--rule)}
+  nav.main a[aria-current="page"]{border-bottom-color:var(--rule);color:var(--copper-ink)}
+  nav.main a.buy{display:none}
+  .page{padding-block:28px 56px;gap:40px}
+  .hero{gap:28px}
+  .lockup .big{font-size:clamp(3rem,16vw,5rem)}
+  .cover{max-width:260px}
+  .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:360px}
+  .hero-cta .btn{width:100%}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 10px;text-align:center}
+  .facts span:nth-child(n+5){grid-column:span 1}
+  .band{height:56px}
+  .two,.three{gap:22px}
+  h2{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .lede{font-size:1.08rem}
+  .quote{font-size:1.35rem}
+  .quiz{padding:20px 16px}
+  .qtext{font-size:1.45rem}
+  .opt{font-size:1rem;padding:12px 12px}
+  .product{padding:20px}
+  .price{font-size:1.9rem}
+  details.av summary{padding:18px 16px}
+  details.av ol{padding:0 16px 16px}
+  .pressgrid dl{grid-template-columns:1fr;gap:2px}
+  .pressgrid dd{margin-bottom:8px}
+  footer.site .wrap{flex-direction:column}
+}
+@media (max-width:380px){.brand{font-size:.7rem;letter-spacing:.1em}.mbuy{padding:8px 9px}}
 </style>
+</head>
+<body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#start">Svenska Kulturkanon</a>
-    <nav class="main" aria-label="Huvudmeny">
+    <a href="#bestall" class="btn solid mbuy">Beställ</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="huvudmeny"><span></span><span></span><span></span><b>Meny</b></button>
+    <nav class="main" id="huvudmeny" aria-label="Huvudmeny">
       <a href="#om">Om boken</a>
       <a href="#verken">Verken</a>
       <a href="#veckans">Veckans verk</a>
@@ -356,6 +414,14 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <script>
 (function(){
 if(!window.KANON){console.error("data/kanon.js saknas");document.querySelectorAll("#avsnitt,#quizbox").forEach(function(e){e.innerHTML="<p class=\"note\">Innehållet kunde inte laddas (data/kanon.js saknas).</p>"});return;}
+
+// ---------- mobilmeny ----------
+var mb=document.querySelector('.menu'),nm=document.getElementById('huvudmeny');
+function closeMenu(){nm.classList.remove('open');mb.setAttribute('aria-expanded','false')}
+mb.addEventListener('click',function(){var o=!nm.classList.contains('open');nm.classList.toggle('open',o);mb.setAttribute('aria-expanded',o?'true':'false')});
+nm.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
+window.addEventListener('hashchange',closeMenu);
+
 // ---------- routing ----------
 var pages=['start','om','verken','veckans','quiz','bestall','foretag','press','kontakt'];
 function route(){
@@ -449,3 +515,5 @@ function end(){
 start();
 })();
 </script>
+</body>
+</html>
