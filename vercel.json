@@ -550,7 +550,7 @@
   ],
   "headers": [
     {
-      "source": "/img/(.*)",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

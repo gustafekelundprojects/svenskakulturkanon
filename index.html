@@ -187,11 +187,11 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <span class="label"><i>och</i> identitet</span>
       <div class="hero-cta"><a class="btn solid" href="#bestall">Beställ boken · 695 kr</a><a class="btn" href="#quiz">Testa dig själv</a></div>
     </div>
-    <figure class="cover" style="margin:0"><img src="img/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
+    <figure class="cover" style="margin:0"><img src="images/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
   </div>
   <div class="facts"><span><b>100</b>verk i kanon</span><span><b>109</b>verk i boken</span><span><b>11</b>avsnitt</span><span><b>272</b>sidor</span><span><b>240 × 300</b>mm, inbunden</span><span><b>December</b>2026</span></div>
 </section>
-<div class="band" style="background-image:url('img/marmor.jpg')" role="img" aria-label="Marmorerat försättspapper ur boken"></div>
+<div class="band" style="background-image:url('images/marmor.jpg')" role="img" aria-label="Marmorerat försättspapper ur boken"></div>
 <section class="page" id="start-2" data-part="start">
   <div class="two">
     <div class="col">
@@ -201,7 +201,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <p class="measure">Varje uppslag presenterar ett verk eller en företeelse, människorna bakom och sammanhanget det kom ur. Texterna är korta och kan läsas utan förkunskaper. QR-koderna leder vidare till musiken, filmerna och dikterna i sin helhet.</p>
       <p><a class="btn" href="#om">Om boken</a></p>
     </div>
-    <figure class="spread" style="margin:0"><img src="img/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
+    <figure class="spread" style="margin:0"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
   </div>
   <div class="three">
     <a class="nr" href="#veckans" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
@@ -222,7 +222,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <p>Vi har inte gjort urvalet och inte skapat en egen kanon. Vi har utgått från expertgruppernas arbete och gett det en sammanhållen, tillgänglig och visuellt engagerande form.</p>
       <p>Boken är gjord för att bläddras i, upptäckas och återvändas till. Den ska kunna ligga framme i hemmet, öppnas i klassrummet och plockas upp av den som blir nyfiken på en bild, en person eller ett verk.</p>
     </div>
-    <figure class="spread" style="margin:0;align-self:start"><img src="img/uppslag-01.jpg" alt="Uppslag ur boken: nummer 1, Det går an, med porträtt av Carl Jonas Love Almqvist." width="1600" height="1000" loading="lazy"><figcaption>Nummer 1 · Det går an av Carl Jonas Love Almqvist</figcaption></figure>
+    <figure class="spread" style="margin:0;align-self:start"><img src="images/uppslag-01.jpg" alt="Uppslag ur boken: nummer 1, Det går an, med porträtt av Carl Jonas Love Almqvist." width="1600" height="1000" loading="lazy"><figcaption>Nummer 1 · Det går an av Carl Jonas Love Almqvist</figcaption></figure>
   </div>
   <blockquote class="quote rule-top" style="margin:0">"Jag tycker detta ser väldigt fint ut. Inga invändningar från min sida vad gäller er inledning och er tolkning av vad jag och utredningen landade i."<cite><span class="label">Lars Trägårdh</span><br><span style="color:var(--ink-2)">Historiker, ordförande för kulturkanonutredningen</span></cite></blockquote>
   <div class="three">
@@ -237,7 +237,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <section class="page" id="verken" hidden>
   <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, hundra verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
   <div class="avsnitt" id="avsnitt"></div>
-  <figure class="spread" style="margin:0"><img src="img/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" loading="lazy"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
+  <figure class="spread" style="margin:0"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" loading="lazy"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
 </section>
 
 <!-- VECKANS -->
@@ -391,7 +391,7 @@ el('vv-title').textContent=info.t;
 el('vv-hook').textContent=cw.hook||info.by;
 el('vv-ingress').textContent=cw.ingress;
 el('vv-place').textContent='Nummer '+cw.nr+', sidan '+cw.bokSida+'–'+(cw.bokSida+1)+', avsnittet '+info.av+'.';
-el('vv-img').src='img/verk/'+cw.nr.replace('.','-')+'.jpg';el('vv-img').alt='Bildsidan om '+info.t+' ur boken';
+el('vv-img').src='images/verk/'+cw.nr.replace('.','-')+'.jpg';el('vv-img').alt='Bildsidan om '+info.t+' ur boken';
 el('vv-credit').textContent=cw.credit;
 el('vv-card-nr').textContent=cw.nr;el('vv-card-title').textContent=info.t;el('vv-card-by').textContent=info.by;el('vv-card-label').textContent='Veckans verk · vecka '+cw.vecka;
 el('vv-next').innerHTML=V.filter(function(v){return v.ar*100+v.vecka>cw.ar*100+cw.vecka}).slice(0,3).map(function(v){var i=all[v.nr]||{};return '<div class="nr"><span class="n"><small>NUMMER</small>'+v.nr+'</span><span class="label">Vecka '+v.vecka+'</span><h4>'+i.t+'</h4><span class="by">'+(i.by||'')+'</span></div>'}).join('')||'<p class="note">Fler veckor läggs till löpande.</p>';
