@@ -1,0 +1,562 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/qr/1",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/2",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/3",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/4",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/5",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/6",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/7",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/8",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/9",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-1",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-2",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-3",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-4",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-5",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-6",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-7",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-8",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-9",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/10-10",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/11",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/12",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/13",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/14",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/15",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/16",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/17",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/18",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/19",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/20",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/21",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/22",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/23",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/24",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/25",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/26",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/27",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/28",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/29",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/30",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/31",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/32",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/33",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/34",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/35",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/36",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/37",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/38",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/39",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/40",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/41",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/42",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/43",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/44",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/45",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/46",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/47",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/48",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/49",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/50",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/51",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/52",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/53",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/54",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/55",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/56",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/57",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/58",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/59",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/60",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/61",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/62",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/63",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/64",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/65",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/66",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/67",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/68",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/69",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/70",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/71",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/72",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/73",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/74",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/75",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/76",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/77",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/78",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/79",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/80",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/81",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/82",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/83",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/84",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/85",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/86",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/87",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/88",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/89",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/90",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/91",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/92",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/93",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/94",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/95",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/96",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/97",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/98",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/99",
+      "destination": "/#verken",
+      "permanent": false
+    },
+    {
+      "source": "/qr/100",
+      "destination": "/#verken",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}
