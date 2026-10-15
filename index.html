@@ -355,6 +355,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <script src="data/kanon.js"></script>
 <script>
 (function(){
+if(!window.KANON){console.error("data/kanon.js saknas");document.querySelectorAll("#avsnitt,#quizbox").forEach(function(e){e.innerHTML="<p class=\"note\">Innehållet kunde inte laddas (data/kanon.js saknas).</p>"});return;}
 // ---------- routing ----------
 var pages=['start','om','verken','veckans','quiz','bestall','foretag','press','kontakt'];
 function route(){
@@ -391,7 +392,7 @@ el('vv-title').textContent=info.t;
 el('vv-hook').textContent=cw.hook||info.by;
 el('vv-ingress').textContent=cw.ingress;
 el('vv-place').textContent='Nummer '+cw.nr+', sidan '+cw.bokSida+'–'+(cw.bokSida+1)+', avsnittet '+info.av+'.';
-el('vv-img').src='images/verk/'+cw.nr.replace('.','-')+'.jpg';el('vv-img').alt='Bildsidan om '+info.t+' ur boken';
+el('vv-img').src='verk/'+cw.nr.replace('.','-')+'.jpg';el('vv-img').alt='Bildsidan om '+info.t+' ur boken';
 el('vv-credit').textContent=cw.credit;
 el('vv-card-nr').textContent=cw.nr;el('vv-card-title').textContent=info.t;el('vv-card-by').textContent=info.by;el('vv-card-label').textContent='Veckans verk · vecka '+cw.vecka;
 el('vv-next').innerHTML=V.filter(function(v){return v.ar*100+v.vecka>cw.ar*100+cw.vecka}).slice(0,3).map(function(v){var i=all[v.nr]||{};return '<div class="nr"><span class="n"><small>NUMMER</small>'+v.nr+'</span><span class="label">Vecka '+v.vecka+'</span><h4>'+i.t+'</h4><span class="by">'+(i.by||'')+'</span></div>'}).join('')||'<p class="note">Fler veckor läggs till löpande.</p>';
