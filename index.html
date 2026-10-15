@@ -162,7 +162,24 @@ form.f{display:grid;gap:14px;max-width:560px}
 .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em;word-break:break-all}
 
 footer.site{border-top:1px solid var(--rule);padding-block:36px;font-size:.92rem;color:var(--ink-2)}
-footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer.site{background:var(--sheet)}
+footer.site .wrap{display:grid;gap:28px}
+.fgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.fcol{display:grid;gap:8px;align-content:start;min-width:0}
+.fcol a{color:var(--ink);text-decoration:none}
+.fcol .mono{word-break:break-all;font-size:.8rem}
+.fcol a:hover{color:var(--copper-ink);text-decoration:underline}
+.fnl{display:grid;gap:6px;margin-top:6px}
+.fnl label{font-size:.85rem}
+.fnl div{display:flex;gap:6px}
+.fnl input{flex:1;min-width:0;font:inherit;font-size:.95rem;padding:8px 10px;border:1px solid var(--rule);background:var(--paper);color:var(--ink)}
+.fnl .btn{padding:8px 14px}
+.fbase{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:16px;font-size:.85rem}
+ol.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:1px solid var(--copper);display:grid;gap:16px}
+ol.tl li{display:grid;gap:2px;position:relative}
+ol.tl li::before{content:"";position:absolute;left:-23px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--copper)}
+ol.tl b{font-family:var(--f-display);font-weight:600;font-size:1.15rem;color:var(--navy)}
+ol.tl span{font-size:.98rem}
 .draft{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-ink)}
 
 /* ---------- mobil ---------- */
@@ -205,7 +222,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   details.av ol{padding:0 16px 16px}
   .pressgrid dl{grid-template-columns:1fr;gap:2px}
   .pressgrid dd{margin-bottom:8px}
-  footer.site .wrap{flex-direction:column}
+  .fgrid{grid-template-columns:1fr 1fr;gap:24px}
 }
 @media (max-width:380px){.brand{font-size:.7rem;letter-spacing:.1em}.mbuy{padding:8px 9px}}
 </style>
@@ -223,8 +240,6 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
       <a href="#veckans">Veckans verk</a>
       <a href="#quiz">Quiz</a>
       <a href="#foretag">Företag &amp; gåvor</a>
-      <a href="#press">Press &amp; handel</a>
-      <a href="#kontakt">Kontakt</a>
       <a href="#bestall" class="buy">Beställ</a>
     </nav>
   </div>
@@ -273,22 +288,52 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
   <div class="head"><span class="label">Om boken</span><h2>En kulturkanon för Sverige</h2><p class="lede">Frågan om en svensk kulturkanon har länge rört sig i gränslandet mellan kulturpolitik, bildning och identitet.</p></div>
   <div class="two">
     <div class="col measure">
-      <p>När regeringen 2023 tillsatte kommittén <i>En kulturkanon för Sverige</i> var uppdraget att ta fram en kanon som gör kulturarvet tillgängligt för fler och fungerar som ett levande verktyg för bildning och gemenskap. Arbetet leddes av historikern Lars Trägårdh.</p>
-      <p>Utredningen, SOU 2025:92, utgår från en bred förståelse av kultur. Kanonen omfattar inte bara konstnärliga verk utan också företeelser inom religion, lag och rätt, ekonomi, uppfinningar och offentlighet. Självständiga expertgrupper valde ut 100 verk som satt varaktiga avtryck i svensk kultur och samhällsutveckling.</p>
-      <p>Utredningen räknar diktantologin som ett verk, nummer 10, med tio dikter av lika många poeter. Boken presenterar därför 109 enskilda verk, vart och ett på ett eget uppslag.</p>
-      <h3 style="margin-top:12px">Vår roll</h3>
-      <p>Vi har inte gjort urvalet och inte skapat en egen kanon. Vi har utgått från expertgruppernas arbete och gett det en sammanhållen, tillgänglig och visuellt engagerande form.</p>
-      <p>Boken är gjord för att bläddras i, upptäckas och återvändas till. Den ska kunna ligga framme i hemmet, öppnas i klassrummet och plockas upp av den som blir nyfiken på en bild, en person eller ett verk.</p>
+      <span class="label">Bakgrund</span>
+      <p>Under årtionden har frågan återkommit i debatten om vad som förenar ett land som förändras demografiskt, socialt och kulturellt – och om vilka berättelser, verk, idéer och institutioner som utgör gemensamma referenspunkter.</p>
+      <p>När regeringen 2023 tillsatte kommittén <i>En kulturkanon för Sverige</i> var uppdraget att ta fram en svensk kulturkanon som skulle göra det svenska kulturarvet tillgängligt för fler och kunna fungera som ett levande och användbart verktyg för bildning, gemenskap och inkludering.</p>
+      <p>Arbetet leddes av historikern Lars Trägårdh, vars forskning om svensk individualism, tillit och samhällskontrakt har bidragit till förståelsen av det moderna Sverige. Ett återkommande tema i hans forskning är sambandet mellan starka gemensamma institutioner och långtgående individuell självständighet – ett samhällsmönster där personlig frihet inte nödvändigtvis står i motsats till det gemensamma, utan delvis möjliggörs av det.</p>
+      <p>I det perspektivet kan en kulturkanon ses mindre som ett monument över det förflutna och mer som ett redskap för orientering och bildning: ett sätt att synliggöra verk, idéer och företeelser som har format Sverige och blivit en del av våra gemensamma referensramar.</p>
     </div>
     <figure class="spread" style="margin:0;align-self:start"><img src="images/uppslag-01.jpg" alt="Uppslag ur boken: nummer 1, Det går an, med porträtt av Carl Jonas Love Almqvist." width="1600" height="1000" loading="lazy"><figcaption>Nummer 1 · Det går an av Carl Jonas Love Almqvist</figcaption></figure>
   </div>
-  <blockquote class="quote rule-top" style="margin:0">"Jag tycker detta ser väldigt fint ut. Inga invändningar från min sida vad gäller er inledning och er tolkning av vad jag och utredningen landade i."<cite><span class="label">Lars Trägårdh</span><br><span style="color:var(--ink-2)">Historiker, ordförande för kulturkanonutredningen</span></cite></blockquote>
-  <div class="three">
-    <div class="col rule-top"><span class="label">Kuratorer</span><h3>Gustaf Ekelund</h3><p>Text och redaktion. Bakgrund i kommunikation för stora bolag och startups, med vana att göra komplex information begriplig.</p></div>
-    <div class="col rule-top"><span class="label">Kuratorer <i>och</i> formgivning</span><h3>Agneta Norlin</h3><p>Formgivning och layout. Lång erfarenhet av digitalt och print, från stora koncerner till startups.</p></div>
-    <div class="col rule-top"><span class="label">Fakta</span>
-      <p>272 sidor · 240 × 300 mm<br>Inbunden, tryckta försättsblad<br>ISBN 978-91-992191-0-3<br>Kaffeförlaget AB, 2026</p></div>
+  <div class="two">
+    <div class="col measure">
+      <span class="label">Utredningen</span>
+      <p>SOU 2025:92 utgår från en bred förståelse av kultur. Kanonen begränsas inte till konstnärliga verk, utan omfattar också samhälleliga företeelser inom bland annat religion, lag och rätt, ekonomi, uppfinningar och offentlighet. Självständiga expertgrupper fick ansvaret för urvalet och valde sammanlagt ut 100 verk och företeelser som bedömdes ha satt varaktiga avtryck i svensk kultur och samhällsutveckling.</p>
+      <p>Utredningen betonar att kulturkanonen ska vara tillgänglig och användbar. Digital tillgänglighet, folkbildning och långsiktig förvaltning är därför viktiga delar av förslaget. Kanonen föreslås också utvärderas efter tio år och vid behov revideras.</p>
+      <p>En kanon behöver inte vara den slutgiltiga berättelsen om Sverige. Den kan i stället vara en gemensam utgångspunkt – en inbjudan att upptäcka, diskutera och ibland ifrågasätta det som har format landet. Frågor om urval, representation, makt och vad som över huvud taget ska räknas som kultur är ofrånkomliga. En kanon behöver inte avsluta den diskussionen, men den kan ge den en struktur att tänka och samtala utifrån – snarare än ett facit att underkasta sig.</p>
+    </div>
+    <div class="col">
+      <span class="label">Från uppdrag till kanon</span>
+      <ol class="tl">
+        <li><b>December 2023</b><span>Regeringen beslutar om kommittédirektivet <i>En svensk kulturkanon</i> (Dir. 2023:180). Arbetet leds av Lars Trägårdh.</span></li>
+        <li><b>2 september 2025</b><span>Utredningen överlämnar betänkandet <i>En kulturkanon för Sverige</i> (SOU 2025:92) med 100 verk i elva kategorier.</span></li>
+        <li><b>Hösten 2025</b><span>Betänkandet skickas på remiss till myndigheter, kulturinstitutioner och organisationer. Remisstiden löper ut 7 januari 2026.</span></li>
+        <li><b>2026–2027</b><span>Skolverket och Riksantikvarieämbetet arbetar med uppdrag om hur kanonen ska användas och tillgängliggöras, med redovisning senast 31 maj 2027.</span></li>
+        <li><b>December 2026</b><span>Svenska Kulturkanon – 100 verk som skapade Sverige ges ut av Kaffeförlaget.</span></li>
+      </ol>
+      <p class="note">Källa: SOU 2025:92 och regeringens kommittédirektiv. Läs hela betänkandet på <a href="https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/09/sou-202592/" target="_blank" rel="noopener">regeringen.se</a>.</p>
+    </div>
   </div>
+  <blockquote class="quote rule-top" style="margin:0">"Jag tycker detta ser väldigt fint ut. Inga invändningar från min sida vad gäller er inledning och er tolkning av vad jag och utredningen landade i."<cite><span class="label">Lars Trägårdh</span><br><span style="color:var(--ink-2)">Historiker, ordförande för kulturkanonutredningen</span></cite></blockquote>
+  <div class="two">
+    <div class="col measure">
+      <span class="label">Om den här boken</span>
+      <p>Boken är skapad för att göra den svenska kulturkanonen levande, tillgänglig och lätt att ta till sig. Den presenterar de verk och företeelser som valts ut till kanonen och – där det är relevant – människorna bakom dem.</p>
+      <p>Vår roll har varit kuratorns. Vi har inte gjort urvalet eller skapat en egen kulturkanon. Vi har utgått från expertgruppernas arbete och gett det en sammanhållen, tillgänglig och visuellt engagerande form. Vårt arbete har handlat om att välja perspektiv, sätta innehållet i sammanhang och göra det begripligt för en bred publik.</p>
+      <p>Varje uppslag ger en kort introduktion till verket eller företeelsen, dess betydelse och dess historiska och kulturella sammanhang. Texterna är avsiktligt koncentrerade och skrivna för att kunna läsas utan särskilda förkunskaper.</p>
+      <p>Det här är därför inte en bok som måste läsas från början till slut. Den är gjord för att bläddras i, upptäckas och återvändas till – i hemmet, i klassrummet, på biblioteket eller av den som helt enkelt blir nyfiken på en bild, en person eller ett verk.</p>
+      <p>Framför allt vill vi skapa en bok som öppnar för samtal. Vid middagsbordet, i klassrummet eller i vardagen kan kulturkanonen bli en gemensam utgångspunkt för att tala om kultur, historia och identitet – och om varför vi minns vissa saker, hur de har påverkat oss och hur vår bild av Sverige förändras över tid.</p>
+      <p>Utredningen räknar diktantologin som ett verk, nummer 10, med tio dikter av lika många poeter. Boken presenterar därför 109 enskilda verk, vart och ett på ett eget uppslag.</p>
+    </div>
+    <div class="col">
+      <div class="col rule-top"><span class="label">Kuratorer</span><h3>Gustaf Ekelund</h3><p>Text och redaktion. Bakgrund i kommunikation för stora bolag och startups, med vana att göra komplex information begriplig.</p></div>
+      <div class="col rule-top"><span class="label">Kuratorer <i>och</i> formgivning</span><h3>Agneta Norlin</h3><p>Formgivning och layout. Lång erfarenhet av digitalt och print, från stora koncerner till startups.</p></div>
+      <div class="col rule-top"><span class="label">Fakta</span><p>272 sidor · 240 × 300 mm<br>Inbunden, tryckta försättsblad<br>ISBN 978-91-992191-0-3<br>Kaffeförlaget AB, 2026</p></div>
+      <div class="col rule-top"><span class="label">Om bokens redaktionella formuleringar</span><p style="font-size:.95rem">De korta formuleringar som förekommer på eller i anslutning till bilder är, om inte annat anges, redaktionella texter skrivna särskilt för boken. De är inte citat ur verken eller uttalanden av de personer som skildras. Direkta citat markeras och källanges särskilt.</p></div>
+    </div>
+  </div>
+  <p class="note">Källor: SOU 2025:92 samt offentliga intervjuer och samtal med Lars Trägårdh.</p>
 </section>
 
 <!-- VERKEN -->
@@ -388,26 +433,66 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 
 <!-- KONTAKT -->
 <section class="page" id="kontakt" hidden>
-  <div class="head"><span class="label">Kontakt <i>och</i> rättelser</span><h2>Hör av dig</h2></div>
+  <div class="head"><span class="label">Kontakt</span><h2>Hör av dig</h2></div>
   <div class="two">
     <div class="col">
       <p>Frågor om boken, beställningar, press och samarbeten:</p>
       <p class="mono" style="font-size:1rem">info@svenskakulturkanon.se</p>
-      <p>Kaffeförlaget AB<br>Saltsjövägen 37 B, 181 62 Lidingö</p>
+      <p>Kaffeförlaget AB<br>Saltsjövägen 37 B, 181 62 Lidingö<br>Org.nr 559584-4852</p>
     </div>
     <div class="col rule-top">
-      <h3>Rättelser</h3>
-      <p>Boken har sammanställts med stor omsorg. Hittar du ett sakfel eller en rättighetsfråga vill vi gärna veta. Bekräftade rättelser publiceras här och förs in i nästa upplaga.</p>
-      <p class="note">Inga rättelser publicerade ännu.</p>
+      <h3>Hittat ett fel?</h3>
+      <p>Läs om hur vi hanterar <a href="#rattelser">rättelser</a>.</p>
     </div>
+  </div>
+</section>
+
+<section class="page" id="rattelser" hidden>
+  <div class="head"><span class="label">Rättelser</span><h2>Rättelser och tillägg</h2><p class="lede">Boken har sammanställts med stor omsorg. Trots noggrann research och korrekturläsning kan sakfel eller tryckfel förekomma.</p></div>
+  <div class="two">
+    <div class="col measure">
+      <p>Hittar du ett sakfel, ett tryckfel eller en rättighetsfråga vill vi gärna veta. Skriv till <span class="mono">info@svenskakulturkanon.se</span> och ange sidnummer och vad det gäller.</p>
+      <p>Bekräftade rättelser publiceras här och förs in i nästa upplaga.</p>
+    </div>
+    <div class="col rule-top"><span class="label">Publicerade rättelser</span><p class="note">Inga rättelser publicerade ännu.</p></div>
+  </div>
+</section>
+
+<section class="page" id="villkor" hidden>
+  <div class="head"><span class="label">Köpvillkor</span><h2>Köpvillkor</h2><p class="note">Utkast. Texten fylls i och granskas innan webbshopen öppnar.</p></div>
+  <div class="col measure">
+    <h3>Säljare</h3><p>Kaffeförlaget AB, org.nr 559584-4852, Saltsjövägen 37 B, 181 62 Lidingö. E-post: info@svenskakulturkanon.se</p>
+    <h3>Priser och betalning</h3><p>[Priser inklusive 6 % moms. Betalsätt.]</p>
+    <h3>Leverans</h3><p>[Leveranstid, fraktkostnad och leveranssätt.]</p>
+    <h3>Ångerrätt</h3><p>[Enligt lagen om distansavtal har du 14 dagars ångerrätt från att du tagit emot varan. Hur du ångrar ett köp och vem som står för returfrakten.]</p>
+    <h3>Reklamation</h3><p>[Hur du reklamerar en skadad eller felaktig vara.]</p>
+    <h3>Tvister</h3><p>[Allmänna reklamationsnämnden, ARN.]</p>
+  </div>
+</section>
+
+<section class="page" id="integritet" hidden>
+  <div class="head"><span class="label">Integritetspolicy</span><h2>Så hanterar vi dina uppgifter</h2><p class="note">Utkast. Texten fylls i och granskas innan sajten tar emot beställningar och anmälningar.</p></div>
+  <div class="col measure">
+    <h3>Personuppgiftsansvarig</h3><p>Kaffeförlaget AB, org.nr 559584-4852. Kontakt: info@svenskakulturkanon.se</p>
+    <h3>Vilka uppgifter vi samlar in</h3><p>[Beställningar: namn, adress, e-post, telefon. Nyhetsbrev: e-post. Offertförfrågningar: kontaktuppgifter.]</p>
+    <h3>Varför och hur länge</h3><p>[Ändamål och rättslig grund för varje typ av uppgift, och hur länge de sparas.]</p>
+    <h3>Vilka vi delar uppgifter med</h3><p>[Betaltjänst, lager och fraktbolag, nyhetsbrevstjänst.]</p>
+    <h3>Dina rättigheter</h3><p>[Rätt till tillgång, rättelse, radering och att klaga hos Integritetsskyddsmyndigheten, IMY.]</p>
+    <h3>Cookies</h3><p>[Vilka cookies sajten använder.]</p>
   </div>
 </section>
 
 </main>
 
 <footer class="site"><div class="wrap">
-  <span><span class="label">Svenska Kulturkanon</span><br>© 2026 Gustaf Ekelund och Agneta Norlin · Kaffeförlaget AB</span>
-  <span class="draft">Utkast till svenskakulturkanon.se · oktober 2026</span>
+  <div class="fgrid">
+    <div class="fcol"><span class="label">Boken</span><a href="#om">Om boken</a><a href="#verken">Verken</a><a href="#veckans">Veckans verk</a><a href="#bestall">Beställ</a><a href="#rattelser">Rättelser</a></div>
+    <div class="fcol"><span class="label">För yrkesfolk</span><a href="#press">Press</a><a href="#press">Återförsäljare</a><a href="#foretag">Företag &amp; gåvor</a><a href="#kontakt">Kontakt</a></div>
+    <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <form class="fnl" id="fnl" novalidate><label for="fnl-mail">Veckans verk via e-post</label><div><input id="fnl-mail" type="email" placeholder="namn@exempel.se" required><button type="submit" class="btn solid">OK</button></div><p class="done" id="fnl-done" hidden>Tack! (Utkast: kopplas till nyhetsbrevet.)</p></form></div>
+    <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="#villkor">Köpvillkor</a><a href="#integritet">Integritetspolicy</a></div>
+  </div>
+  <div class="fbase"><span>© 2026 Gustaf Ekelund och Agneta Norlin · Kaffeförlaget AB</span><span class="draft">Utkast · oktober 2026</span></div>
 </div></footer>
 
 <script src="data/kanon.js"></script>
@@ -423,7 +508,7 @@ nm.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
 window.addEventListener('hashchange',closeMenu);
 
 // ---------- routing ----------
-var pages=['start','om','verken','veckans','quiz','bestall','foretag','press','kontakt'];
+var pages=['start','om','verken','veckans','quiz','bestall','foretag','press','kontakt','rattelser','villkor','integritet'];
 function route(){
   var id=(location.hash||'#start').slice(1); if(pages.indexOf(id)<0)id='start';
   document.querySelectorAll('.page').forEach(function(p){var key=p.dataset.part||p.id;p.hidden=key!==id});
@@ -482,7 +567,7 @@ function draw(){
   document.getElementById('cart-total').textContent=kr(sum+ship);
 }
 document.getElementById('checkout').addEventListener('click',function(){document.getElementById('checkout-note').hidden=false});
-[['nl','nl-done'],['offert','o-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
+[['nl','nl-done'],['offert','o-done'],['fnl','fnl-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
 
 // ---------- quiz ----------
 var Q=window.KANON.QUIZ;
