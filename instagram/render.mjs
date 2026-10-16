@@ -1,5 +1,6 @@
 // Skapar Instagram-inlägg (1080 × 1350) för Svenska Kulturkanon.
-// Per vecka: ett inlägg "Veckans verk" (3 bilder) och två quizinlägg (fråga + svar).
+// Per vecka: "Veckans verk" (3 bilder), två quizinlägg (fråga + svar) och "Personen bakom verket" (2 bilder).
+// Porträtt för personkortet läggs (valfritt) i images/personer/<nr>.jpg.
 // Körs: node instagram/render.mjs 43 44   (veckonummer, år 2026 som standard)
 // Kräver: npm i playwright  (Chromium)
 import { chromium } from 'playwright';
@@ -85,6 +86,30 @@ function quizA(q) {
   </div>
   <div class="foot"><span class="url">Hela quizet på svenskakulturkanon.se</span><span class="brand" style="font-size:24px">Kanonquiz</span></div>`);
 }
+function personA(v, w) {
+  const p = v.person;
+  const pf = path.join(root, 'images/personer', v.nr.replace('.', '-') + '.jpg');
+  const img = fs.existsSync(pf) ? `<div style="width:520px;height:520px;border-radius:50%;overflow:hidden;margin:0 auto;border:2px solid #DAD5CC"><img src="${pathToFileURL(pf).href}" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1)"></div>` : '';
+  const top = img ? 330 : 470;
+  return page(`<div class="tab"></div><div class="tabn"><small>NUMMER</small><b>${esc(v.nr)}</b></div>
+  <div style="position:absolute;top:140px;right:90px" class="label">Personen <i>bakom</i> verket</div>
+  <div style="position:absolute;left:90px;right:90px;top:${img ? 240 : top}px;display:grid;gap:30px;text-align:center;justify-items:center">
+    ${img}
+    <h1 data-fit="300" style="width:900px;font-family:Corm;font-weight:500;font-size:${img ? 104 : 128}px;line-height:1.02;text-transform:uppercase;color:#1E3566;letter-spacing:.02em">${esc(p.namn)}</h1>
+    <p class="label copper" style="font-size:30px;letter-spacing:.3em">${esc(p.levde)}</p>
+    <p style="font-size:34px;font-style:italic">${esc(p.roll)}</p>
+  </div>
+  <div class="foot"><span class="brand">Svenska Kulturkanon</span><span class="url">${esc(w.t)}</span></div>`);
+}
+function personB(v, w) {
+  const p = v.person, n = p.text.length, size = n > 520 ? 38 : n > 400 ? 42 : 46;
+  return page(`<div style="position:absolute;left:90px;right:90px;top:120px;display:grid;gap:40px">
+    <span class="label">Personen <i>bakom</i> · ${esc(w.t)}</span>
+    <h2 data-fit="240" style="width:900px;font-family:Corm;font-weight:500;font-size:72px;line-height:1.05;text-transform:uppercase;color:#1E3566">${esc(p.namn)}<span style="display:block;margin-top:14px;color:#B48D6B;font-size:30px;letter-spacing:.3em;font-family:EBG;font-weight:600">${esc(p.levde)}</span></h2>
+    <p style="font-size:${size}px;line-height:1.5">${esc(p.text)}</p>
+  </div>
+  <div class="foot"><span class="brand">Svenska Kulturkanon</span><span class="url">svenskakulturkanon.se</span></div>`);
+}
 function tags(w) {
   const base = ['#svenskakulturkanon', '#kulturkanon', '#kulturarv', '#svenskhistoria', '#coffeetablebook', '#bokstagram'];
   const extra = { 'Film & scenkonst': ['#svenskfilm', '#scenkonst'], 'Musik': ['#svenskmusik', '#klassiskmusik'], 'Bild & form': ['#svenskkonst', '#konst'], 'Uppfinningar': ['#svenskauppfinningar', '#teknikhistoria'], 'Ekonomi': ['#ekonomihistoria'], 'Litteratur – prosa': ['#svenskalitteratur'], 'Litteratur – dikter': ['#poesi', '#svenskpoesi'] }[w.av] || [];
@@ -120,6 +145,10 @@ for (const wk of weeks) {
     await shot(quizQ(qs[i], i, v), path.join(dir, `${i + 2}-quiz-${i + 1}-fraga.png`));
     await shot(quizA(qs[i]), path.join(dir, `${i + 2}-quiz-${i + 1}-svar.png`));
   }
+  if (v.person) {
+    await shot(personA(v, w), path.join(dir, '4-personen-a.png'));
+    await shot(personB(v, w), path.join(dir, '4-personen-b.png'));
+  }
   const first = v.ingress.split(/(?<=\.)\s/)[0];
   const md = `# Instagram vecka ${wk}, ${year}
 
@@ -129,13 +158,13 @@ Veckans verk: ${w.t}${v.hook ? ` – ${v.hook.toLowerCase()}` : ''}
 
 ${first}
 
-Nummer ${v.nr} i Svenska Kulturkanon, sidan ${v.bokSida}–${v.bokSida + 1}. Läs mer och beställ boken via länken i bion.
+Nummer ${v.nr} i Svenska Kulturkanon, sidan ${v.bokSida}–${v.bokSida + 1}. Läs mer och beställ boken via länken i bion. @svenskakulturkanon
 
 Bild: ${v.credit}
 
 ${tags(w)}
 
-${qs.map((q, i) => `## ${i === 0 ? 'Onsdag' : 'Fredag'} – Kanonquiz ${i + 1} (karusell: ${i + 2}-quiz-${i + 1}-fraga, svar)
+${qs.map((q, i) => `## ${i === 0 ? 'Onsdag' : 'Lördag'} – Kanonquiz ${i + 1} (karusell: ${i + 2}-quiz-${i + 1}-fraga, svar)
 
 Kanonquiz, svår nivå: ${q[0]}
 
@@ -144,7 +173,17 @@ A ${q[1][0]} · B ${q[1][1]} · C ${q[1][2]} · D ${q[1][3]}
 Skriv ditt svar i kommentarerna och svep för facit. Tio nya frågor varje gång på svenskakulturkanon.se.
 
 #kanonquiz #svenskakulturkanon #kulturkanon #quiz #allmänbildning
-`).join('\n')}`;
+`).join('\n')}${v.person ? `
+## Fredag – Personen bakom verket (karusell: 4-personen-a, b)
+
+${v.person.namn} (${v.person.levde}) – ${v.person.roll.toLowerCase()} och personen bakom ${w.t}.
+
+${v.person.text}
+
+Nummer ${v.nr} i Svenska Kulturkanon. Läs mer på svenskakulturkanon.se – länk i bion.
+
+${tags(w)} #personligheter
+` : ''}`;
   fs.writeFileSync(path.join(dir, 'texter.md'), md);
   console.log(`Vecka ${wk}: ${w.t} + ${qs.length} quiz`);
 }
