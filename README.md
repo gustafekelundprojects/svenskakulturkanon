@@ -21,7 +21,8 @@ Lägg till en vecka i `VECKOR` i `data/kanon.js`:
 ```js
 { "vecka": 47, "ar": 2026, "nr": "6", "hook": "Frihet utan tillstånd.",
   "credit": "Astrid Lindgren, cirka 1960. Foto: okänd. Public domain.",
-  "quiz": ["Elsa Beskows", "Barnets århundrade"], "bokSida": 26, "ingress": "…" }
+  "quiz": ["Elsa Beskows", "Barnets århundrade"], "bokSida": 26, "ingress": "…",
+  "person": { "namn": "Astrid Lindgren", "levde": "1907–2002", "roll": "Författare", "text": "…" } }
 ```
 
 `quiz` är sökord som matchar två frågor i `QUIZ`. Sajten visar automatiskt den vecka som gäller.
@@ -34,7 +35,7 @@ npx playwright install chromium
 node instagram/render.mjs 47
 ```
 
-Resultat i `instagram/vecka-47/`: en karusell för Veckans verk (3 bilder), två quizkaruseller (fråga + svar) och `texter.md` med bildtexter och hashtags. Förslag på publicering: veckans verk måndag, quiz onsdag och fredag.
+Resultat i `instagram/vecka-47/`: en karusell för Veckans verk (3 bilder), två quizkaruseller (fråga + svar), en karusell Personen bakom verket (2 bilder) och `texter.md` med bildtexter och hashtags. Publicering: veckans verk måndag, quiz onsdag, personen fredag, quiz lördag. Lägg gärna ett porträtt i `images/personer/<nr>.jpg` – då kommer det med på personkortet.
 
 ## QR-koder
 

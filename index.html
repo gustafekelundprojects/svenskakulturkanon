@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,6 +8,7 @@
 <meta property="og:description" content="100 verk som skapade Sverige – en coffee table-bok om den svenska kulturkanonen.">
 <meta property="og:image" content="https://svenskakulturkanon.se/images/omslag.jpg">
 <meta name="theme-color" content="#F3F1ED">
+<meta name="color-scheme" content="light">
 <title>Svenska Kulturkanon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -225,6 +226,27 @@ ol.tl span{font-size:.98rem}
   .fgrid{grid-template-columns:1fr 1fr;gap:24px}
 }
 @media (max-width:380px){.brand{font-size:.7rem;letter-spacing:.1em}.mbuy{padding:8px 9px}}
+.carousel{display:grid;gap:12px}
+.ctop{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cnav{display:flex;align-items:center;gap:10px}
+.cbtn{width:42px;height:42px;border:1px solid var(--navy);background:transparent;color:var(--navy);font-size:1.5rem;line-height:1;cursor:pointer;font-family:var(--f-body)}
+.cbtn:hover{background:var(--navy);color:var(--on-navy)}
+.ccount{font-size:.85rem;letter-spacing:.12em;color:var(--ink-2);min-width:3.2em;text-align:center}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;margin:0;border:1px solid var(--rule);background:var(--sheet)}
+.slide img{display:block;width:100%;height:auto}
+.slide figcaption{font-size:.85rem;color:var(--ink-2);font-style:italic;padding:10px 4px 6px}
+.dots{display:flex;justify-content:center;gap:8px}
+.dots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--copper-ink);background:transparent;padding:0;cursor:pointer}
+.dots button[aria-selected="true"]{background:var(--copper-ink)}
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.iggrid a{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--sheet);position:relative}
+.iggrid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.iggrid a:hover img{transform:scale(1.03)}
+.iggrid span{position:absolute;left:8px;bottom:6px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.igcta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.igcta .handle{font-family:var(--f-display);font-size:1.6rem;color:var(--navy)}
 </style>
 </head>
 <body>
@@ -239,7 +261,7 @@ ol.tl span{font-size:.98rem}
       <a href="#verken">Verken</a>
       <a href="#veckans">Veckans verk</a>
       <a href="#quiz">Quiz</a>
-      <a href="#foretag">Företag &amp; gåvor</a>
+      <a href="#foretag">Gåvor &amp; storköp</a>
       <a href="#bestall" class="buy">Beställ</a>
     </nav>
   </div>
@@ -279,7 +301,7 @@ ol.tl span{font-size:.98rem}
   <div class="three">
     <a class="nr" href="#veckans" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
     <a class="nr" href="#quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio slumpade frågor om bokens verk.</span></a>
-    <a class="nr" href="#foretag" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Företag &amp; institutioner</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
+    <a class="nr" href="#foretag" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Gåvor <i>och</i> storköp</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
   </div>
 </section>
 
@@ -340,7 +362,17 @@ ol.tl span{font-size:.98rem}
 <section class="page" id="verken" hidden>
   <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, hundra verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
   <div class="avsnitt" id="avsnitt"></div>
-  <figure class="spread" style="margin:0"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" loading="lazy"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
+  <div class="carousel" id="uppslag" aria-roledescription="karusell" aria-label="Uppslag ur boken">
+    <div class="ctop"><span class="label">Uppslag <i>ur</i> boken</span><span class="cnav"><button type="button" class="cbtn" data-d="-1" aria-label="Föregående uppslag">‹</button><span class="ccount" aria-live="polite">1 / 5</span><button type="button" class="cbtn" data-d="1" aria-label="Nästa uppslag">›</button></span></div>
+    <div class="track" tabindex="0">
+      <figure class="slide"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" loading="lazy"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-37.jpg" alt="Uppslag ur boken: nummer 37, Det sjunde inseglet, med bild från inspelningen." width="1600" height="1000" loading="lazy"><figcaption>Nummer 37 · Det sjunde inseglet av Ingmar Bergman</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-86.jpg" alt="Uppslag ur boken: nummer 86, Göta kanal, med en kanalbåt på akvedukten." width="1600" height="1000" loading="lazy"><figcaption>Nummer 86 · Göta kanal av Baltzar von Platen</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-98.jpg" alt="Uppslag ur boken: nummer 98, Vasaloppet, med åkare i spåret." width="1600" height="1000" loading="lazy"><figcaption>Nummer 98 · Vasaloppet av Anders Pers och IFK Mora</figcaption></figure>
+    </div>
+    <div class="dots" role="tablist"></div>
+  </div>
 </section>
 
 <!-- VECKANS -->
@@ -350,14 +382,15 @@ ol.tl span{font-size:.98rem}
     <div class="col measure">
       <p id="vv-ingress"></p>
       <div class="rule-top col"><span class="label">I boken</span><p id="vv-place"></p></div>
-      <form class="f" id="nl" novalidate>
-        <span class="label">Få veckans verk i din inkorg</span>
-        <div class="field"><label for="nl-mail">E-post</label><input id="nl-mail" type="email" placeholder="namn@exempel.se" required></div>
-        <button class="btn solid" type="submit">Prenumerera</button>
-        <p class="done" id="nl-done" hidden>Tack. Utkast: anmälan kopplas till nyhetsbrevet när sajten går live.</p>
-      </form>
+      <div class="rule-top col"><span class="label">Följ veckans verk</span><p>Varje vecka på Instagram: veckans verk på måndagen, kanonquiz på onsdagen och lördagen och personen bakom verket på fredagen.</p><p><a class="btn solid" href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">@svenskakulturkanon på Instagram</a></p></div>
     </div>
     <figure class="spread" style="margin:0;align-self:start;max-width:480px;justify-self:center"><img id="vv-img" src="" alt="" width="1080" height="1350" loading="lazy"><figcaption id="vv-credit"></figcaption></figure>
+  </div>
+  <div class="col rule-top">
+    <div class="igcta"><div><span class="label">Instagram</span><div class="handle">@svenskakulturkanon</div></div><a class="btn" href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Följ oss</a></div>
+    <!-- Instagram-flöde: klistra in widgetkod (t.ex. Behold eller LightWidget) i #ig-widget. Utan widget visas veckornas verk nedan. -->
+    <div id="ig-widget"></div>
+    <div class="iggrid" id="ig-grid"></div>
   </div>
   <div class="col"><span class="label">Kommande veckor</span><div class="three" id="vv-next"></div></div>
 </section>
@@ -374,9 +407,8 @@ ol.tl span{font-size:.98rem}
   <div class="shop">
     <div class="two" style="gap:20px">
       <div class="product feat" data-id="std" data-price="695"><span class="label">Första upplagan</span><h3>Svenska Kulturkanon</h3><p>Inbunden, 272 sidor, 240 × 300 mm. Med tryckta försättsblad i marmormönster.</p><span class="price">695 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
-      <div class="product" data-id="sig" data-price="795"><span class="label">Begränsad</span><h3>Signerat exemplar</h3><p>Signerat av Gustaf Ekelund och Agneta Norlin. Ett litet antal ur första upplagan.</p><span class="price">795 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
       <div class="product" data-id="gift" data-price="745"><span class="label">Present</span><h3>Presentförpackning</h3><p>Boken inslagen i silkespapper, med ett tryckt gåvokort och din hälsning.</p><span class="price">745 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
-      <div class="product"><span class="label">Från 10 ex</span><h3>Företag &amp; institutioner</h3><p>Mängdpris, tryckt hälsning och leverans till en adress.</p><a class="btn" href="#foretag">Begär offert</a></div>
+      <div class="product"><span class="label">Från 25 ex</span><h3>Storköp</h3><p>Rabatt för företag, skolor och föreningar. Tryckt hälsning och leverans till en adress.</p><a class="btn" href="#foretag">Begär offert</a></div>
     </div>
     <aside class="cart" aria-label="Varukorg">
       <h3>Varukorg</h3>
@@ -392,11 +424,11 @@ ol.tl span{font-size:.98rem}
 
 <!-- FÖRETAG -->
 <section class="page" id="foretag" hidden>
-  <div class="head"><span class="label">Företag <i>och</i> institutioner</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster.</p></div>
+  <div class="head"><span class="label">Gåvor <i>och</i> storköp</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster – och ett referensverk för skolor, bibliotek och föreningar.</p></div>
   <div class="two">
     <div class="col">
       <div class="three" style="gap:18px">
-        <div class="col rule-top"><h3>Mängdpris</h3><p>Rabatt från 10 exemplar, stigande med volym.</p></div>
+        <div class="col rule-top"><h3>Mängdpris</h3><p>Rabatt från 25 exemplar, stigande med volym.</p></div>
         <div class="col rule-top"><h3>Egen hälsning</h3><p>Tryckt kort eller exlibris med er logotyp.</p></div>
         <div class="col rule-top"><h3>Leverans</h3><p>Till en adress eller direkt till mottagarna.</p></div>
       </div>
@@ -406,7 +438,7 @@ ol.tl span{font-size:.98rem}
       <div class="field"><label for="o-org">Organisation</label><input id="o-org" required></div>
       <div class="field"><label for="o-name">Kontaktperson</label><input id="o-name" required></div>
       <div class="field"><label for="o-mail">E-post</label><input id="o-mail" type="email" required></div>
-      <div class="field"><label for="o-qty">Ungefärligt antal</label><select id="o-qty"><option>10–24</option><option>25–49</option><option>50–99</option><option>100 eller fler</option></select></div>
+      <div class="field"><label for="o-qty">Ungefärligt antal</label><select id="o-qty"><option>25–49</option><option>50–99</option><option>100 eller fler</option></select></div>
       <div class="field"><label for="o-msg">Önskemål</label><textarea id="o-msg" rows="4" placeholder="Leveransdatum, tryckt hälsning, adresser"></textarea></div>
       <button class="btn solid" type="submit">Skicka förfrågan</button>
       <p class="done" id="o-done" hidden>Utkast: formuläret kopplas till info@svenskakulturkanon.se när sajten går live.</p>
@@ -487,9 +519,8 @@ ol.tl span{font-size:.98rem}
 <footer class="site"><div class="wrap">
   <div class="fgrid">
     <div class="fcol"><span class="label">Boken</span><a href="#om">Om boken</a><a href="#verken">Verken</a><a href="#veckans">Veckans verk</a><a href="#bestall">Beställ</a><a href="#rattelser">Rättelser</a></div>
-    <div class="fcol"><span class="label">För yrkesfolk</span><a href="#press">Press</a><a href="#press">Återförsäljare</a><a href="#foretag">Företag &amp; gåvor</a><a href="#kontakt">Kontakt</a></div>
-    <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <form class="fnl" id="fnl" novalidate><label for="fnl-mail">Veckans verk via e-post</label><div><input id="fnl-mail" type="email" placeholder="namn@exempel.se" required><button type="submit" class="btn solid">OK</button></div><p class="done" id="fnl-done" hidden>Tack! (Utkast: kopplas till nyhetsbrevet.)</p></form></div>
+    <div class="fcol"><span class="label">För yrkesfolk</span><a href="#press">Press</a><a href="#press">Återförsäljare</a><a href="#foretag">Gåvor &amp; storköp</a><a href="#kontakt">Kontakt</a></div>
+    <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Instagram · @svenskakulturkanon</a><a href="#veckans">Veckans verk</a><a href="#quiz">Kanonquiz</a></div>
     <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="#villkor">Köpvillkor</a><a href="#integritet">Integritetspolicy</a></div>
   </div>
   <div class="fbase"><span>© 2026 Gustaf Ekelund och Agneta Norlin · Kaffeförlaget AB</span><span class="draft">Utkast · oktober 2026</span></div>
@@ -527,7 +558,6 @@ document.getElementById('avsnitt').innerHTML=AV.map(function(a,i){
   return '<details class="av" id="av-'+i+'"><summary><span class="glyph">'+roman[i]+'</span><h3>'+a[1]+'</h3><span class="intro">'+a[2]+' '+(a[1]==='Litteratur – dikter'?'Verk nummer 10: en antologi med tio dikter.':a[3].length+' verk.')+'</span><span class="more">'+(i===0?'':'')+'</span></summary><ol>'+
    a[3].map(function(w){return '<li><span>'+w[0]+'</span><span>'+w[1]+(w[2]?'<br><em>'+w[2]+'</em>':'')+'</span></li>'}).join('')+'</ol></details>';
 }).join('');
-document.getElementById('av-0').open=true;
 
 
 // ---------- veckans verk ----------
@@ -548,9 +578,13 @@ el('vv-credit').textContent=cw.credit;
 el('vv-card-nr').textContent=cw.nr;el('vv-card-title').textContent=info.t;el('vv-card-by').textContent=info.by;el('vv-card-label').textContent='Veckans verk · vecka '+cw.vecka;
 el('vv-next').innerHTML=V.filter(function(v){return v.ar*100+v.vecka>cw.ar*100+cw.vecka}).slice(0,3).map(function(v){var i=all[v.nr]||{};return '<div class="nr"><span class="n"><small>NUMMER</small>'+v.nr+'</span><span class="label">Vecka '+v.vecka+'</span><h4>'+i.t+'</h4><span class="by">'+(i.by||'')+'</span></div>'}).join('')||'<p class="note">Fler veckor läggs till löpande.</p>';
 
+// ---------- instagram-rutnät ----------
+if(!el('ig-widget').innerHTML.trim()){var past=V.filter(function(v){return v.ar*100+v.vecka<=cw.ar*100+cw.vecka}).reverse().slice(0,6);
+el('ig-grid').innerHTML=past.map(function(v){var i=all[v.nr]||{};return '<a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener" aria-label="'+(i.t||'')+' på Instagram"><img src="images/verk/'+v.nr.replace('.','-')+'.jpg" alt="" loading="lazy"><span>Vecka '+v.vecka+'</span></a>'}).join('')}
+
 // ---------- shop ----------
 var cart={};
-var names={std:'Svenska Kulturkanon',sig:'Signerat exemplar',gift:'Presentförpackning'};
+var names={std:'Svenska Kulturkanon',gift:'Presentförpackning'};
 function kr(n){return n.toLocaleString('sv-SE')+' kr'}
 document.querySelectorAll('.product[data-id]').forEach(function(p){
   var id=p.dataset.id,price=+p.dataset.price,out=p.querySelector('output'),b=p.querySelectorAll('.qty button');
@@ -567,7 +601,15 @@ function draw(){
   document.getElementById('cart-total').textContent=kr(sum+ship);
 }
 document.getElementById('checkout').addEventListener('click',function(){document.getElementById('checkout-note').hidden=false});
-[['nl','nl-done'],['offert','o-done'],['fnl','fnl-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
+// ---------- karusell ----------
+(function(){var c=document.getElementById('uppslag');if(!c)return;var tr=c.querySelector('.track'),sl=tr.children,n=sl.length,cnt=c.querySelector('.ccount'),dots=c.querySelector('.dots'),cur=0;
+for(var k=0;k<n;k++){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-label','Uppslag '+(k+1));(function(k){b.addEventListener('click',function(){go(k)})})(k);dots.appendChild(b)}
+function mark(i){cur=i;cnt.textContent=(i+1)+' / '+n;[].forEach.call(dots.children,function(d,j){d.setAttribute('aria-selected',j===i?'true':'false')})}
+function go(i){i=(i+n)%n;tr.scrollTo({left:sl[i].offsetLeft-tr.offsetLeft,behavior:'smooth'});mark(i)}
+c.querySelectorAll('.cbtn').forEach(function(b){b.addEventListener('click',function(){go(cur+Number(b.dataset.d))})});
+tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+var t;tr.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){mark(Math.round(tr.scrollLeft/tr.clientWidth))},80)});mark(0)})();
+[['offert','o-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
 
 // ---------- quiz ----------
 var Q=window.KANON.QUIZ;
