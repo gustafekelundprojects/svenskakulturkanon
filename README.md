@@ -6,7 +6,7 @@ Statisk webbplats för boken *Svenska Kulturkanon – 100 verk som skapade Sveri
 
 ```
 index.html            Startsidan och mallen för alla sidor
-*.html, verken/        Egna sidor, byggda med build.mjs (se nedan)
+*.html                Egna sidor, byggda med build.mjs (se nedan)
 build.mjs             Bygger sidorna, sitemap och QR-regler
 data/kanon.js         All data: avsnitt och verk, kapitelinledningar och verkbeskrivningar ur boken, quizfrågor, veckans verk
 images/               Omslag, marmorpapper och uppslag ur boken
@@ -41,13 +41,15 @@ Resultat i `instagram/vecka-47/`: en karusell för Veckans verk (3 bilder), två
 
 ## Sidor och adresser
 
+Alla sidor och nya bilder ligger direkt i roten (inga nya undermappar). Miljöbilderna heter `miljo-*.jpg`.
+
 Varje sida är en egen HTML-fil med egen titel, beskrivning, delningsbild-text och kanonisk adress. Innehållet finns i filen, så sidorna fungerar även utan JavaScript och kan indexeras av Google.
 
 ```
 index.html                    /                     Startsida
 om-boken.html                 /om-boken
 verken.html                   /verken               Alla elva avsnitt
-verken/<avsnitt>.html         /verken/musik         Kapitelinledning och alla verk i avsnittet
+verken-<avsnitt>.html         /verken-musik         Kapitelinledning och alla verk i avsnittet
 veckans-verk.html             /veckans-verk
 quiz.html                     /quiz
 bestall.html                  /bestall
@@ -67,7 +69,7 @@ sitemap.xml, robots.txt       för sökmotorer
 node build.mjs
 ```
 
-Skriptet skriver om alla sidfiler, `sitemap.xml` och QR-reglerna i `vercel.json`. Ladda sedan upp alla ändrade filer. Ändra inte i `om-boken.html`, `verken/musik.html` osv. direkt – de skrivs över nästa gång skriptet körs. Sidtitlar och beskrivningar för sökmotorer ändras i listan `pages` överst i `build.mjs`.
+Skriptet skriver om alla sidfiler, `sitemap.xml` och QR-reglerna i `vercel.json`. Ladda sedan upp alla ändrade filer. Ändra inte i `om-boken.html`, `verken-musik.html` osv. direkt – de skrivs över nästa gång skriptet körs. Sidtitlar och beskrivningar för sökmotorer ändras i listan `pages` överst i `build.mjs`.
 
 ## QR-koder
 

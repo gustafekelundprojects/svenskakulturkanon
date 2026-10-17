@@ -1,5 +1,5 @@
 // Bygger egna sidor för svenskakulturkanon.se från index.html (mallen) och data/kanon.js.
-// Körs: node build.mjs   – skriver om-boken.html, verken.html, verken/<avsnitt>.html, …,
+// Körs: node build.mjs   – skriver om-boken.html, verken.html, verken-<avsnitt>.html, …,
 // 404.html, sitemap.xml och QR-reglerna i vercel.json.
 // Ändra alltid i index.html eller data/kanon.js och kör sedan om skriptet.
 import fs from 'node:fs';
@@ -49,13 +49,13 @@ function kapitelHtml(a, i) {
       const b = K.BESKRIVNING[w[0]] || {};
       return `<li id="verk-${w[0].replace('.', '-')}"><span class="n"><small>NUMMER</small>${esc(w[0])}</span><span class="hitlabel">Du skannade det här verket</span><h3>${esc(w[1])}</h3>${w[2] ? `<span class="by">${esc(w[2])}</span>` : ''}${b.text ? `<p>${esc(b.text)}</p>` : ''}${b.sida ? `<span class="sida">Sidan ${b.sida} i boken</span>` : ''}</li>`;
     }).join(''),
-    prev: [`/verken/${slugOf(pv)}`, `← ${esc(pv[1])}`],
-    next: [`/verken/${slugOf(nx)}`, `${esc(nx[1])} →`],
+    prev: [`/verken-${slugOf(pv)}`, `← ${esc(pv[1])}`],
+    next: [`/verken-${slugOf(nx)}`, `${esc(nx[1])} →`],
   };
 }
 AV.forEach((a, i) => {
   const kap = K.KAPITEL[a[1]];
-  pages.push({ file: `verken/${kap.slug}.html`, path: `/verken/${kap.slug}`, id: 'kapitel', nav: '/verken', title: a[1],
+  pages.push({ file: `verken-${kap.slug}.html`, path: `/verken-${kap.slug}`, id: 'kapitel', nav: '/verken', title: a[1],
     desc: `${a[1]} i Svenska Kulturkanon: ${a[2]} ${a[3].map(w => w[1]).slice(0, 4).join(', ')} med flera.`, kapitel: kapitelHtml(a, i) });
 });
 
@@ -68,6 +68,8 @@ function build(pg) {
   sub(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(pg.desc)}">${pg.noindex ? '\n<meta name="robots" content="noindex">' : ''}`);
   sub(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(full)}">`);
   sub(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(pg.desc)}">`);
+  const OG = { start: 'bokhylla', om: 'gustaviansk', verken: 'soffbord', kapitel: 'soffbord', bestall: 'lasning', foretag: 'julklapp', veckans: 'lasning', quiz: 'bokhylla' };
+  sub(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${SITE}/${OG[pg.id] ? 'miljo-' + OG[pg.id] + '-dela.jpg' : 'images/omslag.jpg'}">`);
   sub(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
   sub(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
   // visa rätt sektion utan JavaScript
@@ -103,10 +105,12 @@ fs.writeFileSync(path.join(root, 'robots.txt'), `User-agent: *\nAllow: /\nSitema
 // vercel.json: QR- och verkadresser pekar på rätt avsnittssida
 const vpath = path.join(root, 'vercel.json');
 const vj = JSON.parse(fs.readFileSync(vpath, 'utf8'));
-const special = new Set((vj.redirects || []).map(r => r.source));
+const special = new Set((vj.redirects || []).filter(r => r.source.startsWith('/qr/')).map(r => r.source));
 vj.rewrites = [];
+vj.redirects = (vj.redirects || []).filter(r => !r.source.startsWith('/verken/'));
+AV.forEach(a => vj.redirects.push({ source: `/verken/${slugOf(a)}`, destination: `/verken-${slugOf(a)}`, permanent: false }));
 AV.forEach(a => a[3].forEach(w => {
-  const nr = w[0].replace('.', '-'), dest = `/verken/${slugOf(a)}.html`;
+  const nr = w[0].replace(".", "-"), dest = `/verken-${slugOf(a)}`;
   if (!special.has(`/qr/${nr}`)) vj.rewrites.push({ source: `/qr/${nr}`, destination: dest });
   vj.rewrites.push({ source: `/verk/${nr}`, destination: dest });
   if (w[0].includes('.')) vj.rewrites.push({ source: `/verk/${w[0]}`, destination: dest });

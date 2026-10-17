@@ -278,6 +278,12 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 .knav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:18px;font-size:.9rem;letter-spacing:.06em}
 .knav a{color:var(--navy);text-decoration:none}
 .knav a:hover{color:var(--copper-ink)}
+html,body{overflow-x:clip}
+.page{grid-template-columns:minmax(0,1fr)}
+.photo{margin:-48px 0 0;width:100vw;max-width:none;justify-self:center;aspect-ratio:21/9;max-height:78vh;overflow:hidden;background:var(--tint)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50%) 55%}
+@media (max-width:860px){.photo{margin-top:-28px;aspect-ratio:4/3}}
+@media (max-width:520px){.photo{aspect-ratio:1/1}}
 </style>
 </head>
 <body data-page="integritet">
@@ -302,6 +308,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 
 <!-- START -->
 <section class="page" id="start" hidden>
+  <figure class="photo hero-photo" style="--pos:34%"><img src="miljo-bokhylla.jpg" srcset="miljo-bokhylla-960.jpg 960w, miljo-bokhylla.jpg 1916w" sizes="100vw" alt="Svenska Kulturkanon uppställd i en bokhylla med skinnband i ett klassiskt Stockholmsbibliotek, kvällsljus och utsikt över vattnet." width="1916" height="821" fetchpriority="high" decoding="async"></figure>
   <div class="hero">
     <div class="lockup">
       <span class="label">Lista <i>över</i> viktiga verk,</span>
@@ -338,6 +345,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 
 <!-- OM BOKEN -->
 <section class="page" id="om" hidden>
+  <figure class="photo" style="--pos:55%"><img src="miljo-gustaviansk.jpg" srcset="miljo-gustaviansk-960.jpg 960w, miljo-gustaviansk.jpg 1916w" sizes="100vw" alt="Boken på ett gustavianskt soffbord i ljust sommarljus, med tennljusstake och en skål äpplen." width="1916" height="821" loading="lazy" decoding="async"></figure>
   <div class="head"><span class="label">Om boken</span><h2>En kulturkanon för Sverige</h2><p class="lede">Frågan om en svensk kulturkanon har länge rört sig i gränslandet mellan kulturpolitik, bildning och identitet.</p></div>
   <div class="two">
     <div class="col measure">
@@ -391,6 +399,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 
 <!-- VERKEN -->
 <section class="page" id="verken" hidden>
+  <figure class="photo" style="--pos:45%"><img src="miljo-soffbord.jpg" srcset="miljo-soffbord-960.jpg 960w, miljo-soffbord.jpg 1916w" sizes="100vw" alt="Boken på ett soffbord i valnöt framför en soffa i blommigt Josef Frank-tyg." width="1916" height="821" loading="lazy" decoding="async"></figure>
   <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, hundra verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
   <div class="avsnitt" id="avsnitt"></div>
   <div class="carousel" id="uppslag" aria-roledescription="karusell" aria-label="Uppslag ur boken">
@@ -449,6 +458,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 
 <!-- BESTÄLL -->
 <section class="page" id="bestall" hidden>
+  <figure class="photo" style="--pos:62%"><img src="miljo-lasning.jpg" srcset="miljo-lasning-960.jpg 960w, miljo-lasning.jpg 1916w" sizes="100vw" alt="En kvinna läser Svenska Kulturkanon i en fåtölj vid kakelugnen i en sekelskiftesvåning." width="1916" height="821" loading="lazy" decoding="async"></figure>
   <div class="head"><span class="label">Beställ</span><h2>Beställ boken</h2><p class="lede">Första upplagan levereras i december 2026. Sista beställningsdag för leverans före jul meddelas här.</p></div>
   <div class="shop">
     <div class="two" style="gap:20px">
@@ -470,6 +480,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 
 <!-- FÖRETAG -->
 <section class="page" id="foretag" hidden>
+  <figure class="photo" style="--pos:52%"><img src="miljo-julklapp.jpg" srcset="miljo-julklapp-960.jpg 960w, miljo-julklapp.jpg 1916w" sizes="100vw" alt="Boken som julklapp, uppackad ur silkespapper med kopparband på ett långbord med tennljusstakar." width="1916" height="821" loading="lazy" decoding="async"></figure>
   <div class="head"><span class="label">Företagsgåva</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster – och ett referensverk för skolor, bibliotek och föreningar.</p></div>
   <div class="two">
     <div class="col">
@@ -598,7 +609,7 @@ function showPage(id,navKey){
 }
 function route(){
   var path=location.pathname.replace(/\/+$/,'')||'/', m;
-  if((m=path.match(/^\/verken\/([a-z-]+)$/))&&renderKapitel(m[1],null)){showPage('kapitel','/verken');return}
+  if((m=path.match(/^\/verken[\/-]([a-z-]+)$/))&&renderKapitel(m[1],null)){showPage('kapitel','/verken');return}
   if((m=path.match(/^\/(?:verk|qr)\/(\d+(?:[.-]\d+)?)$/))){var nr=m[1].replace('-','.');document.body.toggleAttribute('data-qr',path.indexOf('/qr/')===0);var sl=slugFor(nr);if(sl&&renderKapitel(sl,nr)){showPage('kapitel','/verken');return}}
   var id=PATHS[path]||(document.body.dataset.page||'saknas');
   showPage(id);setTitle(TITLES[id],id);window.scrollTo({top:0,behavior:'instant'});
@@ -615,7 +626,7 @@ function slugFor(nr){for(var i=0;i<AV.length;i++){if(AV[i][3].some(function(w){r
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function count(a){return a[1]==='Litteratur – dikter'?'Verk nummer 10: en antologi med tio dikter.':a[3].length+' verk.'}
 document.getElementById('avsnitt').innerHTML=AV.map(function(a,i){
-  return '<a class="avcard" href="/verken/'+slugOf(a)+'"><span class="glyph">'+roman[i]+'</span><h3>'+esc(a[1])+'</h3><span class="intro">'+esc(a[2])+' '+count(a)+'</span><span class="more">Läs om verken →</span></a>';
+  return '<a class="avcard" href="/verken-'+slugOf(a)+'"><span class="glyph">'+roman[i]+'</span><h3>'+esc(a[1])+'</h3><span class="intro">'+esc(a[2])+' '+count(a)+'</span><span class="more">Läs om verken →</span></a>';
 }).join('');
 function renderKapitel(slug,hit){
   var i=-1;AV.forEach(function(a,j){if(slugOf(a)===slug)i=j});if(i<0)return false;
@@ -627,8 +638,8 @@ function renderKapitel(slug,hit){
   el('k-intro').innerHTML=kap.text.map(function(t){return '<p>'+esc(t)+'</p>'}).join('');
   el('k-list').innerHTML=a[3].map(function(w){var b=BESK[w[0]]||{};return '<li id="verk-'+w[0].replace('.','-')+'"'+(w[0]===hit?' class="hit"':'')+'><span class="n"><small>NUMMER</small>'+esc(w[0])+'</span><span class="hitlabel">Du skannade det här verket</span><h3>'+esc(w[1])+'</h3>'+(w[2]?'<span class="by">'+esc(w[2])+'</span>':'')+(b.text?'<p>'+esc(b.text)+'</p>':'')+(b.sida?'<span class="sida">Sidan '+b.sida+' i boken</span>':'')+'</li>'}).join('');
   var pv=AV[(i+AV.length-1)%AV.length],nx=AV[(i+1)%AV.length];
-  el('k-prev').href='/verken/'+slugOf(pv);el('k-prev').textContent='← '+pv[1];
-  el('k-next').href='/verken/'+slugOf(nx);el('k-next').textContent=nx[1]+' →';
+  el('k-prev').href='/verken-'+slugOf(pv);el('k-prev').textContent='← '+pv[1];
+  el('k-next').href='/verken-'+slugOf(nx);el('k-next').textContent=nx[1]+' →';
   var w=hit&&a[3].filter(function(x){return x[0]===hit})[0];
   setTitle(w?w[1]+' – '+a[1]:a[1],'kapitel');
   if(w){var go=function(){var li=document.getElementById('verk-'+hit.replace('.','-'));if(li)li.scrollIntoView({block:'start',behavior:'instant'})};requestAnimationFrame(go);setTimeout(go,350);if(document.readyState!=='complete')window.addEventListener('load',go,{once:true});if(document.fonts)document.fonts.ready.then(go)}else window.scrollTo({top:0,behavior:'instant'});
