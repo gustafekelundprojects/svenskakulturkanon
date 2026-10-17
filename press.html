@@ -17,9 +17,19 @@
 <meta property="og:locale" content="sv_SE">
 <meta name="twitter:card" content="summary_large_image">
 <script defer src="/_vercel/insights/script.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Book", "@id": "https://svenskakulturkanon.se/#bok", "name": "Svenska Kulturkanon – 100 verk som skapade Sverige", "isbn": "978-91-992191-0-3", "bookFormat": "https://schema.org/Hardcover", "numberOfPages": 272, "inLanguage": "sv", "datePublished": "2026-12", "image": "https://svenskakulturkanon.se/images/omslag.jpg", "url": "https://svenskakulturkanon.se/", "description": "Hela den svenska kulturkanonen enligt SOU 2025:92 i en bok – 100 verk i elva avsnitt, ett verk per uppslag.", "author": [{"@type": "Person", "name": "Gustaf Ekelund"}, {"@type": "Person", "name": "Agneta Norlin"}], "publisher": {"@id": "https://svenskakulturkanon.se/#forlag"}, "offers": {"@type": "Offer", "price": "695", "priceCurrency": "SEK", "availability": "https://schema.org/PreOrder", "url": "https://svenskakulturkanon.se/bestall", "seller": {"@id": "https://svenskakulturkanon.se/#forlag"}}}, {"@type": "Organization", "@id": "https://svenskakulturkanon.se/#forlag", "name": "Kaffeförlaget AB", "email": "info@svenskakulturkanon.se", "url": "https://svenskakulturkanon.se/", "sameAs": ["https://www.instagram.com/svenskakulturkanon/"], "address": {"@type": "PostalAddress", "addressLocality": "Lidingö", "addressCountry": "SE"}}]}</script>
+<link rel="preload" href="/font-eb-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/font-cg-500.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url("/font-cg-400.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url("/font-cg-500.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url("/font-cg-600.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url("/font-cg-400-i.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url("/font-cg-500-i.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400;font-display:swap;src:url("/font-eb-400.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:500;font-display:swap;src:url("/font-eb-500.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:600;font-display:swap;src:url("/font-eb-600.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400;font-display:swap;src:url("/font-eb-400-i.woff2") format("woff2")}
 /* Layout: the book translated to screen — spaced copper capitals on paper, navy display heads, a quarter-circle "NUMMER" tab per work, marbled endpaper as the one ornament. */
 :root{
   --paper:#F3F1ED; --sheet:#FBFAF7; --ink:#1D2433; --ink-2:#5D6270; --rule:#DAD5CC;
@@ -285,6 +295,7 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 html,body{overflow-x:clip}
 .page{grid-template-columns:minmax(0,1fr)}
 .photo{margin:-48px 0 0;width:100vw;max-width:none;justify-self:center;aspect-ratio:21/9;max-height:70vh;overflow:hidden;background:var(--tint)}
+.photo picture{display:contents}
 .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50%) 40%}
 @media (max-width:860px){.photo{margin-top:-28px;aspect-ratio:4/3}}
 @media (max-width:520px){.photo{aspect-ratio:1/1}}
@@ -336,10 +347,54 @@ html,body{overflow-x:clip}
 .mytop li{display:grid;grid-template-columns:2em 5em minmax(0,1fr) auto;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
 .mytop li span:first-child{font-family:var(--f-display);color:var(--copper-ink)}
 @media (max-width:520px){.result{grid-template-columns:1fr;gap:8px}.qmodes button{padding:10px 11px;font-size:.72rem}}
+.taxbox{background:var(--navy);color:var(--on-navy);padding:24px;display:grid;gap:10px}
+.taxbox .label{color:var(--copper)}
+.taxbox .big{font-family:var(--f-display);font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;margin:0}
+.taxbox .big small{font-family:var(--f-body);font-size:.9rem;letter-spacing:.04em}
+.taxbox p{margin:0}.taxbox .note{color:color-mix(in srgb,var(--on-navy) 80%,transparent)}
+.pricetab{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.pricetab caption{text-align:left;padding-bottom:8px}
+.pricetab th,.pricetab td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--rule)}
+.pricetab th{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.pricetab td:nth-child(2){font-family:var(--f-display);font-size:1.25rem;color:var(--navy)}
+.dates{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;margin:8px 0 0}
+.dates dd{margin:0;font-style:italic}
+.trust{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.95rem}
+.trust li::before{content:"✓ ";color:var(--ok);font-weight:600}
+.ship{border:1px solid color-mix(in srgb,var(--on-navy) 35%,transparent);padding:10px 12px;margin:0;display:grid;gap:6px}
+.ship legend{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:0 4px}
+.ship label{display:flex;gap:8px;align-items:center;font-size:.95rem}
+.ship label span{margin-left:auto;font-variant-numeric:tabular-nums}
+.pay{margin:0;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.carttrust{margin:0;font-size:.85rem;opacity:.85}
+.facts-list{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;margin:8px 0 0}
+.facts-list dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.facts-list dd{margin:0}
+.notify h3{font-size:1.5rem}
+.ideas{margin:0;padding-left:1.2em;display:grid;gap:10px}
+@media (max-width:520px){.facts-list{grid-template-columns:1fr}.facts-list dd{margin-bottom:6px}}
+.viewer{position:fixed;inset:0;z-index:100;background:rgba(14,20,36,.96);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:12px max(12px,env(safe-area-inset-left))}
+.viewer[hidden]{display:none}
+.vbar{display:flex;align-items:center;gap:16px;color:var(--on-navy,#F3F1ED);padding:4px 4px 10px}
+.vbar .label{color:#F3F1ED}
+.vcount{margin-left:auto;font-size:.85rem;letter-spacing:.12em;opacity:.8}
+.vclose{background:transparent;border:1px solid rgba(243,241,237,.5);color:#F3F1ED;width:42px;height:42px;font-size:1.6rem;cursor:pointer}
+.vstage{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;min-height:0}
+.vstage img{max-width:100%;max-height:100%;margin:auto;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.vnav{background:transparent;border:1px solid rgba(243,241,237,.5);color:#F3F1ED;width:46px;height:46px;font-size:1.8rem;cursor:pointer}
+.vnav:hover,.vclose:hover{background:rgba(243,241,237,.15)}
+.vhint{color:#F3F1ED;opacity:.6;text-align:center;font-size:.8rem;margin:8px 0 0}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--copper-ink);text-decoration:underline;cursor:pointer;letter-spacing:inherit;text-transform:inherit}
+@media (max-width:600px){.vstage{grid-template-columns:minmax(0,1fr)}.vnav{display:none}.vstage img{max-height:70vh}}
+:focus-visible{outline:2px solid var(--copper-ink);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--navy);color:var(--on-navy);padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
 </style>
 </head>
 <body data-page="press">
 
+<a class="skip" href="#innehall">Hoppa till innehållet</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/">Svenska Kulturkanon</a>
@@ -356,18 +411,18 @@ html,body{overflow-x:clip}
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="innehall" tabindex="-1">
 
 <!-- START -->
 <section class="page" id="start" hidden>
-  <figure class="photo hero-photo" style="--pos:34%"><img src="miljo-bokhylla.jpg" srcset="miljo-bokhylla-960.jpg 960w, miljo-bokhylla.jpg 1916w" sizes="100vw" alt="Svenska Kulturkanon uppställd i en bokhylla med skinnband i ett klassiskt Stockholmsbibliotek, kvällsljus och utsikt över vattnet." width="1916" height="821" fetchpriority="high" decoding="async"></figure>
+  <figure class="photo hero-photo" style="--pos:34%"><picture><source type="image/webp" srcset="miljo-bokhylla-960.webp 960w, miljo-bokhylla.webp 1916w" sizes="100vw"><img src="miljo-bokhylla.jpg" srcset="miljo-bokhylla-960.jpg 960w, miljo-bokhylla.jpg 1916w" sizes="100vw" alt="Svenska Kulturkanon uppställd i en bokhylla med skinnband i ett klassiskt Stockholmsbibliotek, kvällsljus och utsikt över vattnet." width="1916" height="821" fetchpriority="high" decoding="async"></picture></figure>
   <div class="hero">
     <div class="intro">
       <span class="label">Svenska Kulturkanon · <i>utkommer december 2026</i></span>
       <h1>100 verk som skapade Sverige</h1>
       <p class="lede">Sveriges första kulturkanon samlad i en bok – ett verk per uppslag, med texten om verket, människorna bakom och tiden det kom ur.</p>
       <p class="measure">Utredningen SOU 2025:92 valde ut hundra verk och företeelser i elva avsnitt: litteratur, poesi, musik, bild och form, film och scenkonst – men också lagar, uppfinningar, ekonomi, religion och offentliga rum. Från Heliga Birgittas uppenbarelser och Falu koppargruva till Det sjunde inseglet, Pippi Långstrump och pappaledigheten. En bok att bläddra i, läsa högt ur och ge bort.</p>
-      <div class="hero-cta"><a class="btn solid" href="/bestall">Beställ boken · 695 kr</a><a class="btn" href="/quiz">Testa dig själv</a></div>
+      <div class="hero-cta"><a class="btn solid" href="/bestall">Beställ boken · 695 kr</a><button type="button" class="btn" data-viewer>Bläddra i boken</button><a class="btn" href="/quiz">Testa dig själv</a></div>
     </div>
     <figure class="cover" style="margin:0"><img src="images/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
   </div>
@@ -381,20 +436,20 @@ html,body{overflow-x:clip}
       <h2>Ett verk <br>per uppslag</h2>
       <p class="lede">Från Magnus Erikssons landslag till Pippi Långstrump, från Falu koppargruva till Radiohuset. Hela den svenska kulturkanonen i en bok att bläddra i, läsa högt ur och ge bort.</p>
       <p class="measure">Varje uppslag presenterar ett verk eller en företeelse, människorna bakom och sammanhanget det kom ur. Texterna är korta och kan läsas utan förkunskaper. QR-koderna leder vidare till musiken, filmerna och dikterna i sin helhet.</p>
-      <p><a class="btn" href="/om-boken">Om boken</a></p>
+      <p><a class="btn" href="/om-boken">Om boken</a> <button type="button" class="btn" data-viewer>Bläddra i boken</button></p>
     </div>
     <figure class="spread" style="margin:0"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
   </div>
   <div class="three">
     <a class="nr" href="/veckans-verk" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
     <a class="nr" href="/quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio frågor, Dagens fem, tidslinjer och nummerfrågor.</span></a>
-    <a class="nr" href="/foretagsgava" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Företagsgåva</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
+    <a class="nr" href="/foretagsgava" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Företagsgåva</span><h4>Skattefri julgåva</h4><span class="by">595 kr från 25 exemplar – under gränsen för skattefri julgåva.</span></a>
   </div>
 </section>
 
 <!-- OM BOKEN -->
 <section class="page" id="om" hidden>
-  <figure class="photo" style="--pos:55%"><img src="miljo-gustaviansk.jpg" srcset="miljo-gustaviansk-960.jpg 960w, miljo-gustaviansk.jpg 1916w" sizes="100vw" alt="Boken på ett gustavianskt soffbord i ljust sommarljus, med tennljusstake och en skål äpplen." width="1916" height="821" loading="lazy" decoding="async"></figure>
+  <figure class="photo" style="--pos:55%"><picture><source type="image/webp" srcset="miljo-gustaviansk-960.webp 960w, miljo-gustaviansk.webp 1916w" sizes="100vw"><img src="miljo-gustaviansk.jpg" srcset="miljo-gustaviansk-960.jpg 960w, miljo-gustaviansk.jpg 1916w" sizes="100vw" alt="Boken på ett gustavianskt soffbord i ljust sommarljus, med tennljusstake och en skål äpplen." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
   <div class="head"><span class="label">Om boken</span><h2>En kulturkanon för Sverige</h2><p class="lede">Frågan om en svensk kulturkanon har länge rört sig i gränslandet mellan kulturpolitik, bildning och identitet.</p></div>
   <div class="two">
     <div class="col measure">
@@ -425,7 +480,6 @@ html,body{overflow-x:clip}
       <p class="note">Källa: SOU 2025:92 och regeringens kommittédirektiv. Läs hela betänkandet på <a href="https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/09/sou-202592/" target="_blank" rel="noopener">regeringen.se</a>.</p>
     </div>
   </div>
-  <blockquote class="quote rule-top" style="margin:0">"Jag tycker detta ser väldigt fint ut. Inga invändningar från min sida vad gäller er inledning och er tolkning av vad jag och utredningen landade i."<cite><span class="label">Lars Trägårdh</span><br><span style="color:var(--ink-2)">Historiker, ordförande för kulturkanonutredningen</span></cite></blockquote>
   <div class="two">
     <div class="col measure">
       <span class="label">Om den här boken</span>
@@ -437,22 +491,20 @@ html,body{overflow-x:clip}
       <p>Utredningen räknar diktantologin som ett verk, nummer 10, med tio dikter av lika många poeter. Boken presenterar därför 109 enskilda verk, vart och ett på ett eget uppslag.</p>
     </div>
     <div class="col">
-      <div class="col rule-top"><span class="label">Kuratorer</span><h3>Gustaf Ekelund</h3><p>Text och redaktion. Bakgrund i kommunikation för stora bolag och startups, med vana att göra komplex information begriplig.</p></div>
-      <div class="col rule-top"><span class="label">Kuratorer <i>och</i> formgivning</span><h3>Agneta Norlin</h3><p>Formgivning och layout. Lång erfarenhet av digitalt och print, från stora koncerner till startups.</p></div>
       <div class="col rule-top"><span class="label">Fakta</span><p>272 sidor · 240 × 300 mm<br>Inbunden, tryckta försättsblad<br>ISBN 978-91-992191-0-3<br>Kaffeförlaget AB, 2026</p></div>
       <div class="col rule-top"><span class="label">Om bokens redaktionella formuleringar</span><p style="font-size:.95rem">De korta formuleringar som förekommer på eller i anslutning till bilder är, om inte annat anges, redaktionella texter skrivna särskilt för boken. De är inte citat ur verken eller uttalanden av de personer som skildras. Direkta citat markeras och källanges särskilt.</p></div>
     </div>
   </div>
-  <p class="note">Källor: SOU 2025:92 samt offentliga intervjuer och samtal med Lars Trägårdh.</p>
+  <p class="note">Källor: SOU 2025:92 samt offentliga intervjuer med Lars Trägårdh.</p>
 </section>
 
 <!-- VERKEN -->
 <section class="page" id="verken" hidden>
-  <figure class="photo" style="--pos:45%"><img src="miljo-soffbord.jpg" srcset="miljo-soffbord-960.jpg 960w, miljo-soffbord.jpg 1916w" sizes="100vw" alt="Boken på ett soffbord i valnöt framför en soffa i blommigt Josef Frank-tyg." width="1916" height="821" loading="lazy" decoding="async"></figure>
+  <figure class="photo" style="--pos:45%"><picture><source type="image/webp" srcset="miljo-soffbord-960.webp 960w, miljo-soffbord.webp 1916w" sizes="100vw"><img src="miljo-soffbord.jpg" srcset="miljo-soffbord-960.jpg 960w, miljo-soffbord.jpg 1916w" sizes="100vw" alt="Boken på ett soffbord i valnöt framför en soffa i blommigt Josef Frank-tyg." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
   <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, hundra verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
   <div class="avsnitt" id="avsnitt"></div>
   <div class="carousel" id="uppslag" aria-roledescription="karusell" aria-label="Uppslag ur boken">
-    <div class="ctop"><span class="label">Uppslag <i>ur</i> boken</span><span class="cnav"><button type="button" class="cbtn" data-d="-1" aria-label="Föregående uppslag">‹</button><span class="ccount" aria-live="polite">1 / 5</span><button type="button" class="cbtn" data-d="1" aria-label="Nästa uppslag">›</button></span></div>
+    <div class="ctop"><span class="label">Uppslag <i>ur</i> boken · <button type="button" class="linkbtn" data-viewer>visa i helskärm</button></span><span class="cnav"><button type="button" class="cbtn" data-d="-1" aria-label="Föregående uppslag">‹</button><span class="ccount" aria-live="polite">1 / 5</span><button type="button" class="cbtn" data-d="1" aria-label="Nästa uppslag">›</button></span></div>
     <div class="track" tabindex="0">
       <figure class="slide"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" decoding="async"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
       <figure class="slide"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" decoding="async"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
@@ -512,48 +564,105 @@ html,body{overflow-x:clip}
 
 <!-- BESTÄLL -->
 <section class="page" id="bestall" hidden>
-  <figure class="photo" style="--pos:62%"><img src="miljo-lasning.jpg" srcset="miljo-lasning-960.jpg 960w, miljo-lasning.jpg 1916w" sizes="100vw" alt="En kvinna läser Svenska Kulturkanon i en fåtölj vid kakelugnen i en sekelskiftesvåning." width="1916" height="821" loading="lazy" decoding="async"></figure>
-  <div class="head"><span class="label">Beställ</span><h2>Beställ boken</h2><p class="lede">Första upplagan levereras i december 2026. Sista beställningsdag för leverans före jul meddelas här.</p></div>
+  <figure class="photo" style="--pos:62%"><picture><source type="image/webp" srcset="miljo-lasning-960.webp 960w, miljo-lasning.webp 1916w" sizes="100vw"><img src="miljo-lasning.jpg" srcset="miljo-lasning-960.jpg 960w, miljo-lasning.jpg 1916w" sizes="100vw" alt="En kvinna läser Svenska Kulturkanon i en fåtölj vid kakelugnen i en sekelskiftesvåning." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
+  <div class="head"><span class="label">Förhandsbeställ</span><h2>Beställ boken</h2><p class="lede">Första upplagan skickas i december 2026. Du betalar först när boken skickas.</p></div>
+  <ul class="trust"><li><b>Betala när boken skickas</b> – inga pengar dras vid beställningen</li><li><b>Swish, kort eller Klarna</b></li><li><b>Paketskåp, ombud eller hem</b></li><li><b>14 dagars ångerrätt</b></li></ul>
   <div class="shop">
     <div class="two" style="gap:20px">
       <div class="product feat" data-id="std" data-price="695"><span class="label">Första upplagan</span><h3>Svenska Kulturkanon</h3><p>Inbunden, 272 sidor, 240 × 300 mm. Med tryckta försättsblad i marmormönster.</p><span class="price">695 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
       <div class="product" data-id="gift" data-price="745"><span class="label">Present</span><h3>Presentförpackning</h3><p>Boken inslagen i silkespapper, med ett tryckt gåvokort och din hälsning.</p><span class="price">745 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
-      <div class="product"><span class="label">Från 25 ex</span><h3>Företagsgåva</h3><p>Rabatt för företag, skolor och föreningar. Tryckt hälsning och leverans till en adress.</p><a class="btn" href="/foretagsgava">Begär offert</a></div>
+      <div class="product"><span class="label">Från 25 ex</span><h3>Företagsgåva</h3><p>595 kr per bok – under gränsen för skattefri julgåva till anställda. Faktura, tryckt hälsning och leverans till flera adresser.</p><a class="btn" href="/foretagsgava">Se prislista</a></div>
     </div>
     <aside class="cart" aria-label="Varukorg">
       <h3>Varukorg</h3>
       <div id="cart-lines"><p style="opacity:.8">Inga böcker valda än.</p></div>
+      <fieldset class="ship"><legend>Leverans</legend>
+        <label><input type="radio" name="ship" value="49" checked> Paketskåp <span>49 kr</span></label>
+        <label><input type="radio" name="ship" value="59"> Ombud <span>59 kr</span></label>
+        <label><input type="radio" name="ship" value="99"> Hemleverans <span>99 kr</span></label>
+      </fieldset>
       <div class="row"><span>Frakt</span><span id="cart-ship">–</span></div>
       <div class="row total"><span>Totalt</span><span id="cart-total">0 kr</span></div>
       <button class="btn" type="button" id="checkout">Till kassan</button>
+      <p class="pay">Swish · Kort · Klarna</p>
+      <p class="carttrust">Fri frakt från tre böcker. Du betalar när boken skickas i december.</p>
       <p id="checkout-note" style="font-size:.85rem;opacity:.85" hidden>Utkast: kassan kopplas till webbshopen när den är vald.</p>
     </aside>
   </div>
-  <p class="note">Priserna är förslag och fastställs före lansering.</p>
+  <div class="two">
+    <form class="f notify" id="bevaka" novalidate>
+      <span class="label">Bevaka utgivningen</span>
+      <h3>Få ett mejl när boken kan beställas</h3>
+      <p>Ett enda mejl på lanseringsdagen, och ett när boken skickas. Inga nyhetsbrev.</p>
+      <div class="field"><label for="b-mail">E-post</label><input id="b-mail" type="email" autocomplete="email" required placeholder="namn@exempel.se"></div>
+      <button class="btn solid" type="submit">Bevaka</button>
+      <p class="done" id="b-done" hidden>Tack! Du får ett mejl när boken kan beställas.</p>
+    </form>
+    <div class="col rule-top">
+      <span class="label">Köpinformation</span>
+      <dl class="facts-list"><dt>Säljare</dt><dd>Kaffeförlaget AB, org.nr 559584-4852, Lidingö</dd><dt>Leverans</dt><dd>December 2026. Sista beställningsdag för leverans före jul meddelas i november.</dd><dt>Betalning</dt><dd>Swish, kort eller Klarna. Beloppet dras när boken skickas.</dd><dt>Ångerrätt</dt><dd>14 dagar från att du tagit emot boken, enligt distansavtalslagen. Se <a href="/kopvillkor">köpvillkor</a>.</dd><dt>Kontakt</dt><dd><a href="mailto:info@svenskakulturkanon.se">info@svenskakulturkanon.se</a></dd></dl>
+    </div>
+  </div>
+  <p class="note">Priser och fraktkostnader är förslag och fastställs före lansering.</p>
 </section>
 
 <!-- FÖRETAG -->
 <section class="page" id="foretag" hidden>
-  <figure class="photo" style="--pos:52%"><img src="miljo-julklapp.jpg" srcset="miljo-julklapp-960.jpg 960w, miljo-julklapp.jpg 1916w" sizes="100vw" alt="Boken som julklapp, uppackad ur silkespapper med kopparband på ett långbord med tennljusstakar." width="1916" height="821" loading="lazy" decoding="async"></figure>
-  <div class="head"><span class="label">Företagsgåva</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster – och ett referensverk för skolor, bibliotek och föreningar.</p></div>
+  <figure class="photo" style="--pos:52%"><picture><source type="image/webp" srcset="miljo-julklapp-960.webp 960w, miljo-julklapp.webp 1916w" sizes="100vw"><img src="miljo-julklapp.jpg" srcset="miljo-julklapp-960.jpg 960w, miljo-julklapp.jpg 1916w" sizes="100vw" alt="Boken som julklapp, uppackad ur silkespapper med kopparband på ett långbord med tennljusstakar." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
+  <div class="head"><span class="label">Företagsgåva</span><h2>Skattefri julgåva till medarbetarna</h2><p class="lede">Svenska Kulturkanon som gåva till medarbetare, kunder, styrelser och internationella gäster. Från 25 exemplar under Skatteverkets gräns för skattefri julgåva.</p></div>
   <div class="two">
     <div class="col">
+      <div class="taxbox"><span class="label">Julgåva 2026</span><p class="big">595 kr <small>per bok inkl. moms</small></p><p>En julgåva till anställda är skattefri upp till <b>600 kr inklusive moms</b> (Skatteverket, 2026). Med företagspriset ryms boken under gränsen – medarbetaren betalar ingen förmånsskatt och företaget kan dra av momsen.</p><p class="note">Gåvor till kunder och affärskontakter är avdragsgilla upp till 300 kr exklusive moms. Boken ges då som representation utan avdrag. Kontrollera alltid med er redovisning.</p></div>
+      <table class="pricetab"><caption class="label">Prislista för företag <i>och</i> organisationer</caption>
+        <thead><tr><th scope="col">Antal</th><th scope="col">Pris per bok</th><th scope="col">Exkl. moms</th></tr></thead>
+        <tbody><tr><td>25–49 ex</td><td>595 kr</td><td>561 kr</td></tr><tr><td>50–99 ex</td><td>565 kr</td><td>533 kr</td></tr><tr><td>100–249 ex</td><td>545 kr</td><td>514 kr</td></tr><tr><td>250 ex eller fler</td><td colspan="2">Offert</td></tr></tbody>
+      </table>
+      <p class="note">Prisförslag – fastställs före lansering. Bokmoms 6 %. Frakt tillkommer, fri frakt från 100 ex till en adress.</p>
       <div class="three" style="gap:18px">
-        <div class="col rule-top"><h3>Mängdpris</h3><p>Rabatt från 25 exemplar, stigande med volym.</p></div>
-        <div class="col rule-top"><h3>Egen hälsning</h3><p>Tryckt kort eller exlibris med er logotyp.</p></div>
-        <div class="col rule-top"><h3>Leverans</h3><p>Till en adress eller direkt till mottagarna.</p></div>
+        <div class="col rule-top"><h3>Egen hälsning</h3><p>Tryckt kort eller exlibris med er logotyp, inlagt i varje bok.</p></div>
+        <div class="col rule-top"><h3>Leverans</h3><p>Till en adress, eller direkt till varje mottagare med en adresslista.</p></div>
+        <div class="col rule-top"><h3>Faktura</h3><p>30 dagars betalning. E-faktura via Peppol för kommuner, regioner och myndigheter.</p></div>
       </div>
-      <p class="measure">Passar för julgåvor, jubileer, styrelsemöten och besök från utlandet. Banker, advokatbyråer, stiftelser, kommuner och kulturinstitutioner är välkomna att höra av sig.</p>
+      <div class="col rule-top"><span class="label">Sista beställningsdag <i>för</i> jul</span><dl class="dates"><dt>Med tryckt hälsning eller exlibris</dt><dd>Meddelas i november</dd><dt>Utan hälsning, leverans före jul</dt><dd>Meddelas i november</dd></dl></div>
+      <p><a class="btn" href="/saljblad.pdf" download>Ladda ner säljblad (PDF)</a> <span class="note">För att skicka vidare internt.</span></p>
     </div>
     <form class="f" id="offert" novalidate>
-      <div class="field"><label for="o-org">Organisation</label><input id="o-org" required></div>
-      <div class="field"><label for="o-name">Kontaktperson</label><input id="o-name" required></div>
-      <div class="field"><label for="o-mail">E-post</label><input id="o-mail" type="email" required></div>
-      <div class="field"><label for="o-qty">Ungefärligt antal</label><select id="o-qty"><option>25–49</option><option>50–99</option><option>100 eller fler</option></select></div>
-      <div class="field"><label for="o-msg">Önskemål</label><textarea id="o-msg" rows="4" placeholder="Leveransdatum, tryckt hälsning, adresser"></textarea></div>
+      <span class="label">Beställ <i>eller</i> begär offert</span>
+      <div class="field"><label for="o-org">Organisation</label><input id="o-org" autocomplete="organization" required></div>
+      <div class="field"><label for="o-orgnr">Organisationsnummer</label><input id="o-orgnr" inputmode="numeric" placeholder="556677-8899"></div>
+      <div class="field"><label for="o-name">Kontaktperson</label><input id="o-name" autocomplete="name" required></div>
+      <div class="field"><label for="o-mail">E-post</label><input id="o-mail" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="o-qty">Antal</label><select id="o-qty"><option>25–49</option><option>50–99</option><option>100–249</option><option>250 eller fler</option></select></div>
+      <div class="field"><label for="o-opt">Tillval</label><select id="o-opt"><option>Ingen hälsning</option><option>Tryckt hälsningskort</option><option>Exlibris med logotyp</option></select></div>
+      <div class="field"><label for="o-inv">Faktura</label><select id="o-inv"><option>PDF-faktura via e-post</option><option>E-faktura (Peppol)</option></select></div>
+      <div class="field"><label for="o-msg">Önskemål</label><textarea id="o-msg" rows="4" placeholder="Leveransdatum, en eller flera adresser, referens"></textarea></div>
       <button class="btn solid" type="submit">Skicka förfrågan</button>
-      <p class="done" id="o-done" hidden>Utkast: formuläret kopplas till info@svenskakulturkanon.se när sajten går live.</p>
+      <p class="done" id="o-done" hidden>Tack. Vi återkommer inom en arbetsdag. (Utkast: formuläret kopplas till info@svenskakulturkanon.se.)</p>
     </form>
+  </div>
+</section>
+
+<!-- SKOLOR -->
+<section class="page" id="skolor" hidden>
+  <div class="head"><span class="label">Skolor <i>och</i> bibliotek</span><h2>Kanon i klassrummet</h2><p class="lede">Hela den svenska kulturkanonen i en bok att samlas kring – med korta texter som kan läsas utan förkunskaper och ett quiz som fungerar som lektionsstart.</p></div>
+  <div class="two">
+    <div class="col measure">
+      <span class="label">Bakgrund</span>
+      <p>Regeringen har gett Skolverket och Riksantikvarieämbetet i uppdrag att arbeta med hur kulturkanonen ska användas och tillgängliggöras, med redovisning senast 31 maj 2027. Boken samlar alla verk och företeelser ur SOU 2025:92 på ett ställe, ett verk per uppslag, med verket, människorna bakom och sammanhanget.</p>
+      <span class="label">Lektionsidéer</span>
+      <ol class="ideas">
+        <li><b>Kanonquiz som start.</b> Välj ett avsnitt i <a href="/quiz">quizet</a> och låt klassen svara tillsammans. Varje svar leder till verkets sida.</li>
+        <li><b>Tidslinjen.</b> Sortera fyra verk i tidsordning och diskutera vad som hände i Sverige vid samma tid.</li>
+        <li><b>Den personliga kanonen.</b> Boken avslutas med sidor där läsaren skriver sin egen kanon. Låt eleverna välja ett verk var och motivera det.</li>
+        <li><b>Vad saknas?</b> Kanonen ska utvärderas efter tio år. Vilket verk skulle klassen lägga till – och vilket skulle de ta bort?</li>
+        <li><b>Nära oss.</b> Bokens geografiska platsförteckning visar var verken hör hemma. Vilket verk finns närmast skolan?</li>
+      </ol>
+    </div>
+    <div class="col">
+      <div class="col rule-top"><span class="label">Klassuppsättning</span><h3>Skolpris från 10 exemplar</h3><p>Pris på förfrågan. Faktura med 30 dagars betalning och e-faktura via Peppol.</p><p><a class="btn solid" href="mailto:info@svenskakulturkanon.se?subject=Skolpris%20Svenska%20Kulturkanon">Begär skolpris</a></p></div>
+      <div class="col rule-top"><span class="label">Bibliotek</span><p>Ange ISBN 978-91-992191-0-3 vid beställning. Inbunden, 272 sidor, 240 × 300 mm. Utkommer december 2026.</p></div>
+      <div class="col rule-top"><span class="label">Material</span><p>Omslag och uppslag för skolans intranät och skyltning finns på <a href="/press">pressidan</a>.</p></div>
+    </div>
   </div>
 </section>
 
@@ -627,10 +736,15 @@ html,body{overflow-x:clip}
 
 </main>
 
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Bläddra i boken" hidden>
+  <div class="vbar"><span class="label" id="vcap"></span><span class="vcount" id="vcount"></span><button type="button" class="vclose" id="vclose" aria-label="Stäng">×</button></div>
+  <div class="vstage"><button type="button" class="vnav" data-d="-1" aria-label="Föregående uppslag">‹</button><img id="vimg" alt=""><button type="button" class="vnav" data-d="1" aria-label="Nästa uppslag">›</button></div>
+  <p class="vhint">Svep eller använd piltangenterna · Esc stänger</p>
+</div>
 <footer class="site"><div class="wrap">
   <div class="fgrid">
     <div class="fcol"><span class="label">Boken</span><a href="/om-boken">Om boken</a><a href="/verken">Verken</a><a href="/veckans-verk">Veckans verk</a><a href="/bestall">Beställ</a><a href="/rattelser">Rättelser</a></div>
-    <div class="fcol"><span class="label">För yrkesfolk</span><a href="/press">Press</a><a href="/press">Återförsäljare</a><a href="/foretagsgava">Företagsgåva</a><a href="/kontakt">Kontakt</a></div>
+    <div class="fcol"><span class="label">För yrkesfolk</span><a href="/press">Press</a><a href="/press">Återförsäljare</a><a href="/foretagsgava">Företagsgåva</a><a href="/skolor-och-bibliotek">Skolor och bibliotek</a><a href="/kontakt">Kontakt</a></div>
     <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Instagram · @svenskakulturkanon</a><a href="/veckans-verk">Veckans verk</a><a href="/quiz">Kanonquiz</a></div>
     <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="/kopvillkor">Köpvillkor</a><a href="/integritet">Integritetspolicy</a></div>
   </div>
@@ -650,9 +764,9 @@ nm.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
 
 function el(id){return document.getElementById(id)}
 // ---------- routing ----------
-var PATHS={'/':'start','/index':'start','/404':'saknas','/om-boken':'om','/verken':'verken','/veckans-verk':'veckans','/quiz':'quiz','/bestall':'bestall','/foretagsgava':'foretag','/press':'press','/kontakt':'kontakt','/rattelser':'rattelser','/kopvillkor':'villkor','/integritet':'integritet'};
+var PATHS={'/':'start','/index':'start','/404':'saknas','/om-boken':'om','/verken':'verken','/veckans-verk':'veckans','/quiz':'quiz','/bestall':'bestall','/foretagsgava':'foretag','/press':'press','/kontakt':'kontakt','/rattelser':'rattelser','/skolor-och-bibliotek':'skolor','/kopvillkor':'villkor','/integritet':'integritet'};
 var HASH={'#start':'/','#om':'/om-boken','#verken':'/verken','#veckans':'/veckans-verk','#quiz':'/quiz','#bestall':'/bestall','#foretag':'/foretagsgava','#press':'/press','#kontakt':'/kontakt','#rattelser':'/rattelser','#villkor':'/kopvillkor','#integritet':'/integritet'};
-var TITLES={start:'Svenska Kulturkanon – 100 verk som skapade Sverige',om:'Om boken',verken:'Verken',veckans:'Veckans verk',quiz:'Kanonquiz',bestall:'Beställ boken',foretag:'Företagsgåva',press:'Press och handel',kontakt:'Kontakt',rattelser:'Rättelser',villkor:'Köpvillkor',integritet:'Integritetspolicy',kapitel:'Verken',saknas:'Sidan finns inte'};
+var TITLES={start:'Svenska Kulturkanon – 100 verk som skapade Sverige',om:'Om boken',verken:'Verken',veckans:'Veckans verk',quiz:'Kanonquiz',bestall:'Beställ boken',foretag:'Företagsgåva',press:'Press och handel',kontakt:'Kontakt',rattelser:'Rättelser',skolor:'Skolor och bibliotek',villkor:'Köpvillkor',integritet:'Integritetspolicy',kapitel:'Verken',saknas:'Sidan finns inte'};
 if(HASH[location.hash]){history.replaceState(null,'',HASH[location.hash])}
 function setTitle(t,id){document.title=id==='start'?t:t+' · Svenska Kulturkanon';}
 function showPage(id,navKey){
@@ -735,12 +849,13 @@ document.querySelectorAll('.product[data-id]').forEach(function(p){
 function draw(){
   var lines='',sum=0,count=0;
   document.querySelectorAll('.product[data-id]').forEach(function(p){var q=cart[p.dataset.id]||0;if(q){sum+=q*p._price;count+=q;lines+='<div class="row"><span>'+q+' × '+names[p.dataset.id]+'</span><span>'+kr(q*p._price)+'</span></div>'}});
-  var ship=count?(count>=3?0:79):0;
+  var opt=document.querySelector('input[name=ship]:checked');var ship=count?(count>=3?0:+(opt?opt.value:49)):0;
   document.getElementById('cart-lines').innerHTML=lines||'<p style="opacity:.8">Inga böcker valda än.</p>';
   document.getElementById('cart-ship').textContent=count?(ship?kr(ship):'Fri frakt'):'–';
   document.getElementById('cart-total').textContent=kr(sum+ship);
 }
 document.getElementById('checkout').addEventListener('click',function(){document.getElementById('checkout-note').hidden=false});
+document.querySelectorAll('input[name=ship]').forEach(function(r){r.addEventListener('change',draw)});
 // ---------- karusell ----------
 (function(){var c=document.getElementById('uppslag');if(!c)return;var tr=c.querySelector('.track'),sl=tr.children,n=sl.length,cnt=c.querySelector('.ccount'),dots=c.querySelector('.dots'),cur=0;
 for(var k=0;k<n;k++){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-label','Uppslag '+(k+1));(function(k){b.addEventListener('click',function(){go(k)})})(k);dots.appendChild(b)}
@@ -749,6 +864,26 @@ function go(i){i=(i+n)%n;tr.scrollTo({left:sl[i].offsetLeft-tr.offsetLeft,behavi
 c.querySelectorAll('.cbtn').forEach(function(b){b.addEventListener('click',function(){go(cur+Number(b.dataset.d))})});
 tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
 var t;tr.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){mark(Math.round(tr.scrollLeft/tr.clientWidth))},80)});mark(0)})();
+
+// ---------- bläddra i boken ----------
+(function(){var V=[['images/uppslag-01.jpg','1 · Det går an'],['images/uppslag-03.jpg','3 · Gösta Berlings saga'],['images/uppslag-12.jpg','12 · Gripsholms slott'],['images/uppslag-37.jpg','37 · Det sjunde inseglet'],['uppslag-48.jpg','48 · Barnets århundrade'],['uppslag-62.jpg','62 · Vadstena kloster'],['uppslag-72.jpg','72 · Riksbanken'],['images/uppslag-86.jpg','86 · Göta kanal'],['images/uppslag-98.jpg','98 · Vasaloppet']];
+var v=document.getElementById('viewer'),img=document.getElementById('vimg'),cap=document.getElementById('vcap'),cnt=document.getElementById('vcount'),i=0,last=null,x0=null;
+function draw(){img.src=V[i][0];img.alt='Uppslag ur boken: nummer '+V[i][1];cap.textContent='Nummer '+V[i][1];cnt.textContent=(i+1)+' / '+V.length;var n=new Image();n.src=V[(i+1)%V.length][0]}
+function open(){last=document.activeElement;i=0;draw();v.hidden=false;document.body.style.overflow='hidden';document.getElementById('vclose').focus()}
+function close(){v.hidden=true;document.body.style.overflow='';if(last)last.focus()}
+function go(d){i=(i+d+V.length)%V.length;draw()}
+document.querySelectorAll('[data-viewer]').forEach(function(b){b.addEventListener('click',open)});
+document.getElementById('vclose').addEventListener('click',close);
+v.querySelectorAll('.vnav').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.d)})});
+v.addEventListener('click',function(e){if(e.target===v)close()});
+document.addEventListener('keydown',function(e){if(v.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);if(e.key==='Tab'){var f=v.querySelectorAll('button');if(e.shiftKey&&document.activeElement===f[0]){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&document.activeElement===f[f.length-1]){e.preventDefault();f[0].focus()}}});
+img.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+img.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?1:-1);x0=null});
+})();
+var LIST_ENDPOINT='';// Sätt till adressen för nyhetsbrevstjänstens formulär (t.ex. Mailchimp eller Brevo) när den finns.
+document.getElementById('bevaka').addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('b-mail');if(!m.checkValidity()){m.reportValidity();return}
+  if(LIST_ENDPOINT){fetch(LIST_ENDPOINT,{method:'POST',body:new URLSearchParams({email:m.value}),mode:'no-cors'}).finally(function(){document.getElementById('b-done').hidden=false})}
+  else{location.href='mailto:info@svenskakulturkanon.se?subject='+encodeURIComponent('Bevaka utgivningen')+'&body='+encodeURIComponent('Meddela mig när Svenska Kulturkanon kan beställas: '+m.value);document.getElementById('b-done').hidden=false}});
 [['offert','o-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
 
 // ---------- quiz ----------

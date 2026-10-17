@@ -41,7 +41,9 @@ Resultat i `instagram/vecka-47/`: en karusell för Veckans verk (3 bilder), två
 
 ## Sidor och adresser
 
-Alla sidor och nya bilder ligger direkt i roten (inga nya undermappar). Miljöbilderna heter `miljo-*.jpg`.
+Alla sidor och nya filer ligger direkt i roten (inga nya undermappar): miljöbilder `miljo-*.jpg/.webp`, fonter `font-*.woff2` (egna, inga Google Fonts), extra uppslag `uppslag-*.jpg`, `saljblad.html` och `saljblad.pdf` (säljbladet för företag – ändra i html-filen och skriv ut till PDF).
+
+Nyhetsbrevet "Bevaka utgivningen" skickar tills vidare ett mejl till info@. Koppla en tjänst genom att sätta `LIST_ENDPOINT` i index.html.
 
 Varje sida är en egen HTML-fil med egen titel, beskrivning, delningsbild-text och kanonisk adress. Innehållet finns i filen, så sidorna fungerar även utan JavaScript och kan indexeras av Google.
 

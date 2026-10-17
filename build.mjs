@@ -30,6 +30,7 @@ const pages = [
   { file: 'foretagsgava.html', path: '/foretagsgava', id: 'foretag', title: 'Företagsgåva', desc: 'Svenska Kulturkanon som gåva till kunder, medarbetare och internationella gäster. Rabatt från 25 exemplar och tryckt hälsning.' },
   { file: 'press.html', path: '/press', id: 'press', title: 'Press och handel', desc: 'Pressmaterial och information för återförsäljare om Svenska Kulturkanon.' },
   { file: 'kontakt.html', path: '/kontakt', id: 'kontakt', title: 'Kontakt', desc: 'Kontakta Kaffeförlaget AB om boken Svenska Kulturkanon.' },
+  { file: 'skolor-och-bibliotek.html', path: '/skolor-och-bibliotek', id: 'skolor', title: 'Skolor och bibliotek', desc: 'Svenska Kulturkanon i undervisningen – skolpris från 10 exemplar, lektionsidéer och kanonquiz för klassrummet.' },
   { file: 'rattelser.html', path: '/rattelser', id: 'rattelser', title: 'Rättelser', desc: 'Rättelser till boken Svenska Kulturkanon.' },
   { file: 'kopvillkor.html', path: '/kopvillkor', id: 'villkor', title: 'Köpvillkor', desc: 'Köpvillkor för beställningar på svenskakulturkanon.se.' },
   { file: 'integritet.html', path: '/integritet', id: 'integritet', title: 'Integritetspolicy', desc: 'Så hanterar Kaffeförlaget AB personuppgifter på svenskakulturkanon.se.' },
