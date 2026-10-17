@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
-<meta property="og:title" content="Svenska Kulturkanon – 100 verk som skapade Sverige">
-<meta property="og:description" content="Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
+<meta name="description" content="Svenska Kulturkanon – 100+ verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
+<meta property="og:title" content="Svenska Kulturkanon – 100+ verk som skapade Sverige">
+<meta property="og:description" content="Svenska Kulturkanon – 100+ verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
 <meta property="og:image" content="https://svenskakulturkanon.se/miljo-bokhylla-dela.jpg">
 <meta name="theme-color" content="#F3F1ED">
 <meta name="color-scheme" content="light">
-<title>Svenska Kulturkanon – 100 verk som skapade Sverige</title>
+<title>Svenska Kulturkanon – 100+ verk som skapade Sverige</title>
 <link rel="canonical" href="https://svenskakulturkanon.se/">
 <meta property="og:url" content="https://svenskakulturkanon.se/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta name="twitter:card" content="summary_large_image">
 <script defer src="/_vercel/insights/script.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Book", "@id": "https://svenskakulturkanon.se/#bok", "name": "Svenska Kulturkanon – 100 verk som skapade Sverige", "isbn": "978-91-992191-0-3", "bookFormat": "https://schema.org/Hardcover", "numberOfPages": 272, "inLanguage": "sv", "datePublished": "2026-12", "image": "https://svenskakulturkanon.se/images/omslag.jpg", "url": "https://svenskakulturkanon.se/", "description": "Hela den svenska kulturkanonen enligt SOU 2025:92 i en bok – 100 verk i elva avsnitt, ett verk per uppslag.", "author": [{"@type": "Person", "name": "Gustaf Ekelund"}, {"@type": "Person", "name": "Agneta Norlin"}], "publisher": {"@id": "https://svenskakulturkanon.se/#forlag"}, "offers": {"@type": "Offer", "price": "695", "priceCurrency": "SEK", "availability": "https://schema.org/PreOrder", "url": "https://svenskakulturkanon.se/bestall", "seller": {"@id": "https://svenskakulturkanon.se/#forlag"}}}, {"@type": "Organization", "@id": "https://svenskakulturkanon.se/#forlag", "name": "Kaffeförlaget AB", "email": "info@svenskakulturkanon.se", "url": "https://svenskakulturkanon.se/", "sameAs": ["https://www.instagram.com/svenskakulturkanon/"], "address": {"@type": "PostalAddress", "addressLocality": "Lidingö", "addressCountry": "SE"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Book", "@id": "https://svenskakulturkanon.se/#bok", "name": "Svenska Kulturkanon – 100+ verk som skapade Sverige", "isbn": "978-91-992191-0-3", "bookFormat": "https://schema.org/Hardcover", "numberOfPages": 272, "inLanguage": "sv", "datePublished": "2026-12", "image": "https://svenskakulturkanon.se/images/omslag.jpg", "url": "https://svenskakulturkanon.se/", "description": "Hela den svenska kulturkanonen enligt SOU 2025:92 i en bok – 100+ verk i elva avsnitt, ett verk per uppslag.", "author": [{"@type": "Person", "name": "Gustaf Ekelund"}, {"@type": "Person", "name": "Agneta Norlin"}], "publisher": {"@id": "https://svenskakulturkanon.se/#forlag"}, "offers": {"@type": "Offer", "price": "695", "priceCurrency": "SEK", "availability": "https://schema.org/PreOrder", "url": "https://svenskakulturkanon.se/bestall", "seller": {"@id": "https://svenskakulturkanon.se/#forlag"}}}, {"@type": "Organization", "@id": "https://svenskakulturkanon.se/#forlag", "name": "Kaffeförlaget AB", "email": "info@svenskakulturkanon.se", "url": "https://svenskakulturkanon.se/", "sameAs": ["https://www.instagram.com/svenskakulturkanon/"], "address": {"@type": "PostalAddress", "addressLocality": "Lidingö", "addressCountry": "SE"}}]}</script>
 <link rel="preload" href="/font-eb-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/font-cg-500.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -371,6 +371,9 @@ html,body{overflow-x:clip}
 .facts-list dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
 .facts-list dd{margin:0}
 .notify h3{font-size:1.5rem}
+.gifts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}
+.gift{padding-top:26px}
+.gift::before{display:none}
 .ideas{margin:0;padding-left:1.2em;display:grid;gap:10px}
 @media (max-width:520px){.facts-list{grid-template-columns:1fr}.facts-list dd{margin-bottom:6px}}
 .viewer{position:fixed;inset:0;z-index:100;background:rgba(14,20,36,.96);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:12px max(12px,env(safe-area-inset-left))}
@@ -405,6 +408,7 @@ main:focus{outline:none}
       <a href="/verken">Verken</a>
       <a href="/veckans-verk">Veckans verk</a>
       <a href="/quiz">Quiz</a>
+      <a href="/julklapp">Julklapp</a>
       <a href="/foretagsgava">Företagsgåva</a>
       <a href="/bestall" class="buy">Beställ</a>
     </nav>
@@ -419,9 +423,9 @@ main:focus{outline:none}
   <div class="hero">
     <div class="intro">
       <span class="label">Svenska Kulturkanon · <i>utkommer december 2026</i></span>
-      <h1>100 verk som skapade Sverige</h1>
+      <h1>100+ verk som skapade Sverige</h1>
       <p class="lede">Sveriges första kulturkanon samlad i en bok – ett verk per uppslag, med texten om verket, människorna bakom och tiden det kom ur.</p>
-      <p class="measure">Utredningen SOU 2025:92 valde ut hundra verk och företeelser i elva avsnitt: litteratur, poesi, musik, bild och form, film och scenkonst – men också lagar, uppfinningar, ekonomi, religion och offentliga rum. Från Heliga Birgittas uppenbarelser och Falu koppargruva till Det sjunde inseglet, Pippi Långstrump och pappaledigheten. En bok att bläddra i, läsa högt ur och ge bort.</p>
+      <p class="measure">Utredningen SOU 2025:92 valde ut 100+ verk och företeelser i elva avsnitt: litteratur, poesi, musik, bild och form, film och scenkonst – men också lagar, uppfinningar, ekonomi, religion och offentliga rum. Från Heliga Birgittas uppenbarelser och Falu koppargruva till Det sjunde inseglet, Pippi Långstrump och pappaledigheten. En bok att bläddra i, läsa högt ur och ge bort.</p>
       <div class="hero-cta"><a class="btn solid" href="/bestall">Beställ boken · 695 kr</a><button type="button" class="btn" data-viewer>Bläddra i boken</button><a class="btn" href="/quiz">Testa dig själv</a></div>
     </div>
     <figure class="cover" style="margin:0"><img src="images/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
@@ -475,7 +479,7 @@ main:focus{outline:none}
         <li><b>2 september 2025</b><span>Utredningen överlämnar betänkandet <i>En kulturkanon för Sverige</i> (SOU 2025:92) med 100 verk i elva kategorier.</span></li>
         <li><b>Hösten 2025</b><span>Betänkandet skickas på remiss till myndigheter, kulturinstitutioner och organisationer. Remisstiden löper ut 7 januari 2026.</span></li>
         <li><b>2026–2027</b><span>Skolverket och Riksantikvarieämbetet arbetar med uppdrag om hur kanonen ska användas och tillgängliggöras, med redovisning senast 31 maj 2027.</span></li>
-        <li><b>December 2026</b><span>Svenska Kulturkanon – 100 verk som skapade Sverige ges ut av Kaffeförlaget.</span></li>
+        <li><b>December 2026</b><span>Svenska Kulturkanon – 100+ verk som skapade Sverige ges ut av Kaffeförlaget.</span></li>
       </ol>
       <p class="note">Källa: SOU 2025:92 och regeringens kommittédirektiv. Läs hela betänkandet på <a href="https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/09/sou-202592/" target="_blank" rel="noopener">regeringen.se</a>.</p>
     </div>
@@ -501,7 +505,7 @@ main:focus{outline:none}
 <!-- VERKEN -->
 <section class="page" id="verken" hidden>
   <figure class="photo" style="--pos:45%"><picture><source type="image/webp" srcset="miljo-soffbord-960.webp 960w, miljo-soffbord.webp 1916w" sizes="100vw"><img src="miljo-soffbord.jpg" srcset="miljo-soffbord-960.jpg 960w, miljo-soffbord.jpg 1916w" sizes="100vw" alt="Boken på ett soffbord i valnöt framför en soffa i blommigt Josef Frank-tyg." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
-  <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, hundra verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
+  <div class="head"><span class="label">Verken</span><h2>Elva avsnitt, 100+ verk</h2><p class="lede">Bokens ordning följer utredningens kategorier, från prosa och poesi till lagar, uppfinningar och offentliga rum.</p><p class="measure">Kanon har 100 verk. Nummer 10 är en diktantologi med tio dikter, så boken presenterar 109 enskilda verk.</p></div>
   <div class="avsnitt" id="avsnitt"></div>
   <div class="carousel" id="uppslag" aria-roledescription="karusell" aria-label="Uppslag ur boken">
     <div class="ctop"><span class="label">Uppslag <i>ur</i> boken · <button type="button" class="linkbtn" data-viewer>visa i helskärm</button></span><span class="cnav"><button type="button" class="cbtn" data-d="-1" aria-label="Föregående uppslag">‹</button><span class="ccount" aria-live="polite">1 / 5</span><button type="button" class="cbtn" data-d="1" aria-label="Nästa uppslag">›</button></span></div>
@@ -590,7 +594,7 @@ main:focus{outline:none}
     </aside>
   </div>
   <div class="two">
-    <form class="f notify" id="bevaka" novalidate>
+    <form class="f notify" id="bevaka" novalidate style="scroll-margin-top:90px">
       <span class="label">Bevaka utgivningen</span>
       <h3>Få ett mejl när boken kan beställas</h3>
       <p>Ett enda mejl på lanseringsdagen, och ett när boken skickas. Inga nyhetsbrev.</p>
@@ -642,6 +646,30 @@ main:focus{outline:none}
   </div>
 </section>
 
+<!-- JULKLAPP -->
+<section class="page" id="julklapp" hidden>
+  <figure class="photo" style="--pos:52%"><picture><source type="image/webp" srcset="miljo-julklapp-960.webp 960w, miljo-julklapp.webp 1916w" sizes="100vw"><img src="miljo-julklapp.jpg" srcset="miljo-julklapp-960.jpg 960w, miljo-julklapp.jpg 1916w" sizes="100vw" alt="Svenska Kulturkanon som julklapp, uppackad ur silkespapper med kopparband på ett dukat julbord." width="1916" height="821" loading="lazy" decoding="async"></picture></figure>
+  <div class="head"><span class="label">Jul 2026</span><h2>En julklapp att bläddra i hela året</h2><p class="lede">100+ verk som skapade Sverige, ett per uppslag – en bok som blir liggande framme, läses högt ur och startar samtal långt efter juldagen.</p></div>
+  <div class="gifts">
+    <div class="nr gift"><span class="label">Till den som läser historia</span><h4>Från landslag till folkhem</h4><span class="by">Magnus Erikssons landslag, Riksbanken, Saltsjöbadsavtalet – Sveriges historia berättad genom verken som formade den.</span></div>
+    <div class="nr gift"><span class="label">Till den som har allt</span><h4>Något att upptäcka</h4><span class="by">Få har läst Muittalus sámid birra eller sett Hilma af Klints tempelmålningar. Här finns alltid något nytt.</span></div>
+    <div class="nr gift"><span class="label">Till hela familjen</span><h4>Två generationer, ett uppslag</h4><span class="by">Pippi Långstrump bredvid Det sjunde inseglet. Korta texter som går att läsa högt och prata om vid middagsbordet.</span></div>
+    <div class="nr gift"><span class="label">Till värdparet</span><h4>En gåva som stannar kvar</h4><span class="by">Ett stort, vackert bokformat – 240 × 300 mm – som passar på soffbordet hos den som bjuder på julmiddagen.</span></div>
+    <div class="nr gift"><span class="label">Till vänner utomlands</span><h4>Sverige i en bok</h4><span class="by">För den som flyttat utomlands, har svenska rötter eller vill förstå landet – från Bellman till Vasaloppet.</span></div>
+    <a class="nr gift" href="/foretagsgava" style="text-decoration:none;color:inherit"><span class="label">Till medarbetarna</span><h4>Skattefri julgåva</h4><span class="by">595 kr från 25 exemplar – under Skatteverkets gräns på 600 kr. Se prislistan →</span></a>
+  </div>
+  <div class="two">
+    <div class="product feat"><span class="label">Färdig att ge bort</span><h3>Presentförpackning</h3><p>Boken inslagen i silkespapper med kopparband och ett tryckt gåvokort med din hälsning. Skickas direkt till mottagaren om du vill.</p><span class="price">745 kr <small>inkl. moms</small></span><p><a class="btn solid" href="/bestall">Beställ som julklapp</a></p></div>
+    <div class="col rule-top">
+      <span class="label">Leverans före jul</span>
+      <p>Första upplagan skickas i december. Sista beställningsdag för leverans före julafton meddelas här i november.</p>
+      <p>Vill du inte missa den? <a href="/bestall#bevaka">Bevaka utgivningen</a> så får du ett mejl.</p>
+      <span class="label" style="margin-top:12px">Kanonquiz vid julbordet</span>
+      <p>Tio frågor, tidslinjer och nummerfrågor – spela tillsammans i julhelgen och se vem som kan mest. <a href="/quiz">Starta quizet</a>.</p>
+    </div>
+  </div>
+</section>
+
 <!-- SKOLOR -->
 <section class="page" id="skolor" hidden>
   <div class="head"><span class="label">Skolor <i>och</i> bibliotek</span><h2>Kanon i klassrummet</h2><p class="lede">Hela den svenska kulturkanonen i en bok att samlas kring – med korta texter som kan läsas utan förkunskaper och ett quiz som fungerar som lektionsstart.</p></div>
@@ -673,7 +701,7 @@ main:focus{outline:none}
     <div class="col rule-top">
       <h3>Återförsäljare</h3>
       <p>Boken passar design- och inredningsbutiker, museibutiker och bokhandlar. Vi skickar gärna ett exemplar och säljmaterial med villkor.</p>
-      <dl><dt>Titel</dt><dd>Svenska Kulturkanon – 100 verk som skapade Sverige</dd><dt>ISBN</dt><dd>978-91-992191-0-3</dd><dt>Format</dt><dd>240 × 300 mm, inbunden, 272 sidor</dd><dt>Cirkapris</dt><dd>695 kr</dd><dt>Utgivning</dt><dd>December 2026</dd><dt>Förlag</dt><dd>Kaffeförlaget AB</dd></dl>
+      <dl><dt>Titel</dt><dd>Svenska Kulturkanon – 100+ verk som skapade Sverige</dd><dt>ISBN</dt><dd>978-91-992191-0-3</dd><dt>Format</dt><dd>240 × 300 mm, inbunden, 272 sidor</dd><dt>Cirkapris</dt><dd>695 kr</dd><dt>Utgivning</dt><dd>December 2026</dd><dt>Förlag</dt><dd>Kaffeförlaget AB</dd></dl>
     </div>
     <div class="col rule-top">
       <h3>Press</h3>
@@ -743,7 +771,7 @@ main:focus{outline:none}
 </div>
 <footer class="site"><div class="wrap">
   <div class="fgrid">
-    <div class="fcol"><span class="label">Boken</span><a href="/om-boken">Om boken</a><a href="/verken">Verken</a><a href="/veckans-verk">Veckans verk</a><a href="/bestall">Beställ</a><a href="/rattelser">Rättelser</a></div>
+    <div class="fcol"><span class="label">Boken</span><a href="/om-boken">Om boken</a><a href="/verken">Verken</a><a href="/veckans-verk">Veckans verk</a><a href="/julklapp">Julklapp</a><a href="/bestall">Beställ</a><a href="/rattelser">Rättelser</a></div>
     <div class="fcol"><span class="label">För yrkesfolk</span><a href="/press">Press</a><a href="/press">Återförsäljare</a><a href="/foretagsgava">Företagsgåva</a><a href="/skolor-och-bibliotek">Skolor och bibliotek</a><a href="/kontakt">Kontakt</a></div>
     <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Instagram · @svenskakulturkanon</a><a href="/veckans-verk">Veckans verk</a><a href="/quiz">Kanonquiz</a></div>
     <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="/kopvillkor">Köpvillkor</a><a href="/integritet">Integritetspolicy</a></div>
@@ -764,9 +792,9 @@ nm.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
 
 function el(id){return document.getElementById(id)}
 // ---------- routing ----------
-var PATHS={'/':'start','/index':'start','/404':'saknas','/om-boken':'om','/verken':'verken','/veckans-verk':'veckans','/quiz':'quiz','/bestall':'bestall','/foretagsgava':'foretag','/press':'press','/kontakt':'kontakt','/rattelser':'rattelser','/skolor-och-bibliotek':'skolor','/kopvillkor':'villkor','/integritet':'integritet'};
+var PATHS={'/':'start','/index':'start','/404':'saknas','/om-boken':'om','/verken':'verken','/veckans-verk':'veckans','/quiz':'quiz','/bestall':'bestall','/foretagsgava':'foretag','/press':'press','/kontakt':'kontakt','/rattelser':'rattelser','/skolor-och-bibliotek':'skolor','/julklapp':'julklapp','/kopvillkor':'villkor','/integritet':'integritet'};
 var HASH={'#start':'/','#om':'/om-boken','#verken':'/verken','#veckans':'/veckans-verk','#quiz':'/quiz','#bestall':'/bestall','#foretag':'/foretagsgava','#press':'/press','#kontakt':'/kontakt','#rattelser':'/rattelser','#villkor':'/kopvillkor','#integritet':'/integritet'};
-var TITLES={start:'Svenska Kulturkanon – 100 verk som skapade Sverige',om:'Om boken',verken:'Verken',veckans:'Veckans verk',quiz:'Kanonquiz',bestall:'Beställ boken',foretag:'Företagsgåva',press:'Press och handel',kontakt:'Kontakt',rattelser:'Rättelser',skolor:'Skolor och bibliotek',villkor:'Köpvillkor',integritet:'Integritetspolicy',kapitel:'Verken',saknas:'Sidan finns inte'};
+var TITLES={start:'Svenska Kulturkanon – 100+ verk som skapade Sverige',om:'Om boken',verken:'Verken',veckans:'Veckans verk',quiz:'Kanonquiz',bestall:'Beställ boken',foretag:'Företagsgåva',press:'Press och handel',kontakt:'Kontakt',rattelser:'Rättelser',skolor:'Skolor och bibliotek',julklapp:'Julklapp',villkor:'Köpvillkor',integritet:'Integritetspolicy',kapitel:'Verken',saknas:'Sidan finns inte'};
 if(HASH[location.hash]){history.replaceState(null,'',HASH[location.hash])}
 function setTitle(t,id){document.title=id==='start'?t:t+' · Svenska Kulturkanon';}
 function showPage(id,navKey){
@@ -780,7 +808,7 @@ function route(){
   if((m=path.match(/^\/verken[\/-]([a-z-]+)$/))&&renderKapitel(m[1],null)){showPage('kapitel','/verken');return}
   if((m=path.match(/^\/(?:verk|qr)\/(\d+(?:[.-]\d+)?)$/))){var nr=m[1].replace('-','.');document.body.toggleAttribute('data-qr',path.indexOf('/qr/')===0);var sl=slugFor(nr);if(sl&&renderKapitel(sl,nr)){showPage('kapitel','/verken');return}}
   var id=PATHS[path]||(document.body.dataset.page||'saknas');
-  showPage(id);setTitle(TITLES[id],id);window.scrollTo({top:0,behavior:'instant'});
+  showPage(id);setTitle(TITLES[id],id);var anc=location.hash&&document.getElementById(location.hash.slice(1));if(anc)setTimeout(function(){anc.scrollIntoView({behavior:'instant'})},60);else window.scrollTo({top:0,behavior:'instant'});
 }
 
 // ---------- avsnitt ----------

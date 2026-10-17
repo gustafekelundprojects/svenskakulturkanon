@@ -1,6 +1,6 @@
 # svenskakulturkanon.se
 
-Statisk webbplats för boken *Svenska Kulturkanon – 100 verk som skapade Sverige* (Kaffeförlaget AB). Publiceras med Vercel från `main`.
+Statisk webbplats för boken *Svenska Kulturkanon – 100+ verk som skapade Sverige* (Kaffeförlaget AB). Publiceras med Vercel från `main`.
 
 ## Struktur
 

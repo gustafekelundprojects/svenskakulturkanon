@@ -20,16 +20,17 @@ const AV = K.AVSNITT.slice().sort((a, b) => order.indexOf(a[1]) - order.indexOf(
 const slugOf = a => K.KAPITEL[a[1]].slug;
 const count = a => a[1] === 'Litteratur – dikter' ? 'Verk nummer 10: en antologi med tio dikter.' : a[3].length + ' verk.';
 
-const BASE_DESC = 'Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.';
+const BASE_DESC = 'Svenska Kulturkanon – 100+ verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.';
 const pages = [
   { file: 'om-boken.html', path: '/om-boken', id: 'om', title: 'Om boken', desc: 'Bakgrunden till den svenska kulturkanonen, utredningen SOU 2025:92 och hur boken Svenska Kulturkanon är gjord.' },
-  { file: 'verken.html', path: '/verken', id: 'verken', title: 'Verken', desc: 'Alla 100 verk i den svenska kulturkanonen, i elva avsnitt från prosa och poesi till lagar, uppfinningar och offentliga rum.' },
+  { file: 'verken.html', path: '/verken', id: 'verken', title: 'Verken', desc: 'Alla 100+ verk i den svenska kulturkanonen, i elva avsnitt från prosa och poesi till lagar, uppfinningar och offentliga rum.' },
   { file: 'veckans-verk.html', path: '/veckans-verk', id: 'veckans', title: 'Veckans verk', desc: 'Ett verk ur Svenska Kulturkanon i veckan – med text ur boken och nya inlägg på Instagram.' },
   { file: 'quiz.html', path: '/quiz', id: 'quiz', title: 'Kanonquiz', desc: 'Tio slumpade frågor på svår nivå om verken i den svenska kulturkanonen. Hur väl känner du kanon?' },
   { file: 'bestall.html', path: '/bestall', id: 'bestall', title: 'Beställ boken', desc: 'Beställ Svenska Kulturkanon – inbunden, 272 sidor, 240 × 300 mm. Första upplagan levereras i december 2026.' },
   { file: 'foretagsgava.html', path: '/foretagsgava', id: 'foretag', title: 'Företagsgåva', desc: 'Svenska Kulturkanon som gåva till kunder, medarbetare och internationella gäster. Rabatt från 25 exemplar och tryckt hälsning.' },
   { file: 'press.html', path: '/press', id: 'press', title: 'Press och handel', desc: 'Pressmaterial och information för återförsäljare om Svenska Kulturkanon.' },
   { file: 'kontakt.html', path: '/kontakt', id: 'kontakt', title: 'Kontakt', desc: 'Kontakta Kaffeförlaget AB om boken Svenska Kulturkanon.' },
+  { file: 'julklapp.html', path: '/julklapp', id: 'julklapp', title: 'Julklapp', desc: 'Svenska Kulturkanon som julklapp – 100+ verk som skapade Sverige i en stor, vacker bok. Presentförpackning och leverans före jul.' },
   { file: 'skolor-och-bibliotek.html', path: '/skolor-och-bibliotek', id: 'skolor', title: 'Skolor och bibliotek', desc: 'Svenska Kulturkanon i undervisningen – skolpris från 10 exemplar, lektionsidéer och kanonquiz för klassrummet.' },
   { file: 'rattelser.html', path: '/rattelser', id: 'rattelser', title: 'Rättelser', desc: 'Rättelser till boken Svenska Kulturkanon.' },
   { file: 'kopvillkor.html', path: '/kopvillkor', id: 'villkor', title: 'Köpvillkor', desc: 'Köpvillkor för beställningar på svenskakulturkanon.se.' },
@@ -62,14 +63,14 @@ AV.forEach((a, i) => {
 
 function build(pg) {
   let h = tpl;
-  const full = pg.id === 'start' ? 'Svenska Kulturkanon – 100 verk som skapade Sverige' : `${pg.title} · Svenska Kulturkanon`;
+  const full = pg.id === 'start' ? 'Svenska Kulturkanon – 100+ verk som skapade Sverige' : `${pg.title} · Svenska Kulturkanon`;
   const url = SITE + (pg.path === '/' ? '/' : pg.path);
   const sub = (re, val) => { if (!re.test(h)) throw new Error('Hittar inte ' + re + ' i mallen'); h = h.replace(re, val); };
   sub(/<title>[^<]*<\/title>/, `<title>${esc(full)}</title>`);
   sub(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(pg.desc)}">${pg.noindex ? '\n<meta name="robots" content="noindex">' : ''}`);
   sub(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(full)}">`);
   sub(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(pg.desc)}">`);
-  const OG = { start: 'bokhylla', om: 'gustaviansk', verken: 'soffbord', kapitel: 'soffbord', bestall: 'lasning', foretag: 'julklapp', veckans: 'lasning', quiz: 'bokhylla' };
+  const OG = { start: 'bokhylla', om: 'gustaviansk', verken: 'soffbord', kapitel: 'soffbord', bestall: 'lasning', foretag: 'julklapp', julklapp: 'julklapp', veckans: 'lasning', quiz: 'bokhylla' };
   sub(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${SITE}/${OG[pg.id] ? 'miljo-' + OG[pg.id] + '-dela.jpg' : 'images/omslag.jpg'}">`);
   sub(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
   sub(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
