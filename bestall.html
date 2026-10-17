@@ -79,7 +79,10 @@ nav.main a.buy:hover{color:var(--on-navy);background:var(--copper-ink)}
 .lockup .label{font-size:clamp(.62rem,1.3vw,.82rem)}
 .cover{max-width:400px;justify-self:center;width:100%}
 .cover img{width:100%;box-shadow:0 34px 60px -30px rgba(20,24,40,.55),0 0 0 1px var(--rule)}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.intro{display:grid;gap:18px;align-content:center}
+.intro h1{font-size:clamp(2.4rem,5.2vw,4.2rem);text-transform:uppercase;letter-spacing:.05em;line-height:1.02;color:var(--navy)}
+.intro p{margin:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-body);font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border:1px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;border-radius:0}
 .btn.solid{background:var(--navy);color:var(--on-navy)}
 .btn:hover{background:var(--copper-ink);border-color:var(--copper-ink);color:var(--on-navy)}
@@ -212,6 +215,7 @@ ol.tl span{font-size:.98rem}
   .hero{gap:28px}
   .lockup .big{font-size:clamp(3rem,16vw,5rem)}
   .cover{max-width:260px}
+  .hero .cover{display:none}
   .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:360px}
   .hero-cta .btn{width:100%}
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 10px;text-align:center}
@@ -280,10 +284,58 @@ body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
 .knav a:hover{color:var(--copper-ink)}
 html,body{overflow-x:clip}
 .page{grid-template-columns:minmax(0,1fr)}
-.photo{margin:-48px 0 0;width:100vw;max-width:none;justify-self:center;aspect-ratio:21/9;max-height:78vh;overflow:hidden;background:var(--tint)}
-.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50%) 55%}
+.photo{margin:-48px 0 0;width:100vw;max-width:none;justify-self:center;aspect-ratio:21/9;max-height:70vh;overflow:hidden;background:var(--tint)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50%) 40%}
 @media (max-width:860px){.photo{margin-top:-28px;aspect-ratio:4/3}}
 @media (max-width:520px){.photo{aspect-ratio:1/1}}
+.qtop{display:grid;gap:12px;max-width:820px}
+.qmodes{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--navy);width:max-content;max-width:100%}
+.qmodes button{font:inherit;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border:0;background:transparent;color:var(--navy);cursor:pointer}
+.qmodes button+button{border-left:1px solid var(--navy)}
+.qmodes button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}
+.qsec{display:flex;gap:10px;align-items:center;font-size:.95rem}
+.qsec[hidden]{display:none}
+.qsec select{font:inherit;padding:8px 10px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink)}
+.qstats{margin:0;font-size:.92rem;color:var(--ink-2)}
+.qstats b,.qpts b{color:var(--navy);font-weight:600}
+.qpts{font-size:.9rem;color:var(--ink-2);letter-spacing:.04em}
+.qkind{justify-self:start;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;background:var(--copper-ink);color:var(--on-navy);padding:4px 10px}
+.plus{color:var(--ok);font-weight:600}
+.streak{color:var(--copper-ink);font-weight:600}
+.afterbox{display:grid;gap:16px}
+.afterbox .btn{justify-self:start}
+.vcards{display:grid;gap:12px}
+.vcard{position:relative;display:grid;gap:6px;padding:58px 20px 18px;background:var(--paper);border:1px solid var(--rule);text-decoration:none;color:inherit;overflow:hidden}
+.vcard:hover{border-color:var(--copper)}
+.vcard::before{content:"";position:absolute;left:-55px;top:-55px;width:120px;height:120px;border-radius:50%;background:var(--sheet)}
+.vcard .n{position:absolute;left:12px;top:6px;font-family:var(--f-display);font-size:2.2rem;line-height:1;color:var(--navy)}
+.vcard .n small{display:block;font-family:var(--f-body);font-size:.5rem;letter-spacing:.22em;color:var(--ink-2)}
+.vcard h4{font-size:1.3rem;text-transform:uppercase;letter-spacing:.02em}
+.vcard p{margin:0;font-size:.98rem}
+.vcard .more{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-ink)}
+.tl{display:grid;gap:10px}
+.tli{position:relative;text-align:left;font:inherit;font-size:1.05rem;padding:14px 16px 14px 60px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer;min-height:56px}
+.tli em{font-style:normal;color:var(--ink-2);font-size:.92rem}
+.tli:hover:not(:disabled){border-color:var(--navy)}
+.tli.picked{border-color:var(--navy);background:var(--sheet)}
+.tli.right{background:var(--ok-bg);border-color:var(--ok)} .tli.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.tlpos{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:1px solid var(--copper);display:grid;place-items:center;font-family:var(--f-display);font-size:1.2rem;color:var(--navy)}
+.tlyou{color:var(--bad);font-size:.82rem}
+#quizbox{scroll-margin-top:90px}
+.tlar{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:var(--f-display);font-size:1.3rem;color:var(--copper-ink)}
+.tli:disabled{cursor:default;padding-right:70px}
+.tlbar{display:flex}
+.result{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center}
+.result .score span{font-size:.4em;color:var(--ink-2)}
+.rank{font-family:var(--f-display);font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--navy);text-transform:uppercase;letter-spacing:.04em;line-height:1.05}
+.result p{margin:.3em 0 0}
+.qactions{display:flex;gap:12px;flex-wrap:wrap}
+.qbook{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:20px}
+.qbook p{margin:.3em 0 0;max-width:32em}
+.mytop ol{list-style:none;margin:8px 0 0;padding:0;display:grid}
+.mytop li{display:grid;grid-template-columns:2em 5em minmax(0,1fr) auto;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.mytop li span:first-child{font-family:var(--f-display);color:var(--copper-ink)}
+@media (max-width:520px){.result{grid-template-columns:1fr;gap:8px}.qmodes button{padding:10px 11px;font-size:.72rem}}
 </style>
 </head>
 <body data-page="bestall">
@@ -310,14 +362,11 @@ html,body{overflow-x:clip}
 <section class="page" id="start" hidden>
   <figure class="photo hero-photo" style="--pos:34%"><img src="miljo-bokhylla.jpg" srcset="miljo-bokhylla-960.jpg 960w, miljo-bokhylla.jpg 1916w" sizes="100vw" alt="Svenska Kulturkanon uppställd i en bokhylla med skinnband i ett klassiskt Stockholmsbibliotek, kvällsljus och utsikt över vattnet." width="1916" height="821" fetchpriority="high" decoding="async"></figure>
   <div class="hero">
-    <div class="lockup">
-      <span class="label">Lista <i>över</i> viktiga verk,</span>
-      <span class="big">Svenska</span>
-      <span class="label">personer <i>och</i> uttryck <i>som</i></span>
-      <span class="big">Kultur</span>
-      <span class="label"><i>format</i> Sveriges kulturarv</span>
-      <span class="big">Kanon</span>
-      <span class="label"><i>och</i> identitet</span>
+    <div class="intro">
+      <span class="label">Svenska Kulturkanon · <i>utkommer december 2026</i></span>
+      <h1>100 verk som skapade Sverige</h1>
+      <p class="lede">Sveriges första kulturkanon samlad i en bok – ett verk per uppslag, med texten om verket, människorna bakom och tiden det kom ur.</p>
+      <p class="measure">Utredningen SOU 2025:92 valde ut hundra verk och företeelser i elva avsnitt: litteratur, poesi, musik, bild och form, film och scenkonst – men också lagar, uppfinningar, ekonomi, religion och offentliga rum. Från Heliga Birgittas uppenbarelser och Falu koppargruva till Det sjunde inseglet, Pippi Långstrump och pappaledigheten. En bok att bläddra i, läsa högt ur och ge bort.</p>
       <div class="hero-cta"><a class="btn solid" href="/bestall">Beställ boken · 695 kr</a><a class="btn" href="/quiz">Testa dig själv</a></div>
     </div>
     <figure class="cover" style="margin:0"><img src="images/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
@@ -338,7 +387,7 @@ html,body{overflow-x:clip}
   </div>
   <div class="three">
     <a class="nr" href="/veckans-verk" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
-    <a class="nr" href="/quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio slumpade frågor om bokens verk.</span></a>
+    <a class="nr" href="/quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio frågor, Dagens fem, tidslinjer och nummerfrågor.</span></a>
     <a class="nr" href="/foretagsgava" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Företagsgåva</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
   </div>
 </section>
@@ -452,7 +501,12 @@ html,body{overflow-x:clip}
 
 <!-- QUIZ -->
 <section class="page" id="quiz" hidden>
-  <div class="head"><span class="label">Quiz · <i>svår nivå</i></span><h2>Hur väl känner du kanon?</h2><p class="lede">Tio frågor dras slumpvis ur bokens hundra verk. Varje gång blir det ett nytt quiz.</p></div>
+  <div class="head"><span class="label">Kanonquiz · <i>svår nivå</i></span><h2>Hur väl känner du kanon?</h2><p class="lede">Frågor om bokens 109 verk – med nummerfrågor, tidslinjer och poäng för snabba svar. Efter varje fråga får du veta var verket finns i boken.</p></div>
+  <div class="qtop">
+    <div class="qmodes" id="qmodes" role="group" aria-label="Välj quiz"><button type="button" data-mode="tio" aria-pressed="true">Tio frågor</button><button type="button" data-mode="dag" aria-pressed="false">Dagens fem</button><button type="button" data-mode="avsnitt" aria-pressed="false">Välj avsnitt</button></div>
+    <label class="qsec" hidden>Avsnitt <select id="qsec"></select></label>
+    <p class="qstats" id="qstats"></p>
+  </div>
   <div class="quiz" id="quizbox" aria-live="polite"></div>
 </section>
 
@@ -583,7 +637,7 @@ html,body{overflow-x:clip}
   <div class="fbase"><span>© 2026 Gustaf Ekelund och Agneta Norlin · Kaffeförlaget AB</span><span class="draft">Utkast · oktober 2026</span></div>
 </div></footer>
 
-<script src="data/kanon.js"></script>
+<script src="kanon.js"></script>
 <script>
 (function(){
 if(!window.KANON){console.error("data/kanon.js saknas");document.querySelectorAll("#avsnitt,#quizbox").forEach(function(e){e.innerHTML="<p class=\"note\">Innehållet kunde inte laddas (data/kanon.js saknas).</p>"});return;}
@@ -698,34 +752,130 @@ var t;tr.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(funct
 [['offert','o-done']].forEach(function(x){document.getElementById(x[0]).addEventListener('submit',function(e){e.preventDefault();document.getElementById(x[1]).hidden=false})});
 
 // ---------- quiz ----------
-var Q=window.KANON.QUIZ;
-var box=document.getElementById('quizbox'),cur,idx,score,res;
-function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
-function start(){
-  cur=shuffle(Q).slice(0,10).map(function(q){var o=q[1].map(function(t,i){return {t:t,ok:i===q[2]}});return {q:q[0],o:shuffle(o),x:q[3]}});
-  idx=0;score=0;res=[];show();
+var Q=K.QUIZ,box=document.getElementById('quizbox');
+var WORK={};AV.forEach(function(a,i){a[3].forEach(function(w){var b=BESK[w[0]]||{};WORK[w[0]]={nr:w[0],t:w[1],by:w[2]||'',av:a[1],slug:slugOf(a),sida:b.sida,text:b.text,ar:b.ar}})});
+var STORE='kk-quiz';
+function load(){try{return JSON.parse(localStorage.getItem(STORE))||{}}catch(e){return {}}}
+function save(d){try{localStorage.setItem(STORE,JSON.stringify(d))}catch(e){}}
+function today(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var rnd=Math.random;
+function shuffle(a,r){r=r||rnd;a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(r()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function textQ(q){return {type:'val',q:q[0],o:shuffle(q[1].map(function(t,i){return {t:t,ok:i===q[2]}})),x:q[3],nr:[q[4]]}}
+function pool(sec){return Object.keys(WORK).map(function(k){return WORK[k]}).filter(function(w){return !sec||w.av===sec})}
+function numberQ(sec,r){
+  var ws=pool(sec).filter(function(w){return w.nr.indexOf('.')<0});if(ws.length<4)ws=pool().filter(function(w){return w.nr.indexOf('.')<0});
+  var w=shuffle(ws,r)[0];
+  if(r()<.5){var others=shuffle(pool().filter(function(x){return x.nr!==w.nr&&x.nr.indexOf('.')<0}),r).slice(0,3);
+    return {type:'val',kind:'Nummerfrågan',q:'Vilket nummer har '+w.t+' i kanon?',o:shuffle([{t:w.nr,ok:true}].concat(others.map(function(x){return {t:x.nr,ok:false}})),r),x:w.t+' är nummer '+w.nr+' i avsnittet '+w.av+'. Numren följer bokens ordning, avsnitt för avsnitt.',nr:[w.nr]}}
+  var others2=shuffle(pool().filter(function(x){return x.nr!==w.nr}),r).slice(0,3);
+  return {type:'val',kind:'Nummerfrågan',q:'Vilket verk har nummer '+w.nr+' i kanon?',o:shuffle([{t:w.t,ok:true}].concat(others2.map(function(x){return {t:x.t,ok:false}})),r),x:'Nummer '+w.nr+' är '+w.t+(w.by?', '+w.by:'')+', i avsnittet '+w.av+'.',nr:[w.nr]};
 }
-function pips(){return '<div class="pips">'+cur.map(function(_,i){return '<i class="'+(i<idx?(res[i]?'c':'w'):(i===idx?'now':''))+'"></i>'}).join('')+'</div>'}
+function timeQ(sec,r){
+  var ws=shuffle(pool(sec).filter(function(w){return w.ar}),r),pick=[];
+  ws.forEach(function(w){if(pick.length<4&&pick.every(function(p){return Math.abs(p.ar-w.ar)>=8}))pick.push(w)});
+  if(pick.length<4){ws=shuffle(pool().filter(function(w){return w.ar}),r);pick=[];ws.forEach(function(w){if(pick.length<4&&pick.every(function(p){return Math.abs(p.ar-w.ar)>=8}))pick.push(w)})}
+  var order=pick.slice().sort(function(a,b){return a.ar-b.ar});
+  return {type:'tid',kind:'Tidslinjen',q:'Ordna verken i tidsordning – tryck på det äldsta först.',items:pick,order:order,nr:order.map(function(w){return w.nr})};
+}
+function build(mode,sec){
+  var r=rnd,list=[],texts=Q;
+  if(mode==='dag'){var d=today().replace(/-/g,'');r=rng(+d);list=shuffle(Q,r).slice(0,3).map(textQ);list.push(numberQ(null,r));list.splice(Math.floor(r()*4),0,timeQ(null,r));return list}
+  if(mode==='avsnitt'){texts=Q.filter(function(q){return WORK[q[4]]&&WORK[q[4]].av===sec})}
+  var n=mode==='avsnitt'?Math.min(7,texts.length):7;
+  list=shuffle(texts).slice(0,n).map(textQ);
+  list.push(numberQ(mode==='avsnitt'?sec:null,r),numberQ(mode==='avsnitt'?sec:null,r));
+  list=shuffle(list);list.splice(4+Math.floor(r()*5),0,timeQ(mode==='avsnitt'?sec:null,r));
+  return list;
+}
+var S={};
+var RANKS=[[0,'Nyfiken','Kanon har mycket att ge dig – börja bläddra.'],[.3,'Bildad','En stabil grund. Boken fyller i luckorna.'],[.5,'Kännare','Du rör dig hemtamt i den svenska kulturen.'],[.7,'Kanonkännare','Mycket starkt. Få klarar svår nivå så här bra.'],[.9,'Ledamot av Akademien','Kanonisk. Du kunde ha suttit i expertgruppen.']];
+function rank(p){var r=RANKS[0];RANKS.forEach(function(x){if(p>=x[0])r=x});return r}
+function modeName(m,sec){return m==='dag'?'Dagens fem':m==='avsnitt'?sec:'Tio frågor'}
+function stats(){
+  var d=load(),el2=document.getElementById('qstats');if(!el2)return;
+  var parts=[];if(d.played)parts.push('<b>'+d.played+'</b> spelade quiz');if(d.best)parts.push('personbästa <b>'+d.best+'</b> poäng');if(d.streak&&d.streak.n>1)parts.push('Dagens fem <b>'+d.streak.n+'</b> dagar i rad');
+  el2.innerHTML=parts.length?parts.join(' · '):'Spela för att få ditt första personbästa.';
+}
+function begin(mode,sec){
+  var d=load();
+  if(mode==='dag'&&d.daily&&d.daily.date===today()){S={mode:'dag',list:build('dag'),res:d.daily.res,points:d.daily.points,done:true};finish(true);return}
+  S={mode:mode,sec:sec,list:build(mode,sec),i:0,res:[],points:0,streak:0,secs:{}};show();
+}
+function header(){var n=S.list.length;return '<div class="qmeta"><span class="label">'+esc(modeName(S.mode,S.sec))+' · fråga '+(S.i+1)+' <i>av</i> '+n+'</span><span class="qpts"><b id="qp">'+S.points+'</b> poäng</span></div><div class="pips">'+S.list.map(function(_,i){return '<i class="'+(i<S.i?(S.res[i]?'c':'w'):(i===S.i?'now':''))+'"></i>'}).join('')+'</div>'}
 function show(){
-  var q=cur[idx];
-  box.innerHTML='<div class="qmeta"><span class="label">Fråga '+(idx+1)+' <i>av</i> 10</span>'+pips()+'</div><p class="qtext">'+q.q+'</p><div class="opts">'+
-   q.o.map(function(o,i){return '<button type="button" class="opt" id="opt-'+i+'" data-i="'+i+'"><b>'+'ABCD'[i]+'</b><span>'+o.t+'</span></button>'}).join('')+'</div><div id="after"></div>';
-  box.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){answer(+b.dataset.i)})});
+  var q=S.list[S.i];S.t0=Date.now();
+  var kind=q.kind?'<span class="qkind">'+q.kind+'</span>':'';
+  if(q.type==='tid'){
+    S.pick=[];
+    box.innerHTML=header()+kind+'<p class="qtext">'+esc(q.q)+'</p><div class="tl">'+q.items.map(function(w,i){return '<button type="button" class="tli" data-i="'+i+'"><span class="tlpos"></span><span><b>'+esc(w.t)+'</b>'+(w.by?'<br><em>'+esc(w.by.replace(/,\s*\d{4}.*$/,''))+'</em>':'')+'</span></button>'}).join('')+'</div><div class="tlbar"><button type="button" class="btn" id="tlreset">Börja om</button></div><div id="after"></div>';
+    box.querySelectorAll('.tli').forEach(function(b){b.addEventListener('click',function(){if(b.disabled||S.pick.indexOf(+b.dataset.i)>=0)return;S.pick.push(+b.dataset.i);b.classList.add('picked');b.querySelector('.tlpos').textContent=S.pick.length;if(S.pick.length===q.items.length)answerTid()})});
+    document.getElementById('tlreset').addEventListener('click',function(){S.pick=[];box.querySelectorAll('.tli').forEach(function(b){b.classList.remove('picked');b.querySelector('.tlpos').textContent=''})});
+  } else {
+    box.innerHTML=header()+kind+'<p class="qtext">'+esc(q.q)+'</p><div class="opts">'+q.o.map(function(o,i){return '<button type="button" class="opt" data-i="'+i+'"><b>'+'ABCD'[i]+'</b><span>'+esc(o.t)+'</span></button>'}).join('')+'</div><div id="after"></div>';
+    box.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){answerVal(+b.dataset.i)})});
+  }
+  box.scrollIntoView({block:'nearest'});
 }
-function answer(i){
-  var q=cur[idx],ok=q.o[i].ok;res[idx]=ok;if(ok)score++;
+function score(ok){
+  var secs=(Date.now()-S.t0)/1000,p=0;
+  if(ok){S.streak++;p=100+Math.round(Math.max(0,50*(1-secs/20)))+Math.min(80,20*(S.streak-1))}else S.streak=0;
+  S.points+=p;return p;
+}
+function tally(q,ok){q.nr.forEach(function(nr){var a=(WORK[nr]||{}).av;if(!a)return;var s=S.secs[a]||(S.secs[a]={r:0,n:0});s.n++;if(ok)s.r++})}
+function card(nr){var w=WORK[nr];if(!w)return '';return '<a class="vcard" href="/verk/'+w.nr.replace('.','-')+'"><span class="n"><small>NUMMER</small>'+esc(w.nr)+'</span><span class="label">'+esc(w.av)+(w.sida?' · <i>sidan</i> '+w.sida:'')+'</span><h4>'+esc(w.t)+'</h4>'+(w.text?'<p>'+esc(w.text)+'</p>':'')+'<span class="more">Läs om verket →</span></a>'}
+function after(ok,p,x,nrs){
+  var last=S.i===S.list.length-1;
+  document.getElementById('after').innerHTML='<div class="afterbox"><p class="explain"><b>'+(ok?'Rätt!':'Fel.')+'</b>'+(ok?' <span class="plus">+'+p+'</span>'+(S.streak>1?' <span class="streak">'+S.streak+' i rad</span>':''):'')+' '+x+'</p><div class="vcards">'+nrs.map(card).join('')+'</div><button type="button" class="btn solid" id="next">'+(last?'Se resultat':'Nästa fråga')+'</button></div>';
+  document.getElementById('qp').textContent=S.points;
+  box.querySelector('.pips i.now').className=ok?'c':'w';
+  var n=document.getElementById('next');n.focus({preventScroll:true});n.addEventListener('click',function(){S.i++;if(S.i<S.list.length)show();else finish()});
+}
+function answerVal(i){
+  var q=S.list[S.i],ok=q.o[i].ok;S.res[S.i]=ok;var p=score(ok);tally(q,ok);
   box.querySelectorAll('.opt').forEach(function(b,j){b.disabled=true;if(q.o[j].ok)b.classList.add('right');else if(j===i)b.classList.add('wrong')});
-  box.querySelector('.pips').outerHTML=pips().replace('class="now"','class="'+(ok?'c':'w')+'"');
-  document.getElementById('after').innerHTML='<div class="col" style="display:grid;gap:16px"><p class="explain"><b>'+(ok?'Rätt.':'Fel.')+'</b> '+q.x+'</p><button type="button" class="btn solid" id="next" style="justify-self:start">'+(idx<9?'Nästa fråga':'Se resultat')+'</button></div>';
-  var n=document.getElementById('next');n.focus();n.addEventListener('click',function(){idx++;if(idx<10)show();else end()});
+  after(ok,p,esc(q.x),q.nr);
 }
-function end(){
-  var verdict=score>=9?'Kanonisk. Du kunde ha suttit i expertgruppen.':score>=7?'Mycket starkt. Få klarar svår nivå så här bra.':score>=4?'Godkänt. Boken har resten.':'Svårt, eller hur? Det är därför boken finns.';
-  box.innerHTML='<span class="label">Ditt resultat</span><div class="score">'+score+'<span style="font-size:.4em;color:var(--ink-2)"> / 10</span></div><p class="qtext" style="font-size:1.5rem">'+verdict+'</p>'+pips()+
-   '<div style="display:flex;gap:12px;flex-wrap:wrap"><button type="button" class="btn solid" id="again">Tio nya frågor</button><a class="btn" href="/bestall">Beställ boken</a></div>';
-  document.getElementById('again').addEventListener('click',start);
+function answerTid(){
+  var q=S.list[S.i],ok=S.pick.every(function(ix,pos){return q.items[ix]===q.order[pos]});S.res[S.i]=ok;var p=score(ok);tally(q,ok);
+  box.querySelectorAll('.tli').forEach(function(b){b.disabled=true;var w=q.items[+b.dataset.i],right=q.order.indexOf(w)+1,mine=S.pick.indexOf(+b.dataset.i)+1;b.classList.add(right===mine?'right':'wrong');b.querySelector('.tlpos').textContent=right;if(right!==mine)b.querySelector('span:not(.tlpos)').insertAdjacentHTML('beforeend','<br><small class="tlyou">Du valde plats '+mine+'</small>');b.insertAdjacentHTML('beforeend','<span class="tlar">'+w.ar+'</span>')});
+  document.getElementById('tlreset').remove();
+  after(ok,p,'Rätt ordning: '+q.order.map(function(w){return esc(w.t)+' ('+w.ar+')'}).join(' → ')+'.',[]);
 }
-start();
+function shareText(){var r=S.res.filter(Boolean).length,n=S.list.length;return 'Kanonquiz · '+modeName(S.mode,S.sec)+(S.mode==='dag'?' '+today().slice(8)+'/'+(+today().slice(5,7)):'')+'\n'+r+'/'+n+' '+S.res.map(function(x){return x?'🟩':'🟥'}).join('')+' · '+S.points+' p\nsvenskakulturkanon.se/quiz'}
+function finish(replay){
+  var d=load(),r=S.res.filter(Boolean).length,n=S.list.length,rk=rank(r/n),rec=false;
+  if(!replay){
+    d.played=(d.played||0)+1;if(!d.best||S.points>d.best){if(d.best)rec=true;d.best=S.points}
+    d.top=(d.top||[]).concat([{p:S.points,r:r,n:n,m:modeName(S.mode,S.sec),d:today()}]).sort(function(a,b){return b.p-a.p}).slice(0,5);
+    if(S.mode==='dag'){d.daily={date:today(),res:S.res,points:S.points};var y=new Date();y.setDate(y.getDate()-1);var ys=y.getFullYear()+'-'+('0'+(y.getMonth()+1)).slice(-2)+'-'+('0'+y.getDate()).slice(-2);d.streak={last:today(),n:(d.streak&&d.streak.last===ys?d.streak.n:0)+1}}
+    save(d);
+  }
+  var secs=Object.keys(S.secs||{}).map(function(k){return {a:k,r:S.secs[k].r,n:S.secs[k].n,p:S.secs[k].r/S.secs[k].n}}).sort(function(a,b){return b.p-a.p||b.n-a.n});
+  var best=secs[0],worst=secs.length>1?secs[secs.length-1]:null;
+  var secLine='';
+  if(best&&worst&&best.p>worst.p)secLine='<p>Starkast på <b>'+esc(best.a)+'</b> ('+best.r+' av '+best.n+'), svagast på <a href="/verken-'+esc((KAP[worst.a]||{}).slug)+'">'+esc(worst.a)+'</a> ('+worst.r+' av '+worst.n+') – läs på i det avsnittet.</p>';
+  var top=(d.top||[]).map(function(t,i){return '<li><span>'+(i+1)+'</span><span>'+t.p+' p</span><span>'+t.r+'/'+t.n+' · '+esc(t.m)+'</span><span>'+t.d.slice(8)+'/'+(+t.d.slice(5,7))+'</span></li>'}).join('');
+  box.innerHTML='<span class="label">'+(replay?'Du har redan spelat dagens fem':'Ditt resultat')+'</span>'+
+   '<div class="result"><div class="score">'+r+'<span> / '+n+'</span></div><div><div class="rank">'+rk[1]+'</div><p>'+rk[2]+'</p><p class="qpts"><b>'+S.points+'</b> poäng'+(rec?' · <span class="streak">Nytt personbästa!</span>':'')+'</p></div></div>'+
+   '<div class="pips">'+S.res.map(function(x){return '<i class="'+(x?'c':'w')+'"></i>'}).join('')+'</div>'+secLine+
+   '<div class="qactions"><button type="button" class="btn solid" id="share">Dela resultatet</button>'+(S.mode==='dag'?'':'<button type="button" class="btn" id="again">Spela igen</button>')+'<button type="button" class="btn" data-mode="dag" id="todag">Dagens fem</button></div><p class="note" id="sharenote" hidden></p>'+
+   (S.mode==='dag'?'<p class="note">Nya frågor varje dag vid midnatt – samma för alla.</p>':'')+
+   '<div class="qbook"><div><span class="label">Alla svar finns i boken</span><p>Svenska Kulturkanon presenterar alla 109 verk, ett per uppslag. Första upplagan kommer i december 2026.</p></div><a class="btn solid" href="/bestall">Beställ boken</a></div>'+
+   (top?'<div class="mytop"><span class="label">Dina bästa resultat</span><ol>'+top+'</ol><p class="note">Sparas bara i din webbläsare.</p></div>':'');
+  var a=document.getElementById('again');if(a)a.addEventListener('click',function(){begin(S.mode,S.sec)});
+  var td=document.getElementById('todag');if(S.mode==='dag')td.remove();else td.addEventListener('click',function(){setMode('dag')});
+  document.getElementById('share').addEventListener('click',function(){var t=shareText(),note=document.getElementById('sharenote');
+    if(navigator.share){navigator.share({text:t}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){note.hidden=false;note.textContent='Resultatet är kopierat – klistra in det var du vill.'})}else{note.hidden=false;note.textContent=t}});
+  stats();
+}
+// lägen
+var tabs=document.getElementById('qmodes'),secSel=document.getElementById('qsec');
+secSel.innerHTML=AV.map(function(a){return '<option>'+esc(a[1])+'</option>'}).join('');
+function setMode(m){tabs.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===m?'true':'false')});secSel.parentNode.hidden=m!=='avsnitt';begin(m,m==='avsnitt'?secSel.value:null)}
+tabs.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode)})});
+secSel.addEventListener('change',function(){begin('avsnitt',secSel.value)});
+stats();setMode('tio');
 })();
 </script>
 </body>

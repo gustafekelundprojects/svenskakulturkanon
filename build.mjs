@@ -9,7 +9,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://svenskakulturkanon.se';
 globalThis.window = {};
-await import(pathToFileURL(path.join(root, 'data/kanon.js')).href);
+await import(pathToFileURL(path.join(root, 'kanon.js')).href);
 const K = globalThis.window.KANON;
 const tpl = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 

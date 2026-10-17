@@ -8,7 +8,7 @@ Statisk webbplats för boken *Svenska Kulturkanon – 100 verk som skapade Sveri
 index.html            Startsidan och mallen för alla sidor
 *.html                Egna sidor, byggda med build.mjs (se nedan)
 build.mjs             Bygger sidorna, sitemap och QR-regler
-data/kanon.js         All data: avsnitt och verk, kapitelinledningar och verkbeskrivningar ur boken, quizfrågor, veckans verk
+kanon.js              All data: avsnitt och verk, kapitelinledningar och verkbeskrivningar ur boken, quizfrågor, veckans verk
 images/               Omslag, marmorpapper och uppslag ur boken
 images/verk/<nr>.jpg  Bildsidan för varje verk (1080 × 1350), t.ex. 37.jpg, 10-5.jpg
 vercel.json           QR-omdirigeringar /qr/<nr> och cache för bilder
@@ -18,7 +18,7 @@ instagram/            Mall och färdiga inlägg för Instagram
 
 ## Veckans verk och Instagram
 
-Lägg till en vecka i `VECKOR` i `data/kanon.js`:
+Lägg till en vecka i `VECKOR` i `kanon.js`:
 
 ```js
 { "vecka": 47, "ar": 2026, "nr": "6", "hook": "Frihet utan tillstånd.",
@@ -63,7 +63,7 @@ sitemap.xml, robots.txt       för sökmotorer
 
 ### Så ändrar du en sida
 
-`index.html` är mallen för alla sidor och `data/kanon.js` innehåller allt innehåll om verken. Ändra där och kör sedan
+`index.html` är mallen för alla sidor och `kanon.js` innehåller allt innehåll om verken. Ändra där och kör sedan
 
 ```
 node build.mjs
