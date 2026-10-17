@@ -3,76 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/qr/1",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/2",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/3",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/4",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/5",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/6",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/7",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/8",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/9",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/10-1",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/10-2",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/10-3",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/10-4",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/10-5",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
       "source": "/qr/10-6",
       "destination": "/dikt/10-6",
       "permanent": false
@@ -96,456 +26,6 @@
       "source": "/qr/10-10",
       "destination": "/dikt/10-10",
       "permanent": false
-    },
-    {
-      "source": "/qr/11",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/12",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/13",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/14",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/15",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/16",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/17",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/18",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/19",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/20",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/21",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/22",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/23",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/24",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/25",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/26",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/27",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/28",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/29",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/30",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/31",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/32",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/33",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/34",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/35",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/36",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/37",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/38",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/39",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/40",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/41",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/42",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/43",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/44",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/45",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/46",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/47",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/48",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/49",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/50",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/51",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/52",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/53",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/54",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/55",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/56",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/57",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/58",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/59",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/60",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/61",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/62",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/63",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/64",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/65",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/66",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/67",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/68",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/69",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/70",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/71",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/72",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/73",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/74",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/75",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/76",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/77",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/78",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/79",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/80",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/81",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/82",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/83",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/84",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/85",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/86",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/87",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/88",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/89",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/90",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/91",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/92",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/93",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/94",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/95",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/96",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/97",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/98",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/99",
-      "destination": "/#verken",
-      "permanent": false
-    },
-    {
-      "source": "/qr/100",
-      "destination": "/#verken",
-      "permanent": false
     }
   ],
   "headers": [
@@ -557,6 +37,900 @@
           "value": "public, max-age=604800"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/qr/1",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/1",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/2",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/2",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/3",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/3",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/4",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/4",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/5",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/5",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/6",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/6",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/7",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/7",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/8",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/8",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/9",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/verk/9",
+      "destination": "/verken/litteratur-prosa.html"
+    },
+    {
+      "source": "/qr/10-1",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-1",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.1",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/qr/10-2",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-2",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.2",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/qr/10-3",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-3",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.3",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/qr/10-4",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-4",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.4",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/qr/10-5",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-5",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.5",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-6",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.6",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-7",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.7",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-8",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.8",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-9",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.9",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10-10",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/verk/10.10",
+      "destination": "/verken/litteratur-dikter.html"
+    },
+    {
+      "source": "/qr/11",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/11",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/12",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/12",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/13",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/13",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/14",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/14",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/15",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/15",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/16",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/16",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/17",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/17",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/18",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/18",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/19",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/19",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/20",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/verk/20",
+      "destination": "/verken/bild-och-form.html"
+    },
+    {
+      "source": "/qr/21",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/21",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/22",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/22",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/23",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/23",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/24",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/24",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/25",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/25",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/26",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/26",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/27",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/27",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/28",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/28",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/29",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/29",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/30",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/verk/30",
+      "destination": "/verken/musik.html"
+    },
+    {
+      "source": "/qr/31",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/31",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/32",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/32",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/33",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/33",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/34",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/34",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/35",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/35",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/36",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/36",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/37",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/37",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/38",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/38",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/39",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/39",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/40",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/verk/40",
+      "destination": "/verken/film-och-scenkonst.html"
+    },
+    {
+      "source": "/qr/41",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/41",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/42",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/42",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/43",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/43",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/44",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/44",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/45",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/45",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/46",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/46",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/47",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/47",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/48",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/48",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/49",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/49",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/50",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/verk/50",
+      "destination": "/verken/lardom-och-sakprosa.html"
+    },
+    {
+      "source": "/qr/51",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/51",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/52",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/52",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/53",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/53",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/54",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/54",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/55",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/55",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/56",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/56",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/57",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/57",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/58",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/58",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/59",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/59",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/60",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/verk/60",
+      "destination": "/verken/lag-och-ratt.html"
+    },
+    {
+      "source": "/qr/61",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/61",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/62",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/62",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/63",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/63",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/64",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/64",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/65",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/65",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/66",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/66",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/67",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/67",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/68",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/68",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/69",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/69",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/70",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/verk/70",
+      "destination": "/verken/religion.html"
+    },
+    {
+      "source": "/qr/71",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/71",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/72",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/72",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/73",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/73",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/74",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/74",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/75",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/75",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/76",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/76",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/77",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/77",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/78",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/78",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/79",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/79",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/80",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/verk/80",
+      "destination": "/verken/ekonomi.html"
+    },
+    {
+      "source": "/qr/81",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/81",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/82",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/82",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/83",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/83",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/84",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/84",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/85",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/85",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/86",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/86",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/87",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/87",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/88",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/88",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/89",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/89",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/90",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/verk/90",
+      "destination": "/verken/uppfinningar.html"
+    },
+    {
+      "source": "/qr/91",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/91",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/92",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/92",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/93",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/93",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/94",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/94",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/95",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/95",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/96",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/96",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/97",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/97",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/98",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/98",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/99",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/99",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/qr/100",
+      "destination": "/verken/offentlighet.html"
+    },
+    {
+      "source": "/verk/100",
+      "destination": "/verken/offentlighet.html"
     }
   ]
 }

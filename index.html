@@ -2,14 +2,21 @@
 <html lang="sv" data-theme="light">
 <head>
 <meta charset="utf-8">
+<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
-<meta property="og:title" content="Svenska Kulturkanon">
-<meta property="og:description" content="100 verk som skapade Sverige – en coffee table-bok om den svenska kulturkanonen.">
+<meta property="og:title" content="Svenska Kulturkanon – 100 verk som skapade Sverige">
+<meta property="og:description" content="Svenska Kulturkanon – 100 verk som skapade Sverige. En coffee table-bok om hela den svenska kulturkanonen, ett verk per uppslag.">
 <meta property="og:image" content="https://svenskakulturkanon.se/images/omslag.jpg">
 <meta name="theme-color" content="#F3F1ED">
 <meta name="color-scheme" content="light">
-<title>Svenska Kulturkanon</title>
+<title>Svenska Kulturkanon – 100 verk som skapade Sverige</title>
+<link rel="canonical" href="https://svenskakulturkanon.se/">
+<meta property="og:url" content="https://svenskakulturkanon.se/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
@@ -247,22 +254,46 @@ ol.tl span{font-size:.98rem}
 .iggrid span{position:absolute;left:8px;bottom:6px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
 .igcta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
 .igcta .handle{font-family:var(--f-display);font-size:1.6rem;color:var(--navy)}
+.avcard{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:baseline;padding:22px;background:var(--sheet);border:1px solid var(--rule);text-decoration:none;color:inherit;transition:border-color .2s}
+.avcard:hover{border-color:var(--copper)}
+.avcard .glyph{font-family:var(--f-display);font-size:1rem;color:var(--copper-ink);letter-spacing:.1em;grid-row:span 3}
+.avcard h3{text-transform:uppercase;font-size:1.45rem;letter-spacing:.04em}
+.avcard .intro{font-size:.98rem;color:var(--ink-2)}
+.avcard .more{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-ink);margin-top:6px}
+.crumbs{font-size:.85rem;letter-spacing:.08em;color:var(--ink-2)}
+.crumbs a{color:var(--copper-ink)}
+.k-intro p{font-size:1.08rem}
+.verklista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.verklista li{position:relative;padding:70px 24px 24px;background:var(--sheet);border:1px solid var(--rule);overflow:hidden;display:grid;gap:10px;align-content:start;scroll-margin-top:90px;transition:border-color .3s,box-shadow .3s}
+.verklista li::before{content:"";position:absolute;left:-60px;top:-60px;width:130px;height:130px;border-radius:50%;background:var(--paper)}
+.verklista .n{position:absolute;left:14px;top:8px;font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--navy)}
+.verklista .n small{display:block;font-family:var(--f-body);font-size:.55rem;letter-spacing:.22em;color:var(--ink-2)}
+.verklista h3{font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
+.verklista .by{font-size:.95rem;color:var(--ink-2);font-style:italic}
+.verklista p{margin:0}
+.verklista .sida{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-ink)}
+.verklista li.hit{border-color:var(--copper);box-shadow:0 0 0 3px color-mix(in srgb,var(--copper) 30%,transparent)}
+body[data-qr] .verklista li.hit .hitlabel{display:inline-block}
+.hitlabel{display:none;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;background:var(--navy);color:var(--on-navy);padding:3px 8px;justify-self:start}
+.knav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:18px;font-size:.9rem;letter-spacing:.06em}
+.knav a{color:var(--navy);text-decoration:none}
+.knav a:hover{color:var(--copper-ink)}
 </style>
 </head>
-<body>
+<body data-page="start">
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#start">Svenska Kulturkanon</a>
-    <a href="#bestall" class="btn solid mbuy">Beställ</a>
+    <a class="brand" href="/">Svenska Kulturkanon</a>
+    <a href="/bestall" class="btn solid mbuy">Beställ</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="huvudmeny"><span></span><span></span><span></span><b>Meny</b></button>
     <nav class="main" id="huvudmeny" aria-label="Huvudmeny">
-      <a href="#om">Om boken</a>
-      <a href="#verken">Verken</a>
-      <a href="#veckans">Veckans verk</a>
-      <a href="#quiz">Quiz</a>
-      <a href="#foretag">Gåvor &amp; storköp</a>
-      <a href="#bestall" class="buy">Beställ</a>
+      <a href="/om-boken">Om boken</a>
+      <a href="/verken">Verken</a>
+      <a href="/veckans-verk">Veckans verk</a>
+      <a href="/quiz">Quiz</a>
+      <a href="/foretagsgava">Företagsgåva</a>
+      <a href="/bestall" class="buy">Beställ</a>
     </nav>
   </div>
 </header>
@@ -280,7 +311,7 @@ ol.tl span{font-size:.98rem}
       <span class="label"><i>format</i> Sveriges kulturarv</span>
       <span class="big">Kanon</span>
       <span class="label"><i>och</i> identitet</span>
-      <div class="hero-cta"><a class="btn solid" href="#bestall">Beställ boken · 695 kr</a><a class="btn" href="#quiz">Testa dig själv</a></div>
+      <div class="hero-cta"><a class="btn solid" href="/bestall">Beställ boken · 695 kr</a><a class="btn" href="/quiz">Testa dig själv</a></div>
     </div>
     <figure class="cover" style="margin:0"><img src="images/omslag.jpg" alt="Omslaget till Svenska Kulturkanon: titeln i kopparfärgade versaler på ljust papper." width="1080" height="1350"></figure>
   </div>
@@ -294,14 +325,14 @@ ol.tl span{font-size:.98rem}
       <h2>Ett verk <br>per uppslag</h2>
       <p class="lede">Från Magnus Erikssons landslag till Pippi Långstrump, från Falu koppargruva till Radiohuset. Hela den svenska kulturkanonen i en bok att bläddra i, läsa högt ur och ge bort.</p>
       <p class="measure">Varje uppslag presenterar ett verk eller en företeelse, människorna bakom och sammanhanget det kom ur. Texterna är korta och kan läsas utan förkunskaper. QR-koderna leder vidare till musiken, filmerna och dikterna i sin helhet.</p>
-      <p><a class="btn" href="#om">Om boken</a></p>
+      <p><a class="btn" href="/om-boken">Om boken</a></p>
     </div>
     <figure class="spread" style="margin:0"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
   </div>
   <div class="three">
-    <a class="nr" href="#veckans" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
-    <a class="nr" href="#quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio slumpade frågor om bokens verk.</span></a>
-    <a class="nr" href="#foretag" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Gåvor <i>och</i> storköp</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
+    <a class="nr" href="/veckans-verk" style="text-decoration:none;color:inherit"><span class="n"><small>NUMMER</small><span id="vv-card-nr"></span></span><span class="label" id="vv-card-label">Veckans verk</span><h4 id="vv-card-title"></h4><span class="by" id="vv-card-by"></span></a>
+    <a class="nr" href="/quiz" style="text-decoration:none;color:inherit"><span class="n"><small>FRÅGOR</small>10</span><span class="label">Quiz · svår nivå</span><h4>Hur väl känner du kanon?</h4><span class="by">Tio slumpade frågor om bokens verk.</span></a>
+    <a class="nr" href="/foretagsgava" style="text-decoration:none;color:inherit"><span class="n"><small>GÅVA</small>✦</span><span class="label">Företagsgåva</span><h4>En svensk gåva</h4><span class="by">För kunder, styrelser, medarbetare och internationella gäster.</span></a>
   </div>
 </section>
 
@@ -365,14 +396,29 @@ ol.tl span{font-size:.98rem}
   <div class="carousel" id="uppslag" aria-roledescription="karusell" aria-label="Uppslag ur boken">
     <div class="ctop"><span class="label">Uppslag <i>ur</i> boken</span><span class="cnav"><button type="button" class="cbtn" data-d="-1" aria-label="Föregående uppslag">‹</button><span class="ccount" aria-live="polite">1 / 5</span><button type="button" class="cbtn" data-d="1" aria-label="Nästa uppslag">›</button></span></div>
     <div class="track" tabindex="0">
-      <figure class="slide"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" loading="lazy"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
-      <figure class="slide"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" loading="lazy"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
-      <figure class="slide"><img src="images/uppslag-37.jpg" alt="Uppslag ur boken: nummer 37, Det sjunde inseglet, med bild från inspelningen." width="1600" height="1000" loading="lazy"><figcaption>Nummer 37 · Det sjunde inseglet av Ingmar Bergman</figcaption></figure>
-      <figure class="slide"><img src="images/uppslag-86.jpg" alt="Uppslag ur boken: nummer 86, Göta kanal, med en kanalbåt på akvedukten." width="1600" height="1000" loading="lazy"><figcaption>Nummer 86 · Göta kanal av Baltzar von Platen</figcaption></figure>
-      <figure class="slide"><img src="images/uppslag-98.jpg" alt="Uppslag ur boken: nummer 98, Vasaloppet, med åkare i spåret." width="1600" height="1000" loading="lazy"><figcaption>Nummer 98 · Vasaloppet av Anders Pers och IFK Mora</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-03.jpg" alt="Uppslag ur boken: nummer 3, Gösta Berlings saga, med porträtt av Selma Lagerlöf." width="1600" height="1000" decoding="async"><figcaption>Nummer 3 · Gösta Berlings saga av Selma Lagerlöf</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-12.jpg" alt="Uppslag ur boken: nummer 12, Gripsholms slott med statens porträttsamling." width="1600" height="1000" decoding="async"><figcaption>Nummer 12 · Gripsholms slott med statens porträttsamling</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-37.jpg" alt="Uppslag ur boken: nummer 37, Det sjunde inseglet, med bild från inspelningen." width="1600" height="1000" decoding="async"><figcaption>Nummer 37 · Det sjunde inseglet av Ingmar Bergman</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-86.jpg" alt="Uppslag ur boken: nummer 86, Göta kanal, med en kanalbåt på akvedukten." width="1600" height="1000" decoding="async"><figcaption>Nummer 86 · Göta kanal av Baltzar von Platen</figcaption></figure>
+      <figure class="slide"><img src="images/uppslag-98.jpg" alt="Uppslag ur boken: nummer 98, Vasaloppet, med åkare i spåret." width="1600" height="1000" decoding="async"><figcaption>Nummer 98 · Vasaloppet av Anders Pers och IFK Mora</figcaption></figure>
     </div>
     <div class="dots" role="tablist"></div>
   </div>
+</section>
+
+<!-- KAPITEL (ett avsnitt) -->
+<section class="page" id="kapitel" hidden>
+  <nav class="crumbs" aria-label="Brödsmulor"><a href="/verken">Verken</a> <span aria-hidden="true">/</span> <span id="k-crumb"></span></nav>
+  <div class="head"><span class="label" id="k-label"></span><h2 id="k-title"></h2><p class="lede" id="k-lede"></p></div>
+  <div class="col measure k-intro" id="k-intro"></div>
+  <ol class="verklista" id="k-list"></ol>
+  <nav class="knav" aria-label="Andra avsnitt"><a id="k-prev" href="/verken"></a><a id="k-all" href="/verken">Alla avsnitt</a><a id="k-next" href="/verken"></a></nav>
+</section>
+
+<!-- 404 -->
+<section class="page" id="saknas" hidden>
+  <div class="head"><span class="label">Sidan finns inte</span><h2>Här finns inget verk</h2><p class="lede">Adressen kan vara felstavad eller sidan flyttad. Börja om från startsidan eller bläddra bland verken.</p></div>
+  <p><a class="btn solid" href="/">Till startsidan</a> <a class="btn" href="/verken">Alla verk</a></p>
 </section>
 
 <!-- VECKANS -->
@@ -408,7 +454,7 @@ ol.tl span{font-size:.98rem}
     <div class="two" style="gap:20px">
       <div class="product feat" data-id="std" data-price="695"><span class="label">Första upplagan</span><h3>Svenska Kulturkanon</h3><p>Inbunden, 272 sidor, 240 × 300 mm. Med tryckta försättsblad i marmormönster.</p><span class="price">695 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
       <div class="product" data-id="gift" data-price="745"><span class="label">Present</span><h3>Presentförpackning</h3><p>Boken inslagen i silkespapper, med ett tryckt gåvokort och din hälsning.</p><span class="price">745 kr <small>inkl. moms</small></span><div class="qty"><button type="button" aria-label="Färre">−</button><output>0</output><button type="button" aria-label="Fler">+</button></div></div>
-      <div class="product"><span class="label">Från 25 ex</span><h3>Storköp</h3><p>Rabatt för företag, skolor och föreningar. Tryckt hälsning och leverans till en adress.</p><a class="btn" href="#foretag">Begär offert</a></div>
+      <div class="product"><span class="label">Från 25 ex</span><h3>Företagsgåva</h3><p>Rabatt för företag, skolor och föreningar. Tryckt hälsning och leverans till en adress.</p><a class="btn" href="/foretagsgava">Begär offert</a></div>
     </div>
     <aside class="cart" aria-label="Varukorg">
       <h3>Varukorg</h3>
@@ -424,7 +470,7 @@ ol.tl span{font-size:.98rem}
 
 <!-- FÖRETAG -->
 <section class="page" id="foretag" hidden>
-  <div class="head"><span class="label">Gåvor <i>och</i> storköp</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster – och ett referensverk för skolor, bibliotek och föreningar.</p></div>
+  <div class="head"><span class="label">Företagsgåva</span><h2>En svensk gåva</h2><p class="lede">En representativ gåvobok för kunder, medarbetare, styrelser, ambassader och internationella gäster – och ett referensverk för skolor, bibliotek och föreningar.</p></div>
   <div class="two">
     <div class="col">
       <div class="three" style="gap:18px">
@@ -474,7 +520,7 @@ ol.tl span{font-size:.98rem}
     </div>
     <div class="col rule-top">
       <h3>Hittat ett fel?</h3>
-      <p>Läs om hur vi hanterar <a href="#rattelser">rättelser</a>.</p>
+      <p>Läs om hur vi hanterar <a href="/rattelser">rättelser</a>.</p>
     </div>
   </div>
 </section>
@@ -518,10 +564,10 @@ ol.tl span{font-size:.98rem}
 
 <footer class="site"><div class="wrap">
   <div class="fgrid">
-    <div class="fcol"><span class="label">Boken</span><a href="#om">Om boken</a><a href="#verken">Verken</a><a href="#veckans">Veckans verk</a><a href="#bestall">Beställ</a><a href="#rattelser">Rättelser</a></div>
-    <div class="fcol"><span class="label">För yrkesfolk</span><a href="#press">Press</a><a href="#press">Återförsäljare</a><a href="#foretag">Gåvor &amp; storköp</a><a href="#kontakt">Kontakt</a></div>
-    <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Instagram · @svenskakulturkanon</a><a href="#veckans">Veckans verk</a><a href="#quiz">Kanonquiz</a></div>
-    <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="#villkor">Köpvillkor</a><a href="#integritet">Integritetspolicy</a></div>
+    <div class="fcol"><span class="label">Boken</span><a href="/om-boken">Om boken</a><a href="/verken">Verken</a><a href="/veckans-verk">Veckans verk</a><a href="/bestall">Beställ</a><a href="/rattelser">Rättelser</a></div>
+    <div class="fcol"><span class="label">För yrkesfolk</span><a href="/press">Press</a><a href="/press">Återförsäljare</a><a href="/foretagsgava">Företagsgåva</a><a href="/kontakt">Kontakt</a></div>
+    <div class="fcol"><span class="label">Följ oss</span><a href="https://www.instagram.com/svenskakulturkanon/" target="_blank" rel="noopener">Instagram · @svenskakulturkanon</a><a href="/veckans-verk">Veckans verk</a><a href="/quiz">Kanonquiz</a></div>
+    <div class="fcol"><span class="label">Kaffeförlaget AB</span><span class="mono">info@svenskakulturkanon.se</span><span>Org.nr 559584-4852</span><span>Lidingö</span><a href="/kopvillkor">Köpvillkor</a><a href="/integritet">Integritetspolicy</a></div>
   </div>
   <div class="fbase"><span>© 2026 Gustaf Ekelund och Agneta Norlin · Kaffeförlaget AB</span><span class="draft">Utkast · oktober 2026</span></div>
 </div></footer>
@@ -536,29 +582,59 @@ var mb=document.querySelector('.menu'),nm=document.getElementById('huvudmeny');
 function closeMenu(){nm.classList.remove('open');mb.setAttribute('aria-expanded','false')}
 mb.addEventListener('click',function(){var o=!nm.classList.contains('open');nm.classList.toggle('open',o);mb.setAttribute('aria-expanded',o?'true':'false')});
 nm.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
-window.addEventListener('hashchange',closeMenu);
 
+function el(id){return document.getElementById(id)}
 // ---------- routing ----------
-var pages=['start','om','verken','veckans','quiz','bestall','foretag','press','kontakt','rattelser','villkor','integritet'];
-function route(){
-  var id=(location.hash||'#start').slice(1); if(pages.indexOf(id)<0)id='start';
+var PATHS={'/':'start','/index':'start','/404':'saknas','/om-boken':'om','/verken':'verken','/veckans-verk':'veckans','/quiz':'quiz','/bestall':'bestall','/foretagsgava':'foretag','/press':'press','/kontakt':'kontakt','/rattelser':'rattelser','/kopvillkor':'villkor','/integritet':'integritet'};
+var HASH={'#start':'/','#om':'/om-boken','#verken':'/verken','#veckans':'/veckans-verk','#quiz':'/quiz','#bestall':'/bestall','#foretag':'/foretagsgava','#press':'/press','#kontakt':'/kontakt','#rattelser':'/rattelser','#villkor':'/kopvillkor','#integritet':'/integritet'};
+var TITLES={start:'Svenska Kulturkanon – 100 verk som skapade Sverige',om:'Om boken',verken:'Verken',veckans:'Veckans verk',quiz:'Kanonquiz',bestall:'Beställ boken',foretag:'Företagsgåva',press:'Press och handel',kontakt:'Kontakt',rattelser:'Rättelser',villkor:'Köpvillkor',integritet:'Integritetspolicy',kapitel:'Verken',saknas:'Sidan finns inte'};
+if(HASH[location.hash]){history.replaceState(null,'',HASH[location.hash])}
+function setTitle(t,id){document.title=id==='start'?t:t+' · Svenska Kulturkanon';}
+function showPage(id,navKey){
   document.querySelectorAll('.page').forEach(function(p){var key=p.dataset.part||p.id;p.hidden=key!==id});
   document.querySelector('.band').hidden=id!=='start';
-  document.querySelectorAll('nav.main a').forEach(function(a){a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+id);if(a.getAttribute('href')==='#'+id)a.setAttribute('aria-current','page')});
-  window.scrollTo(0,0);
+  var cur=navKey||location.pathname;
+  document.querySelectorAll('nav.main a').forEach(function(a){if(a.getAttribute('href')===cur)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
 }
-window.addEventListener('hashchange',route); route();
+function route(){
+  var path=location.pathname.replace(/\/+$/,'')||'/', m;
+  if((m=path.match(/^\/verken\/([a-z-]+)$/))&&renderKapitel(m[1],null)){showPage('kapitel','/verken');return}
+  if((m=path.match(/^\/(?:verk|qr)\/(\d+(?:[.-]\d+)?)$/))){var nr=m[1].replace('-','.');document.body.toggleAttribute('data-qr',path.indexOf('/qr/')===0);var sl=slugFor(nr);if(sl&&renderKapitel(sl,nr)){showPage('kapitel','/verken');return}}
+  var id=PATHS[path]||(document.body.dataset.page||'saknas');
+  showPage(id);setTitle(TITLES[id],id);window.scrollTo({top:0,behavior:'instant'});
+}
 
 // ---------- avsnitt ----------
-var AV=window.KANON.AVSNITT.slice();
+var K=window.KANON,KAP=K.KAPITEL||{},BESK=K.BESKRIVNING||{};
+var AV=K.AVSNITT.slice();
 var order=['Litteratur – prosa','Litteratur – dikter','Bild & form','Musik','Film & scenkonst','Lärdom & sakprosa','Lag & rätt','Religion','Ekonomi','Uppfinningar','Offentlighet'];
 AV.sort(function(a,b){return order.indexOf(a[1])-order.indexOf(b[1])});
 var roman=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI'];
+function slugOf(a){return (KAP[a[1]]||{}).slug||a[1].toLowerCase().replace(/[åä]/g,'a').replace(/ö/g,'o').replace(/&/g,'och').replace(/[^a-z]+/g,'-').replace(/^-|-$/g,'')}
+function slugFor(nr){for(var i=0;i<AV.length;i++){if(AV[i][3].some(function(w){return w[0]===nr}))return slugOf(AV[i])}return null}
+function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function count(a){return a[1]==='Litteratur – dikter'?'Verk nummer 10: en antologi med tio dikter.':a[3].length+' verk.'}
 document.getElementById('avsnitt').innerHTML=AV.map(function(a,i){
-  return '<details class="av" id="av-'+i+'"><summary><span class="glyph">'+roman[i]+'</span><h3>'+a[1]+'</h3><span class="intro">'+a[2]+' '+(a[1]==='Litteratur – dikter'?'Verk nummer 10: en antologi med tio dikter.':a[3].length+' verk.')+'</span><span class="more">'+(i===0?'':'')+'</span></summary><ol>'+
-   a[3].map(function(w){return '<li><span>'+w[0]+'</span><span>'+w[1]+(w[2]?'<br><em>'+w[2]+'</em>':'')+'</span></li>'}).join('')+'</ol></details>';
+  return '<a class="avcard" href="/verken/'+slugOf(a)+'"><span class="glyph">'+roman[i]+'</span><h3>'+esc(a[1])+'</h3><span class="intro">'+esc(a[2])+' '+count(a)+'</span><span class="more">Läs om verken →</span></a>';
 }).join('');
-
+function renderKapitel(slug,hit){
+  var i=-1;AV.forEach(function(a,j){if(slugOf(a)===slug)i=j});if(i<0)return false;
+  var a=AV[i],kap=KAP[a[1]]||{text:[]};
+  el('k-crumb').textContent=a[1];
+  el('k-label').innerHTML='Avsnitt '+roman[i]+' · <i>'+count(a).replace('.','')+'</i>';
+  el('k-title').textContent=a[1];
+  el('k-lede').textContent=a[2];
+  el('k-intro').innerHTML=kap.text.map(function(t){return '<p>'+esc(t)+'</p>'}).join('');
+  el('k-list').innerHTML=a[3].map(function(w){var b=BESK[w[0]]||{};return '<li id="verk-'+w[0].replace('.','-')+'"'+(w[0]===hit?' class="hit"':'')+'><span class="n"><small>NUMMER</small>'+esc(w[0])+'</span><span class="hitlabel">Du skannade det här verket</span><h3>'+esc(w[1])+'</h3>'+(w[2]?'<span class="by">'+esc(w[2])+'</span>':'')+(b.text?'<p>'+esc(b.text)+'</p>':'')+(b.sida?'<span class="sida">Sidan '+b.sida+' i boken</span>':'')+'</li>'}).join('');
+  var pv=AV[(i+AV.length-1)%AV.length],nx=AV[(i+1)%AV.length];
+  el('k-prev').href='/verken/'+slugOf(pv);el('k-prev').textContent='← '+pv[1];
+  el('k-next').href='/verken/'+slugOf(nx);el('k-next').textContent=nx[1]+' →';
+  var w=hit&&a[3].filter(function(x){return x[0]===hit})[0];
+  setTitle(w?w[1]+' – '+a[1]:a[1],'kapitel');
+  if(w){var go=function(){var li=document.getElementById('verk-'+hit.replace('.','-'));if(li)li.scrollIntoView({block:'start',behavior:'instant'})};requestAnimationFrame(go);setTimeout(go,350);if(document.readyState!=='complete')window.addEventListener('load',go,{once:true});if(document.fonts)document.fonts.ready.then(go)}else window.scrollTo({top:0,behavior:'instant'});
+  return true;
+}
+route();
 
 // ---------- veckans verk ----------
 function isoWeek(d){d=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));var day=d.getUTCDay()||7;d.setUTCDate(d.getUTCDate()+4-day);var y=d.getUTCFullYear();var w=Math.ceil(((d-Date.UTC(y,0,1))/864e5+1)/7);return {y:y,w:w}}
@@ -566,7 +642,6 @@ var all={};window.KANON.AVSNITT.forEach(function(a){a[3].forEach(function(w){all
 var V=window.KANON.VECKOR.slice().sort(function(a,b){return a.ar-b.ar||a.vecka-b.vecka});
 var now=isoWeek(new Date()),key=now.y*100+now.w,cw=V[0];
 V.forEach(function(v){if(v.ar*100+v.vecka<=key)cw=v});
-function el(id){return document.getElementById(id)}
 var info=all[cw.nr]||{t:'',by:'',av:''};
 el('vv-label').innerHTML='Veckans verk · <i>vecka</i> '+cw.vecka;
 el('vv-title').textContent=info.t;
@@ -636,7 +711,7 @@ function answer(i){
 function end(){
   var verdict=score>=9?'Kanonisk. Du kunde ha suttit i expertgruppen.':score>=7?'Mycket starkt. Få klarar svår nivå så här bra.':score>=4?'Godkänt. Boken har resten.':'Svårt, eller hur? Det är därför boken finns.';
   box.innerHTML='<span class="label">Ditt resultat</span><div class="score">'+score+'<span style="font-size:.4em;color:var(--ink-2)"> / 10</span></div><p class="qtext" style="font-size:1.5rem">'+verdict+'</p>'+pips()+
-   '<div style="display:flex;gap:12px;flex-wrap:wrap"><button type="button" class="btn solid" id="again">Tio nya frågor</button><a class="btn" href="#bestall">Beställ boken</a></div>';
+   '<div style="display:flex;gap:12px;flex-wrap:wrap"><button type="button" class="btn solid" id="again">Tio nya frågor</button><a class="btn" href="/bestall">Beställ boken</a></div>';
   document.getElementById('again').addEventListener('click',start);
 }
 start();

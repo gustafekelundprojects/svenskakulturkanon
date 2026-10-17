@@ -5,8 +5,10 @@ Statisk webbplats för boken *Svenska Kulturkanon – 100 verk som skapade Sveri
 ## Struktur
 
 ```
-index.html            Hela sajten (startsida, om boken, verken, veckans verk, quiz, beställ, företag, press, kontakt)
-data/kanon.js         All data: avsnitt och verk, quizfrågor, veckans verk per vecka
+index.html            Startsidan och mallen för alla sidor
+*.html, verken/        Egna sidor, byggda med build.mjs (se nedan)
+build.mjs             Bygger sidorna, sitemap och QR-regler
+data/kanon.js         All data: avsnitt och verk, kapitelinledningar och verkbeskrivningar ur boken, quizfrågor, veckans verk
 images/               Omslag, marmorpapper och uppslag ur boken
 images/verk/<nr>.jpg  Bildsidan för varje verk (1080 × 1350), t.ex. 37.jpg, 10-5.jpg
 vercel.json           QR-omdirigeringar /qr/<nr> och cache för bilder
@@ -37,9 +39,43 @@ node instagram/render.mjs 47
 
 Resultat i `instagram/vecka-47/`: en karusell för Veckans verk (3 bilder), två quizkaruseller (fråga + svar), en karusell Personen bakom verket (2 bilder) och `texter.md` med bildtexter och hashtags. Publicering: veckans verk måndag, quiz onsdag, personen fredag, quiz lördag. Lägg gärna ett porträtt i `images/personer/<nr>.jpg` – då kommer det med på personkortet.
 
+## Sidor och adresser
+
+Varje sida är en egen HTML-fil med egen titel, beskrivning, delningsbild-text och kanonisk adress. Innehållet finns i filen, så sidorna fungerar även utan JavaScript och kan indexeras av Google.
+
+```
+index.html                    /                     Startsida
+om-boken.html                 /om-boken
+verken.html                   /verken               Alla elva avsnitt
+verken/<avsnitt>.html         /verken/musik         Kapitelinledning och alla verk i avsnittet
+veckans-verk.html             /veckans-verk
+quiz.html                     /quiz
+bestall.html                  /bestall
+foretagsgava.html             /foretagsgava
+press.html, kontakt.html, rattelser.html, kopvillkor.html, integritet.html
+404.html                      visas för adresser som inte finns
+sitemap.xml, robots.txt       för sökmotorer
+```
+
+`/verk/<nr>` och `/qr/<nr>` visar avsnittssidan med verket markerat (reglerna ligger under `rewrites` i `vercel.json`). Gamla länkar med # (t.ex. `/#om`) skickas vidare till den nya adressen.
+
+### Så ändrar du en sida
+
+`index.html` är mallen för alla sidor och `data/kanon.js` innehåller allt innehåll om verken. Ändra där och kör sedan
+
+```
+node build.mjs
+```
+
+Skriptet skriver om alla sidfiler, `sitemap.xml` och QR-reglerna i `vercel.json`. Ladda sedan upp alla ändrade filer. Ändra inte i `om-boken.html`, `verken/musik.html` osv. direkt – de skrivs över nästa gång skriptet körs. Sidtitlar och beskrivningar för sökmotorer ändras i listan `pages` överst i `build.mjs`.
+
 ## QR-koder
 
-Boken pekar på `svenskakulturkanon.se/qr/<nr>` (t.ex. `/qr/37`, `/qr/10-5`). Ändra målet i `vercel.json`. Omdirigeringarna är tillfälliga (`permanent: false`) så att målen kan bytas utan att webbläsare cachar dem.
+Boken pekar på `svenskakulturkanon.se/qr/<nr>` (t.ex. `/qr/37`, `/qr/10-5`). De flesta visar avsnittet i boken med verket markerat. Fem dikter (10.6–10.10) skickas vidare till egna diktsidor eller Nobelprisets sida – se `redirects` i `vercel.json`. Omdirigeringarna är tillfälliga (`permanent: false`) så att målen kan bytas.
+
+## Statistik
+
+`index.html` laddar Vercel Web Analytics. Slå på det i Vercel: projektet → Analytics → Enable. Varje sida blir en egen rad i statistiken, så `/qr/37` visar hur många som skannat koden för Det sjunde inseglet.
 
 ## Bildrättigheter
 
