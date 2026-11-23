@@ -35,6 +35,7 @@ const pages = [
   { file: 'rattelser.html', path: '/rattelser', id: 'rattelser', title: 'Rättelser', desc: 'Rättelser till boken Svenska Kulturkanon.' },
   { file: 'kopvillkor.html', path: '/kopvillkor', id: 'villkor', title: 'Köpvillkor', desc: 'Köpvillkor för beställningar på svenskakulturkanon.se.' },
   { file: 'integritet.html', path: '/integritet', id: 'integritet', title: 'Integritetspolicy', desc: 'Så hanterar Kaffeförlaget AB personuppgifter på svenskakulturkanon.se.' },
+  { file: 'tack.html', path: '/tack', id: 'tack', title: 'Tack för din beställning', desc: 'Tack för din beställning av Svenska Kulturkanon.', noindex: true },
   { file: '404.html', path: '/404', id: 'saknas', title: 'Sidan finns inte', desc: BASE_DESC, noindex: true },
 ];
 

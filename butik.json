@@ -1,0 +1,42 @@
+{
+  "_info": "Priser och frakt för kassan. Ändra här – kassan (api/checkout.mjs) läser alltid priserna härifrån, aldrig från webbläsaren.",
+  "valuta": "sek",
+  "momssats_bok": 6,
+  "produkter": {
+    "std": {
+      "namn": "Svenska Kulturkanon",
+      "beskrivning": "Inbunden, 272 sidor, 240 × 300 mm. Skickas i december 2026.",
+      "pris": 599,
+      "artikelnr": "9789199219103"
+    },
+    "gift": {
+      "namn": "Svenska Kulturkanon – presentförpackning",
+      "beskrivning": "Inslagen i silkespapper med tryckt gåvokort och din hälsning. Skickas i december 2026.",
+      "pris": 649,
+      "artikelnr": "9789199219103-P"
+    }
+  },
+  "frakt": {
+    "ombud": {
+      "namn": "Ombud",
+      "pris": 79,
+      "dagar": [
+        1,
+        5
+      ]
+    },
+    "hem": {
+      "namn": "Hemleverans",
+      "pris": 149,
+      "dagar": [
+        1,
+        5
+      ]
+    }
+  },
+  "fri_frakt_fran_antal": 3,
+  "max_antal_per_order": 20,
+  "lander": [
+    "SE"
+  ]
+}
