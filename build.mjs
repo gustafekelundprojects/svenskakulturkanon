@@ -71,7 +71,7 @@ function build(pg) {
   sub(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(pg.desc)}">${pg.noindex ? '\n<meta name="robots" content="noindex">' : ''}`);
   sub(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(full)}">`);
   sub(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(pg.desc)}">`);
-  const OG = { start: 'ottoman', om: 'marmor', verken: 'ottoman', kapitel: 'ottoman', bestall: 'lasning', foretag: 'julklapp', julklapp: 'julklapp', veckans: 'lasning', quiz: 'marmor' };
+  const OG = { start: 'ottoman', om: 'marmor', verken: 'ottoman', kapitel: 'ottoman', bestall: 'lasning', foretag: 'jul', julklapp: 'jul', veckans: 'lasning', quiz: 'marmor' };
   sub(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${SITE}/${OG[pg.id] ? 'miljo-' + OG[pg.id] + '-dela.jpg' : 'omslag.jpg'}">`);
   sub(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
   sub(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
